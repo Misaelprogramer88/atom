@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATOM</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 	<link rel="stylesheet" href="estilos.css">
 
 </head>
@@ -41,11 +42,36 @@
         </video>
     </section>
 
-    <section id="about" class="py-5">
-        <div class="container text-center">
-            <h2>Acerca de Nosotros</h2>
-            <p class="lead">Somos una empresa dedicada a proporcionar servicios de alta calidad para nuestros clientes.</p>
+    <section id="about" class="py-5" style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364); color: white; position: relative;">
+    <div class="container text-center">
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Acerca de Nosotros</h2>
+        <p class="lead" style="font-size: 1.2rem; line-height: 1.8;">
+            Somos una empresa apasionada por la innovación y el desarrollo tecnológico, dedicada a proporcionar servicios de alta calidad que transforman ideas en realidad.
+        </p>
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="icon-box">
+                    <i class="bi bi-cpu" style="font-size: 3rem; color: #1cc5dc;"></i>
+                    <h5 class="mt-3">Innovación</h5>
+                    <p style="font-size: 0.9rem;">Adoptamos las tecnologías más avanzadas para llevar tu empresa al futuro.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="icon-box">
+                    <i class="bi bi-shield-check" style="font-size: 3rem; color: #1cc5dc;"></i>
+                    <h5 class="mt-3">Seguridad</h5>
+                    <p style="font-size: 0.9rem;">Garantizamos soluciones seguras y confiables para tus datos y sistemas.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="icon-box">
+                    <i class="bi bi-graph-up-arrow" style="font-size: 3rem; color: #1cc5dc;"></i>
+                    <h5 class="mt-3">Crecimiento</h5>
+                    <p style="font-size: 0.9rem;">Impulsamos tu negocio con estrategias basadas en tecnología de punta.</p>
+                </div>
+            </div>
         </div>
+    </div>
     </section>
 
     <section id="servicios" class="py-5 bg-light">

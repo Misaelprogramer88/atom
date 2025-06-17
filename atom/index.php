@@ -42,9 +42,9 @@
         </video>
     </section>
 
-    <section id="about" class="py-5" style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364); color: white; position: relative;">
+    <section id="about" class="py-5" style="background: linear-gradient(to right,rgb(15, 25, 39),rgb(32, 50, 67),rgb(44, 62, 100)); color: white; position: relative;">
     <div class="container text-center">
-        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Acerca de Nosotros</h2>
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Sobre Nosotros</h2>
         <p class="lead" style="font-size: 1.2rem; line-height: 1.8;">
             Somos una empresa apasionada por la innovación y el desarrollo tecnológico, dedicada a proporcionar servicios de alta calidad que transforman ideas en realidad.
         </p>
@@ -74,36 +74,34 @@
     </div>
     </section>
 
-    <section id="servicios" class="py-5 bg-light">
-        <div class="container text-center">
-            <h2>Nuestros Servicios</h2>
-            <div class="row mt-4">
-                <div class="col-md-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Servicio 1</h5>
-                            <p class="card-text">Descripción breve del servicio 1.</p>
-                        </div>
-                    </div>
+    <section id="servicios" class="py-5" style="background: #f8f9fa;">
+    <div class="container text-center">
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Nuestros Servicios</h2>
+        <p class="lead mb-5">Descubre lo que podemos ofrecer para llevar tu empresa al siguiente nivel.</p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="service-card shadow-sm p-4" style="transition: transform 0.3s, box-shadow 0.3s; background: white; border-radius: 15px;">
+                    <i class="bi bi-laptop" style="font-size: 3rem; color: #6610f2;"></i>
+                    <h5 class="mt-3">Desarrollo Web</h5>
+                    <p style="font-size: 0.9rem;">Creamos sitios web modernos y funcionales que destacan en el mundo digital.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Servicio 2</h5>
-                            <p class="card-text">Descripción breve del servicio 2.</p>
-                        </div>
-                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card shadow-sm p-4" style="transition: transform 0.3s, box-shadow 0.3s; background: white; border-radius: 15px;">
+                    <i class="bi bi-phone" style="font-size: 3rem; color: #6610f2;"></i>
+                    <h5 class="mt-3">Aplicaciones Móviles</h5>
+                    <p style="font-size: 0.9rem;">Diseñamos aplicaciones innovadoras para iOS y Android que transforman ideas en soluciones.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Servicio 3</h5>
-                            <p class="card-text">Descripción breve del servicio 3.</p>
-                        </div>
-                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card shadow-sm p-4" style="transition: transform 0.3s, box-shadow 0.3s; background: white; border-radius: 15px;">
+                    <i class="bi bi-cloud-upload" style="font-size: 3rem; color: #6610f2;"></i>
+                    <h5 class="mt-3">Soluciones en la Nube</h5>
+                    <p style="font-size: 0.9rem;">Optimizamos la productividad de tu negocio con tecnologías basadas en la nube.</p>
                 </div>
             </div>
         </div>
+    </div>
     </section>
 
 	<section id="cursos" class="py-5 bg-light">

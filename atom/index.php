@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Empresa</a>
+            <a class="navbar-brand" href="#">ATOM</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,6 +33,13 @@
             </div>
         </div>
     </nav>
+
+	<section class="video-section">
+        <video autoplay muted loop>
+            <source src="image/Frase inspiracional.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </section>
 
     <section class="hero">
         <div class="container">

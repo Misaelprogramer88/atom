@@ -24,10 +24,10 @@
                         <a class="nav-link" href="#about">Acerca de</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Servicios</a>
+                        <a class="nav-link" href="#servicios">Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Cursos</a>
+                        <a class="nav-link" href="#cursos">Cursos</a>
                     </li>
                 </ul>
             </div>
@@ -41,14 +41,6 @@
         </video>
     </section>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Bienvenidos a Nuestra Empresa</h1>
-            <p>Ofrecemos soluciones innovadoras para tus necesidades.</p>
-            <a href="#about" class="btn btn-primary mt-3">Conócenos</a>
-        </div>
-    </section>
-
     <section id="about" class="py-5">
         <div class="container text-center">
             <h2>Acerca de Nosotros</h2>
@@ -56,7 +48,7 @@
         </div>
     </section>
 
-    <section id="services" class="py-5 bg-light">
+    <section id="servicios" class="py-5 bg-light">
         <div class="container text-center">
             <h2>Nuestros Servicios</h2>
             <div class="row mt-4">
@@ -80,6 +72,38 @@
                     <div class="card shadow-sm">
                         <div class="card-body">
                             <h5 class="card-title">Servicio 3</h5>
+                            <p class="card-text">Descripción breve del servicio 3.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<section id="cursos" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>Nuestros Cursos</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Curso 1</h5>
+                            <p class="card-text">Descripción breve del servicio 1.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Curso 2</h5>
+                            <p class="card-text">Descripción breve del servicio 2.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Curso 3</h5>
                             <p class="card-text">Descripción breve del servicio 3.</p>
                         </div>
                     </div>

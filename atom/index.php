@@ -84,18 +84,21 @@
                 <div class="service-card shadow-sm p-4" style="transition: transform 0.3s, box-shadow 0.3s; background: white; border-radius: 15px;">
                     <h5 class="mt-3">Diseño de piezas</h5>
                     <p style="font-size: 0.9rem;">Realizamos el Diseno de Piezas mecanicas.</p>
+					<a href="servicios.php" class="card-link">Ver Más</a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="service-card shadow-sm p-4" style="transition: transform 0.3s, box-shadow 0.3s; background: white; border-radius: 15px;">
                     <h5 class="mt-3">Maquinado industrial CNC</h5>
                     <p style="font-size: 0.9rem;">Trabajamos Maquinados Industriales CNC en Saltillo y Monterrey</p>
+					<a href="servicios.php" class="card-link">Ver Más</a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="service-card shadow-sm p-4" style="transition: transform 0.3s, box-shadow 0.3s; background: white; border-radius: 15px;">
                     <h5 class="mt-3">Fabricación de Fixtures</h5>
                     <p style="font-size: 0.9rem;">Apoyamos a distintas maquiladoras en la Fabricacion de Fixtures en Saltillo y Monterrey.</p>
+					<a href="servicios.php" class="card-link">Ver Más</a>
                 </div>
             </div>
         </div>
@@ -105,12 +108,14 @@
                 <div class="service-card shadow-sm p-4" style="transition: transform 0.3s, box-shadow 0.3s; background: white; border-radius: 15px;">
                     <h5 class="mt-3">Servicio de automatización</h5>
                     <p style="font-size: 0.9rem;">A traves de nuestro servicio de automatización de líneas, ayudamos a las distintas empresas maquiladoras de Saltillo y Monterrey.</p>
+					<a href="servicios.php" class="card-link">Ver Más</a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="service-card shadow-sm p-4" style="transition: transform 0.3s, box-shadow 0.3s; background: white; border-radius: 15px;">
                     <h5 class="mt-3">Programación PLC</h5>
                     <p style="font-size: 0.9rem;">Servicio de Programación PLC y Programación PLC SIEMENS.</p>
+					<a href="servicios.php" class="card-link">Ver Más</a>
                 </div>
             </div>
         </div>

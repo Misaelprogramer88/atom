@@ -81,21 +81,21 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="service-card shadow-sm p-4" style="transition: transform 0.3s, box-shadow 0.3s; background: white; border-radius: 15px;">
-                    <i class="bi bi-laptop" style="font-size: 3rem; color: #6610f2;"></i>
+                    
                     <h5 class="mt-3">Desarrollo Web</h5>
                     <p style="font-size: 0.9rem;">Creamos sitios web modernos y funcionales que destacan en el mundo digital.</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="service-card shadow-sm p-4" style="transition: transform 0.3s, box-shadow 0.3s; background: white; border-radius: 15px;">
-                    <i class="bi bi-phone" style="font-size: 3rem; color: #6610f2;"></i>
+                    
                     <h5 class="mt-3">Aplicaciones Móviles</h5>
                     <p style="font-size: 0.9rem;">Diseñamos aplicaciones innovadoras para iOS y Android que transforman ideas en soluciones.</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="service-card shadow-sm p-4" style="transition: transform 0.3s, box-shadow 0.3s; background: white; border-radius: 15px;">
-                    <i class="bi bi-cloud-upload" style="font-size: 3rem; color: #6610f2;"></i>
+                    
                     <h5 class="mt-3">Soluciones en la Nube</h5>
                     <p style="font-size: 0.9rem;">Optimizamos la productividad de tu negocio con tecnologías basadas en la nube.</p>
                 </div>

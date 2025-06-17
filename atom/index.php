@@ -80,24 +80,37 @@
         <p class="lead mb-5">Descubre lo que podemos ofrecer para llevar tu empresa al siguiente nivel.</p>
         <div class="row">
             <div class="col-md-4">
+				<img src="..." class="card-img-top" alt="...">
                 <div class="service-card shadow-sm p-4" style="transition: transform 0.3s, box-shadow 0.3s; background: white; border-radius: 15px;">
-                    
-                    <h5 class="mt-3">Desarrollo Web</h5>
-                    <p style="font-size: 0.9rem;">Creamos sitios web modernos y funcionales que destacan en el mundo digital.</p>
+                    <h5 class="mt-3">Diseño de piezas</h5>
+                    <p style="font-size: 0.9rem;">Realizamos el Diseno de Piezas mecanicas.</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="service-card shadow-sm p-4" style="transition: transform 0.3s, box-shadow 0.3s; background: white; border-radius: 15px;">
-                    
-                    <h5 class="mt-3">Aplicaciones Móviles</h5>
-                    <p style="font-size: 0.9rem;">Diseñamos aplicaciones innovadoras para iOS y Android que transforman ideas en soluciones.</p>
+                    <h5 class="mt-3">Maquinado industrial CNC</h5>
+                    <p style="font-size: 0.9rem;">Trabajamos Maquinados Industriales CNC en Saltillo y Monterrey</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="service-card shadow-sm p-4" style="transition: transform 0.3s, box-shadow 0.3s; background: white; border-radius: 15px;">
-                    
-                    <h5 class="mt-3">Soluciones en la Nube</h5>
-                    <p style="font-size: 0.9rem;">Optimizamos la productividad de tu negocio con tecnologías basadas en la nube.</p>
+                    <h5 class="mt-3">Fabricación de Fixtures</h5>
+                    <p style="font-size: 0.9rem;">Apoyamos a distintas maquiladoras en la Fabricacion de Fixtures en Saltillo y Monterrey.</p>
+                </div>
+            </div>
+        </div>
+        <br><br>
+		<div class="row">
+            <div class="col-md-4">
+                <div class="service-card shadow-sm p-4" style="transition: transform 0.3s, box-shadow 0.3s; background: white; border-radius: 15px;">
+                    <h5 class="mt-3">Servicio de automatización</h5>
+                    <p style="font-size: 0.9rem;">A traves de nuestro servicio de automatización de líneas, ayudamos a las distintas empresas maquiladoras de Saltillo y Monterrey.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card shadow-sm p-4" style="transition: transform 0.3s, box-shadow 0.3s; background: white; border-radius: 15px;">
+                    <h5 class="mt-3">Programación PLC</h5>
+                    <p style="font-size: 0.9rem;">Servicio de Programación PLC y Programación PLC SIEMENS.</p>
                 </div>
             </div>
         </div>

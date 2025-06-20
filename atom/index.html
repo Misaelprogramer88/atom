@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Atom</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="fate.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="imagenes/logor.png" type="image/x-icon">
+
+</head>
+<body>
+
+    
+
+<div class="parallax-section">
+    <video autoplay muted loop playsinline class="video-fondo" id="parallaxVideo">
+        <source src="image/Frase inspiracional.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+    </video>
+    
+    <div class="parallax-content">
+        <img src="imagenes/logo.pn" class="fade-in-slide img-fluid" style="margin: 0 auto; width: 600px;">
+    </div>
+</div>
+
+<script>
+    window.addEventListener("scroll", function () {
+        const scrollPos = window.scrollY;
+        const video = document.getElementById("parallaxVideo");
+        video.style.transform = `translateY(${scrollPos * 0.3}px)`; // Ajusta 0.3 si quieres más o menos movimiento
+    });
+</script>
+
+
+ <!-- 🔁 Trigger invisible justo antes de la navbar -->
+  <div id="trigger" style="height: 0px;"></div>
+
+  <!-- ✅ Navbar (se ve normal al inicio) -->
+  <header id="navbar" class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-logo">
+      <img src="imagenes/logo.png" alt="Logo" />
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <nav class="navbar-links" id="navbar-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+
+  <!-- Placeholder para evitar salto -->
+  <div class="navbar-placeholder"></div>
+
+    
+
+   <script>
+  const navbar = document.getElementById('navbar');
+  const trigger = document.getElementById('trigger');
+
+  const observer = new IntersectionObserver(([entry]) => {
+    if (!entry.isIntersecting) {
+      navbar.classList.add('sticky');
+    } else {
+      navbar.classList.remove('sticky');
+    }
+  }, {
+    root: null,
+    threshold: 0,
+  });
+
+  observer.observe(trigger);
+</script>
+
+  <!-- Navbar para celulares -->
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const links = document.getElementById('navbar-links');
+
+  toggle.addEventListener('click', () => {
+    links.classList.toggle('active');
+  });
+</script>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+    
+<section id="about" class="py-5" style="margin-top: 32px; background: linear-gradient(to right,rgb(15, 25, 39),rgb(32, 50, 67),rgb(44, 62, 100)); color: white; position: relative;">
+    <div class="container text-center">
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Sobre Nosotros</h2>
+        <p class="lead" style="font-size: 1.2rem; line-height: 1.8;">
+            Somos una empresa apasionada por la innovación y el desarrollo tecnológico, dedicada a proporcionar servicios de alta calidad que transforman ideas en realidad.
+        </p>
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="icon-box">
+                    <i class="bi bi-cpu" style="font-size: 3rem; color: #1cc5dc;"></i>
+                    <h5 class="mt-3">Innovación</h5>
+                    <p style="font-size: 0.9rem;">Adoptamos las tecnologías más avanzadas para llevar tu empresa al futuro.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="icon-box">
+                    <i class="bi bi-shield-check" style="font-size: 3rem; color: #1cc5dc;"></i>
+                    <h5 class="mt-3">Seguridad</h5>
+                    <p style="font-size: 0.9rem;">Garantizamos soluciones seguras y confiables para tus datos y sistemas.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="icon-box">
+                    <i class="bi bi-graph-up-arrow" style="font-size: 3rem; color: #1cc5dc;"></i>
+                    <h5 class="mt-3">Crecimiento</h5>
+                    <p style="font-size: 0.9rem;">Impulsamos tu negocio con estrategias basadas en tecnología de punta.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+     <section id="servicios" class="py-5" style="background: #f8f9fa;">
+    <div class="container text-center">
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Nuestros Servicios</h2>
+        <p class="lead mb-5">Descubre lo que podemos ofrecer para llevar tu empresa al siguiente nivel.</p>
+        <div class="row">
+            <div class="col-md-4">
+				
+                <div class="service-card shadow-sm p-4" data-aos="fade-right" style="transition: transform 0.3s, box-shadow 0.3s; background: white; border-radius: 15px;">
+                    <h5 class="mt-3">Diseño de piezas</h5>
+                    <p style="font-size: 0.9rem;">Realizamos el Diseno de Piezas mecanicas.</p>
+					<a href="servicios.php" class="card-link">Ver Más</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card shadow-sm p-4" data-aos="flip-up" style="transition: transform 0.3s, box-shadow 0.3s; background: white; border-radius: 15px;">
+                    <h5 class="mt-3">Maquinado industrial CNC</h5>
+                    <p style="font-size: 0.9rem;">Trabajamos Maquinados Industriales CNC en Saltillo y Monterrey</p>
+					<a href="servicios.php" class="card-link">Ver Más</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card shadow-sm p-4" data-aos="fade-left" style="transition: transform 0.3s, box-shadow 0.3s; background: white; border-radius: 15px;">
+                    <h5 class="mt-3">Fabricación de Fixtures</h5>
+                    <p style="font-size: 0.9rem;">Apoyamos a distintas maquiladoras en la Fabricacion de Fixtures en Saltillo y Monterrey.</p>
+					<a href="servicios.php" class="card-link">Ver Más</a>
+                </div>
+            </div>
+        </div>
+        <br><br>
+		<div class="row">
+            <div class="col-md-4">
+                <div class="service-card shadow-sm p-4" data-aos="fade-right" style="transition: transform 0.3s, box-shadow 0.3s; background: white; border-radius: 15px;">
+                    <h5 class="mt-3">Servicio de automatización</h5>
+                    <p style="font-size: 0.9rem;">A traves de nuestro servicio de automatización de líneas, ayudamos a las distintas empresas maquiladoras de Saltillo y Monterrey.</p>
+					<a href="servicios.php" class="card-link">Ver Más</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card shadow-sm p-4" data-aos="flip-up" style="transition: transform 0.3s, box-shadow 0.3s; background: white; border-radius: 15px;">
+                    <h5 class="mt-3">Programación PLC</h5>
+                    <p style="font-size: 0.9rem;">Servicio de Programación PLC y Programación PLC SIEMENS.</p>
+					<a href="servicios.php" class="card-link">Ver Más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+	<section id="cursos" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>Nuestros Cursos</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Curso 1</h5>
+                            <p class="card-text">Descripción breve del servicio 1.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Curso 2</h5>
+                            <p class="card-text">Descripción breve del servicio 2.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Curso 3</h5>
+                            <p class="card-text">Descripción breve del servicio 3.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container text-center">
+            <h2>Contacto</h2>
+            <p class="lead">Ponte en contacto con nosotros para más información.</p>
+            <form class="mt-4">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control" placeholder="Nombre" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="email" class="form-control" placeholder="Correo Electrónico" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" rows="4" placeholder="Mensaje" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+
+    
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+    <footer class="footer">
+    <p>&copy; 2024 SIR Mantiene. Todos los derechos reservados.</p>
+    <div class="social">
+        <a href="mailto:tuemail@ejemplo.com" title="Enviar correo">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/8442133787" target="_blank" title="Enviar WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+       
+    </div>
+    <div class="footer-services">
+        <!-- Aquí puedes agregar más enlaces de servicios si lo deseas -->
+    </div>
+    </footer>
+
+<!-- Asegúrate de incluir Font Awesome en tu <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+<script>
+    // Intersection Observer para animar las imágenes al hacer scroll
+    document.addEventListener("DOMContentLoaded", function() {
+        const images = document.querySelectorAll('.fade-in');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target); // Dejar de observar después de que la imagen aparezca
+                }
+            });
+        }, { threshold: 0.1 });
+
+        images.forEach(image => {
+            observer.observe(image);
+        });
+    });
+    </script>
+
+
+
+    <script>
+        // Selecciona todos los elementos con la clase 'fade-in-slide'
+const fadeInElements = document.querySelectorAll('.fade-in-slide');
+
+function checkVisibility() {
+    fadeInElements.forEach((element) => {
+        // Verifica si el elemento está en el viewport
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) { // 100px antes de que llegue al viewport completo
+            element.classList.add('show');
+        }
+    });
+}
+
+// Ejecuta la función en scroll
+window.addEventListener('scroll', checkVisibility);
+
+// Ejecuta la función inicialmente para elementos que ya están visibles
+checkVisibility();
+
+    </script>
+
+    <script>
+        // Selecciona todos los elementos con la clase 'zoom-in'
+const zoomInElements = document.querySelectorAll('.zoom-in');
+
+function checkZoomVisibility() {
+    zoomInElements.forEach((element) => {
+        // Verifica si el elemento está en el viewport
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) { // 100px antes de que entre al viewport completo
+            element.classList.add('show');
+        }
+    });
+}
+
+// Ejecuta la función en scroll
+window.addEventListener('scroll', checkZoomVisibility);
+
+// Ejecuta la función inicialmente para elementos que ya están visibles
+checkZoomVisibility();
+
+    </script>
+
+    <script>
+        // Selecciona todos los elementos con la clase 'slide-in-left'
+const slideInElements = document.querySelectorAll('.slide-in-left');
+
+function checkSlideVisibility() {
+    slideInElements.forEach((element) => {
+        // Verifica si el elemento está en el viewport
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) { // 100px antes de que entre al viewport completo
+            element.classList.add('show');
+        }
+    });
+}
+
+// Ejecuta la función en scroll
+window.addEventListener('scroll', checkSlideVisibility);
+
+// Ejecuta la función inicialmente para elementos que ya están visibles
+checkSlideVisibility();
+
+    </script>
+
+
+
+ <script>
+  function ajustarAlturaParallax() {
+    const navbar = document.getElementById('navbar');
+    const parallax = document.getElementById('parallax');
+    const alturaNavbar = navbar.offsetHeight;
+
+    // Resta la altura real de la navbar al 100% de la pantalla
+    parallax.style.height = `calc(100vh - ${alturaNavbar}px)`;
+  }
+
+  // Llama al cargar y al redimensionar
+  window.addEventListener('load', ajustarAlturaParallax);
+  window.addEventListener('resize', ajustarAlturaParallax);
+</script>
+
+<script>
+  function ajustarAlturaParallax() {
+    const navbar = document.getElementById('navbar');
+    const parallax = document.querySelector('.parallax-section');
+
+    if (navbar && parallax) {
+      // Esperamos unos ms para asegurar que se renderice bien la navbar
+      setTimeout(() => {
+        const alturaNavbar = navbar.offsetHeight;
+        parallax.style.height = `calc(100dvh - ${alturaNavbar}px)`;
+      }, 50);
+    }
+  }
+
+  // Ejecutar cuando todo esté bien cargado
+  window.addEventListener('load', ajustarAlturaParallax);
+  window.addEventListener('resize', ajustarAlturaParallax);
+</script>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  AOS.init();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -14,37 +14,31 @@
     <link rel="icon" href="image/ATOM LOGO.png" type="image/x-icon">
 
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
         .service-section {
             background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
             color: white;
             padding: 4rem 0;
         }
-        .service-card {
-            background: white;
-            color: #2c5364;
+        .service-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .service-images img {
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            height: auto;
             transition: transform 0.3s, box-shadow 0.3s;
-            text-align: center;
-            padding: 2rem;
         }
-        .service-card:hover {
-            transform: translateY(-10px);
+        .service-images img:hover {
+            transform: scale(1.05);
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-        }
-        .service-card i {
-            font-size: 3rem;
-            color: #1cc5dc;
-            margin-bottom: 1rem;
-        }
-        .service-card h5 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: bold;
-        }
-        .service-card p {
-            font-size: 1rem;
-            color: #6c757d;
         }
 
     </style>
@@ -120,45 +114,17 @@
 
 
     
-    <section id="servicios" class="service-section">
+     <section id="servicios" class="service-section">
         <div class="container">
             <h2 class="text-center mb-5">Nuestros Servicios</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <i class="bi bi-gear"></i>
-                        <h5>Diseño de Piezas</h5>
-                        <p>Realizamos el diseño de piezas mecánicas con precisión y calidad.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <i class="bi bi-hammer"></i>
-                        <h5>Maquinado Industrial CNC</h5>
-                        <p>Trabajamos maquinados industriales CNC en Saltillo y Monterrey.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <i class="bi bi-tools"></i>
-                        <h5>Fabricación de Fixtures</h5>
-                        <p>Apoyamos a distintas maquiladoras en la fabricación de fixtures personalizados.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <i class="bi bi-lightning"></i>
-                        <h5>Servicio de Automatización</h5>
-                        <p>Automatizamos líneas para mejorar la productividad de las empresas.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <i class="bi bi-cpu"></i>
-                        <h5>Programación PLC</h5>
-                        <p>Ofrecemos programación de PLC, incluyendo PLC SIEMENS, con alta eficiencia.</p>
-                    </div>
-                </div>
+            <div class="service-images">
+                <img src="image/2.png" alt="Servicio 2">
+                <img src="image/3.png" alt="Servicio 2">
+                <img src="image/4.png" alt="Servicio 3">
+            </div>
+            <div class="service-images mt-4">
+                <img src="image/2.png" alt="Servicio 4">
+                <img src="image/2.png" alt="Servicio 5">
             </div>
         </div>
     </section>

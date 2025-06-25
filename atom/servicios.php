@@ -19,7 +19,7 @@
             background-color: #f8f9fa;
         }
         .service-section {
-            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            background: linear-gradient(to right,rgb(239, 243, 247),rgb(177, 206, 206),rgb(195, 210, 224));
             color: white;
             padding: 4rem 0;
         }
@@ -31,14 +31,14 @@
         }
         .service-images img {
             border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            
             width: 300px;
             height: auto;
             transition: transform 0.3s, box-shadow 0.3s;
         }
         .service-images img:hover {
             transform: scale(1.05);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            
         }
 
     </style>

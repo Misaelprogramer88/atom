@@ -55,7 +55,7 @@
   <header id="navbar" class="navbar">
   <div class="navbar-container">
     <div class="navbar-logo">
-      <img src="" alt="Logo" style="margin-right: 20px;"/>
+      <img src="image/LetrasAzul.png" alt="Logo" style="margin-right: 20px;"/>
     </div>
 
     <div class="menu-toggle" id="menu-toggle">

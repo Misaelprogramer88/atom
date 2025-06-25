@@ -31,14 +31,12 @@
         }
         .service-images img {
             border-radius: 15px;
-            
             width: 300px;
             height: auto;
             transition: transform 0.3s, box-shadow 0.3s;
         }
         .service-images img:hover {
             transform: scale(1.05);
-            
         }
 
     </style>
@@ -112,11 +110,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-
+    <h2 class="text-center mb-5">Nuestros Servicios</h2>
     
      <section id="servicios" class="service-section">
         <div class="container">
-            <h2 class="text-center mb-5">Nuestros Servicios</h2>
             <div class="service-images">
                 <img src="image/2.png" alt="Servicio 2">
                 <img src="image/3.png" alt="Servicio 2">

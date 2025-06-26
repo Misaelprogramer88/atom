@@ -27,7 +27,7 @@
       ☰
     </div>
 
-    <nav class="navbar-links" id="navbar-links">
+    <nav class="navbar-links" id="navbar-links" >
       <a href="#servicios">Servicios</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#eventos">Eventos</a>

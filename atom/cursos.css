@@ -1,6 +1,10 @@
 body{
   background-color: #f6f9f9;
 }
+
+.navbar{
+  position: fixed;
+}
 /* Estilos para la sección hero */
 .hero {
   min-height: 100vh;

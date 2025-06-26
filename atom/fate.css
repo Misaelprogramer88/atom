@@ -276,29 +276,8 @@ body {
     }
 }
 
-.fade-in {
-    opacity: 0; /* Las imágenes son inicialmente invisibles */
-    transition: opacity 2s ease-out; /* Solo aplicamos la transición a la opacidad */
-}
-
-.fade-in.show {
-    opacity: 1; /* Aparecen cuando entren en la vista */
-}
 
 
-
-
-/* Efecto de fade-in y movimiento desde abajo */
-.fade-in-slide {
-    opacity: 0; /* Elemento inicialmente invisible */
-    transform: translateY(50px); /* Posicionado 50px más abajo */
-    transition: opacity 2s ease-out, transform 1s ease-out; /* Transición para opacidad y movimiento */
-}
-
-.fade-in-slide.show {
-    opacity: 1; /* Aparece cuando entra en la vista */
-    transform: translateY(0); /* Se mueve hacia su posición original */
-}
 
 
 
@@ -356,17 +335,7 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-/* Efecto de zoom: comienza pequeño y crece */
-.zoom-in {
-    opacity: 0; /* Elemento inicialmente invisible */
-    transform: scale(0.5); /* Comienza al 50% de su tamaño */
-    transition: opacity 1.5s ease-out, transform .6s ease-out; /* Transición suave */
-}
 
-.zoom-in.show {
-    opacity: 1; /* Aparece al entrar en la vista */
-    transform: scale(1); /* Se expande al tamaño original */
-}
 
 /* Ajusta el ancho en pantallas grandes */
 .full-width-lg {
@@ -375,17 +344,7 @@ body {
 }
 
 
-/* Efecto de deslizamiento desde la izquierda */
-.slide-in-left {
-    opacity: 0; /* Elemento inicialmente invisible */
-    transform: translateX(-100px); /* Posicionado 100px a la izquierda de su lugar original */
-    transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Transición suave */
-}
 
-.slide-in-left.show {
-    opacity: 1; /* Aparece al entrar en la vista */
-    transform: translateX(0); /* Se mueve a su posición original */
-}
 
 /* Ajusta el ancho en pantallas grandes */
 .full-width-lg {
@@ -438,87 +397,7 @@ body {
     color: black;
 
 }
-table {
-    width: 100%;
-    text-align: center;
-    border-spacing: 20px; /* Espaciado entre las celdas */
-    
-}
 
-.img-container {
-    display: inline-block;
-   
-    transition: transform 0.3s ease-in-out;
-}
-
-.img-container img {
-    width: 150px; /* Ajusta el tamaño de la imagen */
-    max-width: 100%;
-    filter: grayscale(100%);
-    opacity: 0.6;
-    transition: all 0.5s ease-in-out;
-}
-
-.img-container:hover img {
-    filter: grayscale(0%);
-    opacity: 1;
-    transform: scale(1.1); /* Zoom al pasar el mouse */
-}
-
-.table-responsive {
-    width: 100%;
-    overflow-x: auto;
-}
-.table-responsive {
-    width: 100%;
-    overflow-x: auto;
-}
-
-.img-container img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    opacity: 0.6;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.img-container img:hover {
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-/* Media Query para pantallas pequeñas */
-@media (max-width: 768px) {
-    table {
-        display: block; /* Cambia el diseño de la tabla a bloque */
-        overflow-x: auto; /* Permite el desplazamiento horizontal */
-    }
-    tr {
-        display: flex; /* Usar flexbox para el diseño */
-        flex-wrap: wrap; /* Permitir que las filas se ajusten */
-    }
-    td {
-        flex: 1 1 50%; /* Cada celda ocupará el 50% del ancho disponible */
-        box-sizing: border-box; /* Asegura que el padding y el margen no afecten el tamaño */
-    }
-    
-    .img-container {
-        display: inline-block;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .img-container img {
-        width: 150px; /* Ajusta el tamaño de la imagen */
-        max-width: 100%;
-        /* Elimina el filtro gris y la opacidad */
-        filter: none; /* Elimina el filtro gris */
-        opacity: 1; /* Asegura que la imagen sea completamente opaca */
-    }
-
-    .img-container:hover img {
-        transform: scale(1.1); /* Zoom al pasar el mouse */
-    }
-}
 
 
 .button-container {
@@ -557,104 +436,3 @@ table {
 
 }
 
-/* Media Query para pantallas pequeñas */
-/* Media Query para pantallas pequeñas */
-@media (max-width: 768px) {
-    .btn {
-        width: 150px; /* Botones más pequeños */
-        font-size: 1rem; /* Texto más pequeño */
-        padding: 8px 16px; /* Menor espacio interno */
-    }
-}
-
-.stats-section {
-            
-            color: rgb(255, 255, 255);
-            padding: 4rem 0;
-        }
-        .stat-item {
-            height: 240px;
-            padding: 20px;
-            border-radius: 15px;
-            background: linear-gradient(to bottom, #252931, #656666);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        .stat-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-        }
-        .stat-icon {
-            font-size: 3rem;
-            color: #1cb6dc;
-            margin-bottom: 10px;
-        }
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
-        .stat-label {
-            font-size: 1.2rem;
-            margin-top: 10px;
-        }
-
-/* apartado de servicios y misa menso*/ 
-.services-section {
-            padding: 4rem 0;
-            background-color: #eef2f3;
-        }
-
-        .service-card {
-            position: relative;
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 24px rgba(83, 111, 204, 0.945);
-        }
-
-        .service-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: opacity 0.3s;
-        }
-
-        .service-card .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgb(4, 50, 68);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .service-card:hover img {
-            opacity: 0;
-        }
-
-        .service-card:hover .overlay {
-            opacity: 1;
-        }
-
-        .service-card h5 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .service-card p {
-            font-size: 1rem;
-            text-align: center;
-        }

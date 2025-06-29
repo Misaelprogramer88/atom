@@ -38,7 +38,7 @@ body {
   color: white;
   text-decoration: none;
   font-size: 1.1rem;
-  padding: 10px 15px; /* ← Espacio entre los enlaces */
+  padding: 10px 15px; 
   transition: color 0.3s ease;
 }
 
@@ -49,13 +49,13 @@ body {
   bottom: 5px;
   width: 0%;
   height: 3px;
-  background-color: #1cc5dc; /* Subrayado azul brillante */
+  background-color: #1cc5dc;
   transition: width 0.3s ease;
   border-radius: 2px;
 }
 
 .navbar-links a:hover {
-  color: #1cc5dc; /* Color llamativo al pasar el mouse */
+  color: #1cc5dc; 
 }
 
 .navbar-links a:hover::after {
@@ -64,7 +64,6 @@ body {
 
 
 
-/* Menu hamburguesa oculto en escritorio */
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -72,7 +71,7 @@ body {
   color: white;
 }
 
-/* Responsive: celulares */
+
 @media (max-width: 768px) {
   .navbar-links {
     position: absolute;
@@ -108,7 +107,7 @@ body {
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
-        /* Espaciador para que no salte el contenido cuando la navbar se fija */
+        
         .navbar-placeholder {
             display: none;
             height: 0;
@@ -423,14 +422,14 @@ body {
     color: white;
 }
 .active {
-    background-color: #f1ed13; /* Color amarillo activo */
+    background-color: #000000; /* Color amarillo activo */
 }
 .inactive {
     background-color: #d3d3d3; /* Color gris */
 }
 .btn:hover {
-    background-color: rgba(217, 214, 23, 0.832); /* Mantiene el color actual al pasar el mouse */
-    color: rgb(0, 0, 0); /* Asegura que el texto siga siendo blanco */
+    background-color: rgba(0, 0, 0, 0.832); /* Mantiene el color actual al pasar el mouse */
+    color: rgb(255, 255, 255); /* Asegura que el texto siga siendo blanco */
     transform: scale(1.1); /* Zoom al pasar el mouse */
     transition: transform 0.5s ease, opacity 0.5s ease;
 
@@ -472,7 +471,7 @@ body {
 
 .services-section {
             padding: 4rem 0;
-            background-color: #eef2f3;
+           background: linear-gradient(to right, #1f2020, #546368, #242525);
         }
 
         .service-card {
@@ -528,3 +527,7 @@ body {
             font-size: 1rem;
             text-align: center;
         }
+
+a.btn:hover {
+    background: #0f87a8;
+}

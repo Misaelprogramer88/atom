@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli('localhost', 'root', '', 'sistema_citas');
+$conn = new mysqli('localhost', 'root', '', 'atom');
 
 if ($conn->connect_error) {
     die("Error en la conexión: " . $conn->connect_error);

@@ -19,7 +19,7 @@
     <header id="navbar" class="navbar ">
   <div class="navbar-container">
     <div class="navbar-logo">
-      <img src="image/LetrasAzul.png" alt="Logo" >
+      <a href="index.html"><img src="image/LetrasAzul.png" alt="Logo" ></a>
 
     </div>
 
@@ -27,12 +27,23 @@
       ☰
     </div>
 
-    <nav class="navbar-links" id="navbar-links" >
-      <a href="#servicios">Servicios</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#eventos">Eventos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+    <nav class="navbar-links" id="navbar-links">
+  <a href="#servicios">Servicios</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#eventos">Eventos</a>
+
+  <!-- Dropdown personalizado -->
+  <div class="dropdown-atom">
+    <span class="dropdown-toggle-atom">Cursos ▾</span>
+    <ul class="dropdown-menu-atom">
+      <li><a href="#curso-basico">Básico – Intermedio</a></li>
+      <li><a href="#curso-avanzado">Intermedio – Avanzado</a></li>
+    </ul>
+  </div>
+
+  <a href="#contacto">Contacto</a>
+</nav>
+
   </div>
 </header>
 
@@ -58,7 +69,280 @@
   </div>
 </section>
 
+<section id="tematica" class="timeline-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">¿Cuál es la temática del curso de SOLIDWORKS?</h2>
+    <div class="row">
 
+      <!-- Línea del tiempo (izquierda) -->
+      <div class="col-md-7">
+        <div class="timeline">
+
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h5>1. Lectura de planos 2D</h5>
+              <p>Interpreta planos para diseño en 3D y manufactura de piezas.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h5>2. GD&T Avanzadas</h5>
+              <p>Tolerancias geométricas, simbología ISO/ANSI y uso de datums.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h5>3. Escalamiento de piezas</h5>
+              <p>Modifica el tamaño de piezas complejas manteniendo proporciones.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h5>4. Planos para croquis</h5>
+              <p>Diseño de croquis angulados en espacio 3D para modelado técnico.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h5>5. Metrología</h5>
+              <p>Medición precisa de piezas físicas con instrumentos profesionales.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h5>6. Ingeniería inversa</h5>
+              <p>Reconstrucción 3D desde una pieza física y cálculo de resistencia.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h5>7. Renderizado profesional</h5>
+              <p>Aplicación de materiales, iluminación y técnicas de presentación visual.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="700">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h5>8. Cálculo de engranajes</h5>
+              <p>Cálculo matemático y por software de sistemas de engranajes.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="800">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h5>9. Diseño de sistemas de engranaje</h5>
+              <p>Ensamble de engranajes, generación de cadena, sprockets y spline.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="900">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h5>10. Moldes</h5>
+              <p>Diseño para inyección de plástico o metal, materiales y procesos.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="1000">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h5>11. Administración de proyectos</h5>
+              <p>Entrega profesional de diseños y documentación para clientes.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="1100">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h5>12. Creación de planos especializados</h5>
+              <p>Tablas de taladros, materiales, BOM y aplicación de pesos.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="1200">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h5>13. Animaciones avanzadas</h5>
+              <p>Control por línea de tiempo, estudios de movimiento y simulación.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Galería de imágenes (derecha) -->
+      <div class="col-md-5 d-none d-md-block">
+        <div class="timeline-gallery" >
+          <img src="https://www.1min30.com/wp-content/uploads/2018/10/Logo-SolidWorks.jpg" class="img-fluid mb-3 rounded shadow-sm"  data-aos="fade-left" alt="Interfaz SolidWorks">
+          <img src="https://www.solidworks.com/sites/default/filesd10/styles/webp/public/2025-01/Nemo2.jpg.webp?itok=MeFOakVP"  data-aos="fade-left" class="img-fluid mb-3 rounded shadow-sm" alt="Simulación SolidWorks">
+          <img src="https://cdn.prod.website-files.com/5fcde6f56fdac5414b34eeb3/6422b76aabc618b7492c253c_Solidworks.png" data-aos="fade-left" data-aos-delay="500"  class="img-fluid rounded shadow-sm" alt="Moldes en SolidWorks">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="duracion" class="duracion-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">¿Cuánto dura el curso de SOLIDWORKS?</h2>
+    <p class="text-center mb-5 lead">El curso tiene una duración de <strong>15 a 18 horas</strong> y puedes tomarlo en distintos horarios, entre semana o en sábados.</p>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Entre semana -->
+      <div class="col-md-5" data-aos="zoom-in">
+        <div class="card horario-card h-100">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-calendar-week"></i> Horarios entre semana</h5>
+            <ul class="list-unstyled mt-3">
+              <li>🕘 8:00 am – 11:00 am</li>
+              <li>🕙 10:00 am – 1:00 pm</li>
+              <li>🕚 11:00 am – 2:00 pm</li>
+              <li>🕔 5:00 pm – 8:00 pm</li>
+              <li>🕕 6:00 pm – 9:00 pm</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sabatinos -->
+      <div class="col-md-5" data-aos="zoom-in" data-aos-delay="150">
+        <div class="card horario-card h-100">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-calendar-event"></i> Horarios sabatinos</h5>
+            <ul class="list-unstyled mt-3">
+              <li>🕘 9:00 am – 1:00 pm</li>
+              <li>🕙 10:00 am – 2:00 pm</li>
+              <li>🕚 11:00 am – 3:00 pm</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="modalidad" class="modalidad-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">¿Qué modalidad tiene el curso?</h2>
+    <p class="text-center lead mb-5">Nos adaptamos a tu tiempo y ubicación. Ofrecemos diferentes formas de cursar SolidWorks según tus necesidades.</p>
+
+    <div class="row g-4 text-center">
+
+      <!-- Modalidad virtual -->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card modalidad-card h-100">
+          <div class="card-body">
+            <div class="icon mb-3">
+              <i class="bi bi-laptop" style="font-size: 2.5rem; color: #168ed9;"></i>
+            </div>
+            <h5 class="card-title">Curso Virtual</h5>
+            <p>Estudia desde cualquier parte de México o el mundo. Ideal si tienes restricciones de tiempo o movilidad.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modalidad presencial -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="card modalidad-card h-100">
+          <div class="card-body">
+            <div class="icon mb-3">
+              <i class="bi bi-building" style="font-size: 2.5rem; color: #0d6efd;"></i>
+            </div>
+            <h5 class="card-title">Curso Presencial</h5>
+            <p>Clases en Saltillo con instructores certificados. Ideal para aprendizaje práctico en aula.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Para empresas -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card modalidad-card h-100">
+          <div class="card-body">
+            <div class="icon mb-3">
+              <i class="bi bi-briefcase" style="font-size: 2.5rem; color: #0b4986;"></i>
+            </div>
+            <h5 class="card-title">Para Empresas</h5>
+            <p>Impartimos cursos en cualquier ciudad de México. Ideal para talleres de maquinado industrial y personal técnico.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<footer class="footer-dark">
+  <div class="container py-5">
+    <div class="row text-white">
+
+      <!-- Logo -->
+      <div class="col-md-3 mb-4 mb-md-0 text-center text-md-start">
+        <img src="image/ATOM LOGO.png" alt="ATOM Logo" style="width: 120px;">
+      </div>
+
+      <!-- Nuestras redes -->
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h5 class="footer-title">Nuestras Redes</h5>
+        <hr class="footer-line">
+        <div class="footer-icons">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Contacto -->
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h5 class="footer-title">Contacto</h5>
+        <hr class="footer-line">
+        <p><i class="bi bi-envelope"></i> ariel.perales@disenoymaquinados.mx</p>
+        <p><i class="bi bi-envelope"></i> ventas@disenoymaquinados.mx</p>
+        <p><i class="bi bi-telephone"></i> +52 (844) 622 6979</p>
+        <p><i class="bi bi-whatsapp"></i> WhatsApp</p>
+      </div>
+
+      <!-- Más Información -->
+      <div class="col-md-3">
+        <h5 class="footer-title">Más Información</h5>
+        <hr class="footer-line">
+        <ul class="list-unstyled">
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Eventos</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Créditos -->
+    <div class="text-center text-white mt-4 small">
+      © Copyright 2021 ATOM. All Rights Reserved. Made by <span style="color: #FFD700;">Dark Post Marketing Agency</span>
+    </div>
+  </div>
+</footer>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

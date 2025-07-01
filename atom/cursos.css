@@ -5,6 +5,9 @@ body{
 .navbar{
   position: fixed;
 }
+.navbar {
+  margin-top: 0;
+}
 
 
 

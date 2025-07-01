@@ -1,3 +1,8 @@
+<?php
+require_once 'db_conexion.php';
+?>
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -54,12 +59,25 @@
     </div>
 
     <nav class="navbar-links" id="navbar-links">
-      <a href="#servicios">Servicios</a>
-      <a href="cursos.php">Cursos</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#eventos">Eventos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+  <a href="#servicios">Servicios</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#eventos">Eventos</a>
+  
+
+  <!-- Dropdown personalizado -->
+  <div class="dropdown-atom">
+    <span class="dropdown-toggle-atom">Cursos ▾</span>
+    <ul class="dropdown-menu-atom">
+      <li><a href="cursob-i.php">Básico – Intermedio</a></li>
+      <li><a href="cursos.php">Intermedio – Avanzado</a></li>
+      
+    </ul>
+  </div>
+
+  <a href="#contacto">Contacto</a>
+  <a href="admin.php">Admin</a>
+  
+</nav>
   </div>
 </header>
 
@@ -207,49 +225,79 @@
         </div>
 </section>
 
-<section id="cursos" class="py-5" style="background: linear-gradient(to right, #141414, #343d41, #141414); color: white;">
-    <div class="container text-center">
-        <h2 class="mb-4" style="font-size: 2.5rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;">Nuestros Cursos</h2>
-        <div class="row mt-4">
-            <div class="col-md-4">
-                <div class="card shadow-sm border-0" style="background: #1e293b; color: white; border-radius: 15px; overflow: hidden; transition: transform 0.3s;">
-                    <div class="card-body text-center p-4">
-                        <i class="bi bi-laptop" style="font-size: 3rem; color: #1cc5dc;"></i>
-                        <h5 class="card-title mt-3" style="font-weight: bold;">Curso 1</h5>
-                        <p class="card-text">Aprende lo último en tecnología web con nuestro curso avanzado.</p>
-                    </div>
-                    <div class="card-footer text-center py-3" style="background: #1cc5dc; color: #0f2027; font-weight: bold;">
-                        Más Información
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card shadow-sm border-0" style="background: #1e293b; color: white; border-radius: 15px; overflow: hidden; transition: transform 0.3s;">
-                    <div class="card-body text-center p-4">
-                        <i class="bi bi-code-slash" style="font-size: 3rem; color: #1cc5dc;"></i>
-                        <h5 class="card-title mt-3" style="font-weight: bold;">Curso 2</h5>
-                        <p class="card-text">Domina lenguajes de programación clave para el futuro.</p>
-                    </div>
-                    <div class="card-footer text-center py-3" style="background: #1cc5dc; color: #0f2027; font-weight: bold;">
-                        Más Información
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card shadow-sm border-0" style="background: #1e293b; color: white; border-radius: 15px; overflow: hidden; transition: transform 0.3s;">
-                    <div class="card-body text-center p-4">
-                        <i class="bi bi-gear-fill" style="font-size: 3rem; color: #1cc5dc;"></i>
-                        <h5 class="card-title mt-3" style="font-weight: bold;">Curso 3</h5>
-                        <p class="card-text">Explora el mundo de la inteligencia artificial y el aprendizaje automático.</p>
-                    </div>
-                    <div class="card-footer text-center py-3" style="background: #1cc5dc; color: #0f2027; font-weight: bold;">
-                        Más Información
-                    </div>
-                </div>
-            </div>
+<section id="cursos" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4 styled-title text-center" data-aos="fade-up">Nuestros Cursos de SOLIDWORKS</h2>
+    <p class="text-center mb-5 text-muted" data-aos="fade-up" data-aos-delay="100">
+      Elige el curso que se adapte a tu nivel y modalidad. Capacitación profesional para la industria.
+    </p>
+
+    <div class="row justify-content-center">
+
+      <!-- Curso Básico-Intermedio -->
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in">
+        <div class="curso-card">
+          <img src="https://cdn.prod.website-files.com/5fcde6f56fdac5414b34eeb3/6422b76aabc618b7492c253c_Solidworks.png" alt="Curso Básico" class="curso-img">
+          <div class="curso-content">
+            <h5>SolidWorks Básico - Intermedio</h5>
+            <p>Aprende modelado 3D, operaciones básicas, planos técnicos y animaciones simples.</p>
+            <a href="cursob-i.php" class="btn btn-primary">Ver más</a>
+          </div>
         </div>
+      </div>
+
+      <!-- Curso Intermedio-Avanzado -->
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="curso-card">
+          <img src="https://www.solidworks.com/sites/default/filesd10/styles/webp/public/2025-01/Nemo2.jpg.webp?itok=MeFOakVP" alt="Curso Avanzado" class="curso-img">
+          <div class="curso-content">
+            <h5>SolidWorks Intermedio - Avanzado</h5>
+            <p>Domina lectura de planos, GD&T, engranajes, simulaciones y diseño avanzado.</p>
+            <a href="cursos.php" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cursos dinámicos desde la base de datos -->
+      <?php
+      
+
+      try {
+        $query = $cnnPDO->query("SELECT * FROM cursos ORDER BY id DESC");
+
+        while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+          // Convertir imagen BLOB a base64
+          $imagenSrc = 'data:image/jpeg;base64,' . base64_encode($row['imagen']);
+
+          echo '
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in">
+            <div class="curso-card">
+              <img src="'.$imagenSrc.'" alt="'.htmlspecialchars($row['titulo']).'" class="curso-img">
+              <div class="curso-content">
+                <h5>'.htmlspecialchars($row['titulo']).'</h5>
+                <p>'.htmlspecialchars($row['descripcion']).'</p>
+                <a href="#" class="btn btn-primary">Ver más</a>
+              </div>
+            </div>
+          </div>';
+        }
+      } catch (PDOException $e) {
+        echo '<p class="text-danger text-center">Error al cargar cursos: '.$e->getMessage().'</p>';
+      }
+      ?>
+
     </div>
+  </div>
 </section>
+
+
+
+
+
+
+
+
+
 
 <!-- Incluye Bootstrap Icons para los íconos -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">

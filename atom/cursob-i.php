@@ -54,10 +54,15 @@
       <div class="row align-items-center">
         <!-- Izquierda -->
         <div class="col-12 col-md-6 hero-left">
-          <h1 data-aos="fade-right" data-aos-delay="300" style="margin-top: 40px">SOLIDWORKS INTERMEDIO - AVANZADO</h1>
-          <h3 data-aos="fade-right" data-aos-delay="500"style="margin-top: 40px">Capacitación profesional para industria y diseño mecánico</h3>
-          <p data-aos="fade-right" data-aos-delay="700"style="margin-top: 40px"> Aprende lectura de planos, tolerancias GD&T, metrología, ingeniería inversa, renderizado, engranajes, moldes, animaciones y simulaciones avanzadas. Disponible en modalidad presencial, virtual y para empresas..</p>
-          
+          <h1 data-aos="fade-right" data-aos-delay="300" style="margin-top: 40px">
+            SOLIDWORKS BÁSICO - INTERMEDIO
+          </h1>
+          <h3 data-aos="fade-right" data-aos-delay="500" style="margin-top: 40px">
+            Domina las bases del diseño mecánico 3D desde cero
+          </h3>
+          <p data-aos="fade-right" data-aos-delay="700" style="margin-top: 40px">
+            Aprende el entorno de SOLIDWORKS, croquizado, modelado de piezas, operaciones básicas en 3D, vaciados, nervios, configuraciones, ensambles y animaciones. Curso presencial, virtual o empresarial.
+          </p>
         </div>
 
         <!-- Derecha -->
@@ -81,104 +86,120 @@
           <div class="timeline-item" data-aos="fade-up">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h5>1. Lectura de planos 2D</h5>
-              <p>Interpreta planos para diseño en 3D y manufactura de piezas.</p>
+              <h5>1. Entorno de SolidWorks</h5>
+              <p>Interfaz, unidades, planos cartesianos, árbol de operaciones, croquis y operaciones básicas.</p>
             </div>
           </div>
 
           <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h5>2. GD&T Avanzadas</h5>
-              <p>Tolerancias geométricas, simbología ISO/ANSI y uso de datums.</p>
+              <h5>2. Modelado básico en 3D</h5>
+              <p>Extrusiones, cortes, redondeos, chaflanes, simetrías y control espacial.</p>
             </div>
           </div>
 
           <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h5>3. Escalamiento de piezas</h5>
-              <p>Modifica el tamaño de piezas complejas manteniendo proporciones.</p>
+              <h5>3. Operaciones de revolución</h5>
+              <p>Uso de croquis para modelar piezas mediante revolución.</p>
             </div>
           </div>
 
           <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h5>4. Planos para croquis</h5>
-              <p>Diseño de croquis angulados en espacio 3D para modelado técnico.</p>
+              <h5>4. Asistente de taladros</h5>
+              <p>Tipos de taladro, aplicación según diseño y normas de unidades.</p>
             </div>
           </div>
 
           <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h5>5. Metrología</h5>
-              <p>Medición precisa de piezas físicas con instrumentos profesionales.</p>
+              <h5>5. Matrices</h5>
+              <p>Matriz circular y lineal en croquis y sólidos.</p>
             </div>
           </div>
 
           <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h5>6. Ingeniería inversa</h5>
-              <p>Reconstrucción 3D desde una pieza física y cálculo de resistencia.</p>
+              <h5>6. Planos y vistas</h5>
+              <p>Creación de vistas de sección y uso de herramientas de medición 3D.</p>
             </div>
           </div>
 
           <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h5>7. Renderizado profesional</h5>
-              <p>Aplicación de materiales, iluminación y técnicas de presentación visual.</p>
+              <h5>7. Modelado con vaciado</h5>
+              <p>Técnicas para aplicar vaciados en piezas con diversas geometrías.</p>
             </div>
           </div>
 
           <div class="timeline-item" data-aos="fade-up" data-aos-delay="700">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h5>8. Cálculo de engranajes</h5>
-              <p>Cálculo matemático y por software de sistemas de engranajes.</p>
+              <h5>8. Modelado con nervios</h5>
+              <p>Aplicación de refuerzos en piezas cilíndricas o esféricas.</p>
             </div>
           </div>
 
           <div class="timeline-item" data-aos="fade-up" data-aos-delay="800">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h5>9. Diseño de sistemas de engranaje</h5>
-              <p>Ensamble de engranajes, generación de cadena, sprockets y spline.</p>
+              <h5>9. Edición de piezas</h5>
+              <p>Modificación del árbol de operaciones, solución de errores y rediseño.</p>
             </div>
           </div>
 
           <div class="timeline-item" data-aos="fade-up" data-aos-delay="900">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h5>10. Moldes</h5>
-              <p>Diseño para inyección de plástico o metal, materiales y procesos.</p>
+              <h5>10. Configuraciones</h5>
+              <p>Creación de variantes dentro de una misma pieza (IGES, STEP, Parasólidos).</p>
             </div>
           </div>
 
           <div class="timeline-item" data-aos="fade-up" data-aos-delay="1000">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h5>11. Administración de proyectos</h5>
-              <p>Entrega profesional de diseños y documentación para clientes.</p>
+              <h5>11. Ensambles</h5>
+              <p>Importación, relaciones de coincidencia y control de estructura de ensamble.</p>
             </div>
           </div>
 
           <div class="timeline-item" data-aos="fade-up" data-aos-delay="1100">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h5>12. Creación de planos especializados</h5>
-              <p>Tablas de taladros, materiales, BOM y aplicación de pesos.</p>
+              <h5>12. Tornillería y librerías CAD</h5>
+              <p>Uso de piezas prediseñadas descargadas desde plataformas externas.</p>
             </div>
           </div>
 
           <div class="timeline-item" data-aos="fade-up" data-aos-delay="1200">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h5>13. Animaciones avanzadas</h5>
-              <p>Control por línea de tiempo, estudios de movimiento y simulación.</p>
+              <h5>13. Introducción a GD&T</h5>
+              <p>Vistas de sección, cotas, símbolos y creación del formato de hoja.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="1300">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h5>14. Obtención de planos</h5>
+              <p>Generación de planos listos para manufactura.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="1400">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h5>15. Animaciones básicas</h5>
+              <p>Animaciones explosionadas y estudios de movimiento simples.</p>
             </div>
           </div>
 
@@ -187,16 +208,17 @@
 
       <!-- Galería de imágenes (derecha) -->
       <div class="col-md-5 d-none d-md-block">
-        <div class="timeline-gallery" >
-          <img src="https://www.1min30.com/wp-content/uploads/2018/10/Logo-SolidWorks.jpg" class="img-fluid mb-3 rounded shadow-sm"  data-aos="fade-left" alt="Interfaz SolidWorks">
-          <img src="https://www.solidworks.com/sites/default/filesd10/styles/webp/public/2025-01/Nemo2.jpg.webp?itok=MeFOakVP"  data-aos="fade-left" class="img-fluid mb-3 rounded shadow-sm" alt="Simulación SolidWorks">
-          <img src="https://cdn.prod.website-files.com/5fcde6f56fdac5414b34eeb3/6422b76aabc618b7492c253c_Solidworks.png" data-aos="fade-left" data-aos-delay="500"  class="img-fluid rounded shadow-sm" alt="Moldes en SolidWorks">
+        <div class="timeline-gallery">
+          <img src="https://www.1min30.com/wp-content/uploads/2018/10/Logo-SolidWorks.jpg" class="img-fluid mb-3 rounded shadow-sm" data-aos="fade-left" alt="SolidWorks Básico">
+          <img src="https://www.solidworks.com/sites/default/files/styles/hero_banner_1440x800/public/2023-01/solidworks-interface.png" data-aos="fade-left" class="img-fluid mb-3 rounded shadow-sm" alt="Croquizado SolidWorks">
+          <img src="https://i.pinimg.com/originals/52/46/36/5246366891c1d9cd8ffb28506a0e098a.png" data-aos="fade-left" data-aos-delay="500" class="img-fluid rounded shadow-sm" alt="Modelado Básico 3D">
         </div>
       </div>
 
     </div>
   </div>
 </section>
+
 
 <section id="duracion" class="duracion-section py-5">
   <div class="container">

@@ -1,0 +1,36 @@
+{
+  "id": "chatcmpl-Bp1uWUVb2yVnyO0bzXWSK7Xs97YON",
+  "object": "chat.completion",
+  "created": 1751501772,
+  "model": "gpt-3.5-turbo-0125",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "El curso es de SolidWorks, un software de diseño mecánico en 3D. Ofrecemos dos niveles: Básico-Intermedio y Intermedio-Avanzado, cada uno con temáticas específicas como modelado de piezas, ensambles, animaciones, entre otros. ¿En qué más puedo ayudarte?",
+        "refusal": null,
+        "annotations": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1899,
+    "completion_tokens": 74,
+    "total_tokens": 1973,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "service_tier": "default",
+  "system_fingerprint": null
+}

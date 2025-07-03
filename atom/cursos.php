@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="fate.css">
     <link rel="stylesheet" href="cursos.css">
+    <link rel="stylesheet" href="chatbot.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -15,6 +16,12 @@
     <link rel="icon" href="image/ATOM LOGO.png" type="image/x-icon">
 
 </head>
+
+
+
+
+
+
 <body>
     <header id="navbar" class="navbar ">
   <div class="navbar-container">
@@ -291,6 +298,75 @@
 
 
 
+<!-- Botón flotante para abrir/cerrar -->
+<button id="chat-toggle">💬</button>
+
+<!-- Contenedor del chat -->
+<div id="chat-container">
+  <div id="chat-header">Asistente SolidWorks</div>
+  <div id="chat-log"></div>
+  <div id="chat-input-area">
+    <input type="text" id="chat-input" placeholder="Escribe tu pregunta...">
+    <button id="send-btn">Enviar</button>
+  </div>
+</div>
+
+<!-- Script del chatbot -->
+<script>
+  const toggleBtn = document.getElementById('chat-toggle');
+  const chatContainer = document.getElementById('chat-container');
+  const input = document.getElementById('chat-input');
+  const log = document.getElementById('chat-log');
+  const btn = document.getElementById('send-btn');
+
+  // Mostrar/Ocultar el chatbot
+  toggleBtn.addEventListener('click', () => {
+    chatContainer.style.display = chatContainer.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+  // Enviar pregunta
+  btn.addEventListener('click', enviarPregunta);
+  input.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') enviarPregunta();
+  });
+
+  function enviarPregunta() {
+    const pregunta = input.value.trim();
+    if (!pregunta) return;
+
+    agregarMensaje('👤 Tú', pregunta);
+    input.value = '';
+    input.disabled = true;
+    btn.disabled = true;
+
+    fetch('chat.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ mensaje: pregunta })
+    })
+    .then(res => res.json())
+    .then(data => {
+      agregarMensaje('🤖 Bot', data.respuesta);
+      input.disabled = false;
+      btn.disabled = false;
+      input.focus();
+    })
+    .catch(() => {
+      agregarMensaje('⚠️ Bot', 'Error al conectar con el servidor.');
+      input.disabled = false;
+      btn.disabled = false;
+    });
+  }
+
+  function agregarMensaje(quien, texto) {
+    const div = document.createElement('div');
+    div.innerHTML = `<strong>${quien}:</strong><br>${texto}`;
+    log.appendChild(div);
+    log.scrollTop = log.scrollHeight;
+  }
+</script>
+
+
 
 
 
@@ -343,6 +419,13 @@
     </div>
   </div>
 </footer>
+
+
+
+
+
+
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

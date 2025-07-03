@@ -1,0 +1,123 @@
+/* Botón de burbuja (flotante) */
+#chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0ff;
+  color: #111;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 26px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+#chat-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Contenedor del chatbot (modo oscuro) */
+#chat-container {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 340px;
+  max-height: 500px;
+  background: #121212;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 255, 255, 0.15);
+  display: none;
+  flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+  z-index: 998;
+  animation: fadeInUp 0.4s ease;
+  overflow: hidden;
+}
+
+/* Animación suave */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Encabezado moderno */
+#chat-header {
+  background: linear-gradient(to right, #0ff, #00f);
+  color: white;
+  padding: 14px 18px;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Área de mensajes */
+#chat-log {
+  padding: 14px;
+  overflow-y: auto;
+  flex-grow: 1;
+  background: #1e1e1e;
+  font-size: 14px;
+  color: #eee;
+}
+
+/* Burbujas de mensaje */
+#chat-log div {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+#chat-log div strong {
+  color: #0ff;
+}
+
+/* Área de entrada */
+#chat-input-area {
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid #333;
+  background: #121212;
+}
+
+/* Campo de texto */
+#chat-input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #1a1a1a;
+  color: white;
+  outline: none;
+}
+
+/* Botón de enviar */
+#send-btn {
+  background: #0ff;
+  color: #111;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-left: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+#send-btn:hover {
+  background: #00e0e0;
+}
+
+#send-btn:disabled {
+  background: #555;
+  color: #aaa;
+  cursor: not-allowed;
+}

@@ -119,6 +119,49 @@ h3 {
 }
 
 
+@keyframes neonFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    text-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 0 10px rgba(0, 200, 255, 0.7);
+  }
+}
+
+.preguntas-lista {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.preguntas-lista li {
+  margin-bottom: 1.5rem;
+  padding: 15px 20px;
+  background-color: #0f172a;
+  color: #e0f7ff;
+  border-left: 4px solid #00c8ff;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 200, 255, 0.05);
+}
+
+.preguntas-lista li i {
+  color: #00c8ff;
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+
+.preguntas-lista li:hover {
+  transform: translateX(10px);
+  background-color: #132238;
+}
+
+
+
     </style>
 </head>
 <body>
@@ -204,7 +247,8 @@ En ATOM, trabajamos el Diseño de Piezas de distintas empresas de los parques in
     <div class="row align-items-center">
       
       <div class="col-md-6 mb-4 mb-md-0">
-        <img style="margin-bottom: 30px;" src="image/cad.jpg" alt="Diseño CAD" class="img-fluid rounded shadow">
+        <img  src="image/cad.jpg" alt="Diseño CAD" class="img-fluid rounded shadow"> <br>
+        <img style="margin-top: 130px;" src="image/cad 2.jpg" alt="Diseño CAD" class="img-fluid rounded shadow">
       </div>
 
       <div class="col-md-6">
@@ -226,16 +270,47 @@ En ATOM, trabajamos el Diseño de Piezas de distintas empresas de los parques in
           </li>
           <li><i class="bi bi-check-circle-fill text-info"></i> Asegúrate de que cuente con un departamento de calidad.</li>
         </ul>
+
+        <br><br><br><br>
+
+        <h3>¿Por qué elegir a ATOM como su proveedor de Diseño de Piezas?</h3>
+        <p class="texto" style="font-size: 1.1rem;">
+          En ATOM somos expertos en el Diseño de Piezas conseguimos a través del uso de tecnología CAD optimizar tanto el proceso de diseño como el producto final. Hemos ayudado a múltiples empresas de los parques industriales de Derramadero, Saltillo, Ramos Arizpe, Arteaga, Santa Catarina, Apodaca y Monterrey, entregando como resultado un producto de gran calidad que integra en el diseño todas sus funcionalidades.
+        </p>
+
       </div>
 
     </div>
   </div>
 </section>
 
+<section class="costo-diseno py-5">
+  <div class="container">
+    <h3 class="text-center">¿Cuánto cuesta el Diseño de Piezas?</h3>
+    <p class="texto text-center" style="margin-left: 60px; margin-right: 60px;">
+      El precio del Diseño de Piezas varía, según la necesidad de cada cliente.
+      Si necesitas una cotización, deberás contar con la siguiente información:
+    </p><br>
+
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <ul class="preguntas-lista">
+          <li><i class="bi bi-cpu-fill"></i> ¿La pieza que necesitas es para una máquina como refacción o es un fixture?</li>
+          <li><i class="bi bi-gear-fill"></i> ¿Para qué la vas a utilizar?</li>
+          <li><i class="bi bi-bounding-box-circles"></i> ¿La pieza estará en contacto con otra pieza?, ¿tendrá contacto final con el producto?</li>
+          <li><i class="bi bi-rulers"></i> ¿Qué sistemas de medidas utilizas: métricos o pulgadas?</li>
+          <li><i class="bi bi-hourglass-split"></i> ¿En cuánto tiempo requieres la pieza terminada?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
             <!-- Botón de regreso -->
             <div class="text-center">
-                <a href="index.html#servicios" class="back-button"><i class="bi bi-arrow-left"></i> Volver a Servicios</a>
+                <a href="index.php" class="back-button"><i class="bi bi-arrow-left"></i> Volver a Inicio</a>
             </div>
         </div>
     </section>

@@ -1,31 +1,133 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Atom</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño de Piezas | ATOM</title>
     <link rel="stylesheet" href="fate.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="cursos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+          font-family: "Poppins", sans-serif;
+            background-color: #f8f9fa;
+        }
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="image/ATOM LOGO.png" type="image/x-icon">
-    
+        .texto {
+          font-size: 1.2rem;
+  margin-top: 15px;
+  color: #000000;
+        }
 
+        h1 {
+  font-size: 3rem;
+  color: #168ed9;;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2rem;
+  color: #2f2e2e;;
+  font-weight: 700;
+}
+
+        .check-list i {
+            color: #1cc5dc;
+            margin-right: 8px;
+        }
+
+        .img-fluid {
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .content-section {
+            padding: 3rem 0;
+        }
+
+        .content-section h2 {
+            color: #252525;
+            
+            margin-bottom: 1.5rem;
+        }
+
+        .back-button {
+            margin-top: 2rem;
+            display: inline-block;
+            color: #1cc5dc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            text-decoration: underline;
+        }
+
+        i {
+          font-size: 1.2rem;
+        }
+
+        ul {
+          font-size: 1.1rem;
+        }
+
+        .boton-transparente {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #00bfff;
+    background: transparent;
+    border: 2px solid #00bfff;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.boton-transparente:hover {
+    color: white;
+    background-color: #00bfff;
+    box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+}
+
+.titulo-seccion {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00bcd4;
+  margin-bottom: 1rem;
+}
+
+.lista-criterios {
+  list-style: none;
+  padding-left: 0;
+}
+
+.lista-criterios > li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.lista-criterios i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+
+    </style>
 </head>
 <body>
 
-
- <!-- 🔁 Trigger invisible justo antes de la navbar -->
-  <div id="trigger" style="height: 0px;"></div>
-
-  <!-- ✅ Navbar (se ve normal al inicio) -->
-  <header id="navbar" class="navbar">
+  <header id="navbar" class="navbar ">
   <div class="navbar-container">
     <div class="navbar-logo">
-      <img src="image/LetrasAzul.png" alt="Logo" style="margin-right: 20px;"/>
+      <a href="index.php"><img src="image/LetrasAzul.png" alt="Logo" ></a>
+
     </div>
 
     <div class="menu-toggle" id="menu-toggle">
@@ -33,204 +135,161 @@
     </div>
 
     <nav class="navbar-links" id="navbar-links">
-      <a href="#servicios">Servicios</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#eventos">Eventos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+  <a href="#servicios">Servicios</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#eventos">Eventos</a>
+
+  <!-- Dropdown personalizado -->
+  <div class="dropdown-atom">
+    <span class="dropdown-toggle-atom">Cursos ▾</span>
+    <ul class="dropdown-menu-atom">
+      <li><a href="cursob-i.php">Básico – Intermedio</a></li>
+      <li><a href="cursos.php">Intermedio – Avanzado</a></li>
+    </ul>
+  </div>
+
+  <a href="#contacto">Contacto</a>
+</nav>
+
   </div>
 </header>
 
+    <!-- Sección de contenido -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Imagen -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="image/piezas.jpg" alt="Diseño CAD de piezas" class="img-fluid">
+                </div>
 
-  <!-- Placeholder para evitar salto -->
-  <div class="navbar-placeholder"></div>
+                
+                <div class="col-md-6">
+                    <h1 data-aos="fade-right" data-aos-delay="300" style="margin-top: 40px">
+                      DISEÑO DE PIEZAS
+                    </h1>
 
-    
+                    <h3 data-aos="fade-right" data-aos-delay="500" style="margin-top: 40px">
+                      ¿QUE OFRECEMOS?
+                    </h3>
+                    <p class="texto" data-aos="fade-right" data-aos-delay="700" style="margin-top: 40px">
+                        Nuestro servicio de Diseño de Piezas está orientado a definir el proceso base para la generación de productos, ensambles o subestaciones en las industrias de Saltillo y Monterrey. En ATOM trabajamos el Diseño de Piezas en dibujos 2D o modelado 3D, apoyándonos en la tecnología CAD, a través de prototipos simulados, lo que te permitirán tener una visión idónea del mismo.
+                    </p>
+                </div>
+            </div>
 
-   <script>
-  const navbar = document.getElementById('navbar');
-  const trigger = document.getElementById('trigger');
+            <!-- Lista de beneficios -->
+            <div class="row mt-5" style="margin: 35px;">
+                <div class="col">
+                    <h2 class="text-center mb-5" style="margin-top: 30px;">¿Cuál es la temática del curso de SOLIDWORKS?</h2>
+                    <ul class="check-list mt-3">
+                        <i class="bi bi-check-circle-fill"></i>Si se presentan fracturas de piezas o fracturas de partes en tus máquinas por constante funcionamiento, una de las opciones más rápidas y económicas, es el Diseño de Piezas para la producción de refacciones. <br> <br>
+                        <i class="bi bi-check-circle-fill"></i>Si estás manejando múltiples proyectos ¡No te preocupes! Nosotros nos encargamos de todos tus proyectos, trabajando el Diseño de Piezas, de este modo podrás enfocarte en tu core bussiness. <br> <br>
+                        <i class="bi bi-check-circle-fill"></i>Si tu empresa está realizando mejoras de procesos que involucran la Automatización de Líneas, podemos apoyarlo desde el diseño hasta la automatización.<br> <br>
+                        <i class="bi bi-check-circle-fill"></i>Si tienes un Taller de Maquinado y estás produciendo SCRAP de forma constante, nosotros te asesoramos para la optimización del proceso de manufactura de tu taller.<br> <br>
+                        <i class="bi bi-check-circle-fill"></i>Capacitamos a tus colaboradores en conocimiento de tolerancias geométricas y metrologías de calidad. Además, podemos enseñarte a: conocer tu gasto de producción, distribución de tiempos, ajustes de dibujo 3D para máquina CNC, y más.
+En ATOM, trabajamos el Diseño de Piezas de distintas empresas de los parques industriales de Derramadero, Saltillo, Ramos Arizpe, Arteaga, Santa Catarina, Apodaca y Monterrey.<br>
+                    </ul>
+                </div>
+            </div>
 
-  const observer = new IntersectionObserver(([entry]) => {
-    if (!entry.isIntersecting) {
-      navbar.classList.add('sticky');
-    } else {
-      navbar.classList.remove('sticky');
-    }
-  }, {
-    root: null,
-    threshold: 0,
-  });
-
-  observer.observe(trigger);
-</script>
-
-  <!-- Navbar para celulares -->
-<script>
-  const toggle = document.getElementById('menu-toggle');
-  const links = document.getElementById('navbar-links');
-
-  toggle.addEventListener('click', () => {
-    links.classList.toggle('active');
-  });
-</script>
-
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-    
-
-
+          <div class="text-center mt-5" style="margin: 30px;">
+            <a href="#agendar-cita" class="boton-transparente">Contactanos Ahora</a>
+          </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+          <section class="criterios-proveedor py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img style="margin-bottom: 130px;" src="image/cad.jpg" alt="Diseño CAD" class="img-fluid rounded shadow">
+      </div>
+
+      <div class="col-md-6">
+        <h3>¿Cómo elegir un proveedor de Diseño de Piezas?</h3> <br>
+        <p class="texto" style="font-size: 1.1rem;">
+          Si estás buscando un proveedor de <strong>Diseño de Piezas en Saltillo o Monterrey</strong>, deberás tener en cuenta el proceso en el que se desarrollará la manufactura de tus productos.
+        </p>
+        <p style="font-size: 1.1rem;">
+          Como especialistas en <strong>Diseño de Piezas</strong> te sugerimos evaluar los siguientes criterios:
+        </p>
+        <ul class="lista-criterios">
+          <li><i class="bi bi-gear-fill text-info"></i>Maquinaria ajustada y limpia.</li>
+          <li>
+            <i class="bi bi-person-check-fill text-info"></i> Personal calificado:
+            <ul>
+              <li style="font-size: 1rem;">Capacidad de lectura de planos 2D.</li>
+              <li style="font-size: 1rem;">Conocimiento en metrología y materiales.</li>
+            </ul>
+          </li>
+          <li><i class="bi bi-check-circle-fill text-info"></i> Asegúrate de que cuente con un departamento de calidad.</li>
+        </ul>
+      </div>
+
     </div>
-    <footer class="footer">
-    <p>&copy; 2024 SIR Mantiene. Todos los derechos reservados.</p>
-    <div class="social">
-        <a href="mailto:tuemail@ejemplo.com" title="Enviar correo">
-            <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://wa.me/8442133787" target="_blank" title="Enviar WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-       
+  </div>
+</section>
+
+
+            <!-- Botón de regreso -->
+            <div class="text-center">
+                <a href="index.html#servicios" class="back-button"><i class="bi bi-arrow-left"></i> Volver a Servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-dark">
+  <div class="container py-5">
+    <div class="row text-white">
+
+      <!-- Logo -->
+      <div class="col-md-3 mb-4 mb-md-0 text-center text-md-start">
+        <img src="image/ATOM LOGO.png" alt="ATOM Logo" style="width: 120px;">
+      </div>
+
+      <!-- Nuestras redes -->
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h5 class="footer-title">Nuestras Redes</h5>
+        <hr class="footer-line">
+        <div class="footer-icons">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Contacto -->
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h5 class="footer-title">Contacto</h5>
+        <hr class="footer-line">
+        <p><i class="bi bi-envelope"></i> ariel.perales@disenoymaquinados.mx</p>
+        <p><i class="bi bi-envelope"></i> ventas@disenoymaquinados.mx</p>
+        <p><i class="bi bi-telephone"></i> +52 (844) 622 6979</p>
+        <p><i class="bi bi-whatsapp"></i> WhatsApp</p>
+      </div>
+
+      <!-- Más Información -->
+      <div class="col-md-3">
+        <h5 class="footer-title">Más Información</h5>
+        <hr class="footer-line">
+        <ul class="list-unstyled">
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Eventos</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-services">
-        <!-- Aquí puedes agregar más enlaces de servicios si lo deseas -->
+
+    <!-- Créditos -->
+    <div class="text-center text-white mt-4 small">
+      © Copyright 2021 ATOM. All Rights Reserved. Made by <span style="color: #FFD700;">Dark Post Marketing Agency</span>
     </div>
-    </footer>
-
-<!-- Asegúrate de incluir Font Awesome en tu <head> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </div>
+</footer>
 
 
-
-
-    <script>
-        // Selecciona todos los elementos con la clase 'fade-in-slide'
-const fadeInElements = document.querySelectorAll('.fade-in-slide');
-
-function checkVisibility() {
-    fadeInElements.forEach((element) => {
-        // Verifica si el elemento está en el viewport
-        const rect = element.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) { // 100px antes de que llegue al viewport completo
-            element.classList.add('show');
-        }
-    });
-}
-
-// Ejecuta la función en scroll
-window.addEventListener('scroll', checkVisibility);
-
-// Ejecuta la función inicialmente para elementos que ya están visibles
-checkVisibility();
-
-    </script>
-
-    <script>
-        // Selecciona todos los elementos con la clase 'zoom-in'
-const zoomInElements = document.querySelectorAll('.zoom-in');
-
-function checkZoomVisibility() {
-    zoomInElements.forEach((element) => {
-        // Verifica si el elemento está en el viewport
-        const rect = element.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) { // 100px antes de que entre al viewport completo
-            element.classList.add('show');
-        }
-    });
-}
-
-// Ejecuta la función en scroll
-window.addEventListener('scroll', checkZoomVisibility);
-
-// Ejecuta la función inicialmente para elementos que ya están visibles
-checkZoomVisibility();
-
-    </script>
-
-    <script>
-        // Selecciona todos los elementos con la clase 'slide-in-left'
-const slideInElements = document.querySelectorAll('.slide-in-left');
-
-function checkSlideVisibility() {
-    slideInElements.forEach((element) => {
-        // Verifica si el elemento está en el viewport
-        const rect = element.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) { // 100px antes de que entre al viewport completo
-            element.classList.add('show');
-        }
-    });
-}
-
-// Ejecuta la función en scroll
-window.addEventListener('scroll', checkSlideVisibility);
-
-// Ejecuta la función inicialmente para elementos que ya están visibles
-checkSlideVisibility();
-
-    </script>
-
-
-
- <script>
-  function ajustarAlturaParallax() {
-    const navbar = document.getElementById('navbar');
-    const parallax = document.getElementById('parallax');
-    const alturaNavbar = navbar.offsetHeight;
-
-    // Resta la altura real de la navbar al 100% de la pantalla
-    parallax.style.height = `calc(100vh - ${alturaNavbar}px)`;
-  }
-
-  // Llama al cargar y al redimensionar
-  window.addEventListener('load', ajustarAlturaParallax);
-  window.addEventListener('resize', ajustarAlturaParallax);
-</script>
-
-<script>
-  function ajustarAlturaParallax() {
-    const navbar = document.getElementById('navbar');
-    const parallax = document.querySelector('.parallax-section');
-
-    if (navbar && parallax) {
-      // Esperamos unos ms para asegurar que se renderice bien la navbar
-      setTimeout(() => {
-        const alturaNavbar = navbar.offsetHeight;
-        parallax.style.height = `calc(100dvh - ${alturaNavbar}px)`;
-      }, 50);
-    }
-  }
-
-  // Ejecutar cuando todo esté bien cargado
-  window.addEventListener('load', ajustarAlturaParallax);
-  window.addEventListener('resize', ajustarAlturaParallax);
-</script>
-
-
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-  AOS.init();
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-

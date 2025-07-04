@@ -179,7 +179,7 @@ require_once 'db_conexion.php';
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="service-card">
-                        <a href="servicios.php">
+                        <a href="diseños_piezas.html">
                             <img src="image/servicio 1.png" alt="Diseño de Piezas">
                            <div class="overlay">
                             <h5>Diseño de Piezas</h5>

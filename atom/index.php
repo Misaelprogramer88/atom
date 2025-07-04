@@ -11,6 +11,7 @@ require_once 'db_conexion.php';
     <title>Atom</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="fate.css">
+    <link rel="stylesheet" href="chatbot.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -114,6 +115,8 @@ require_once 'db_conexion.php';
     links.classList.toggle('active');
   });
 </script>
+
+
 
 
 
@@ -225,7 +228,7 @@ require_once 'db_conexion.php';
         </div>
 </section>
 
-<section id="cursos" class="py-5 bg-light">
+<section id="cursos" class="py-5 bg-light" style=" background: linear-gradient(to right,rgb(247, 245, 245),rgb(214, 233, 247),rgb(255, 255, 255)); color: rgb(5, 5, 5); position: relative;">
   <div class="container">
     <h2 class="text-center mb-4 styled-title text-center" data-aos="fade-up">Nuestros Cursos de SOLIDWORKS</h2>
     <p class="text-center mb-5 text-muted" data-aos="fade-up" data-aos-delay="100">
@@ -291,6 +294,39 @@ require_once 'db_conexion.php';
 </section>
 
 
+<section class="bloque-asistente">
+  <div class="contenido-info">
+    <h2 class="styled-title text-center">Hacemos Realidad tus ideas.</h2>
+    <p>¿Tienes dudas sobre el curso? Nuestro asistente virtual está disponible 24/7 para ayudarte con preguntas frecuentes, requisitos, duración y más.</p>
+    <p>
+      ATOM es una empresa en Saltillo especializada en Automatización Industrial. Ofrece servicios de diseño y maquinado CNC, fabricación de moldes y fixtures, programación PLC y capacitación en SolidWorks.
+    </p>
+    <p>
+      Cuenta con un equipo experto en Ingeniería Mecatrónica, que desarrolla sistemas automatizados para distintos sectores, mejorando la eficiencia de los procesos productivos.
+    </p>
+    <p>
+      Además, usan software 3D para diseñar y modelar piezas antes de su fabricación, asegurando precisión y funcionalidad. Sectores como la ingeniería, el diseño industrial y la animación 3D requieren este tipo de programación para interpretar piezas detalladamente.
+    </p>
+</div>
+
+</section>
+<section class="bloque-empresas">
+  <div class="empresas-recomiendan">
+    <h3>EMPRESAS QUE NOS RECOMIENDAN </h3>
+    <p class="descripcion-empresas">
+      Estas son algunas de las empresas que confían en nuestro trabajo y capacitación.
+    </p>
+    <div class="logos-empresas">
+      <img src="image/e1.png" alt="Empresa 1" data-aos="fade-up" data-aos-delay="">
+      <img src="image/e2.png" alt="Empresa 2" data-aos="fade-up" data-aos-delay="200">
+      <img src="image/e3.png" alt="Empresa 3" data-aos="fade-up" data-aos-delay="400">
+      <img src="image/e4.png" alt="Empresa 4" data-aos="fade-up" data-aos-delay="600">
+    </div>
+  </div>
+</section>
+
+
+
 
 
 
@@ -302,7 +338,7 @@ require_once 'db_conexion.php';
 <!-- Incluye Bootstrap Icons para los íconos -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-    <section id="contact" class="py-5">
+    <section id="contact" class="py-5" style=" background: linear-gradient(to right,rgb(247, 245, 245),rgb(214, 233, 247),rgb(255, 255, 255)); color: rgb(5, 5, 5); position: relative;">
         <div class="container text-center">
             <h2>Contacto</h2>
             <p class="lead">Ponte en contacto con nosotros para más información.</p>
@@ -352,6 +388,119 @@ require_once 'db_conexion.php';
 </div>
 
 
+
+
+
+
+<!-- Botón flotante con logo -->
+<button id="chat-toggle">
+  <img src="image/LogoBlanco.png" alt="Chat" style="width: 32px; height: 32px;">
+</button>
+<!-- Mensaje flotante del asistente -->
+<div id="chat-label">Hola, soy tu asistente virtual de Atom</div>
+
+
+
+<!-- Contenedor del chat -->
+<div id="chat-container">
+  <!-- Encabezado del chat con logo -->
+<div id="chat-header">
+  <img src="image/LogoBlanco.png" alt="Logo" style="height: 26px; vertical-align: middle; margin-right: 10px;">
+  Asistente de Atom
+</div>
+
+  <div id="chat-log"></div>
+  <div id="chat-input-area">
+    <input type="text" id="chat-input" placeholder="Escribe tu pregunta...">
+    <button id="send-btn">Enviar</button>
+  </div>
+</div>
+
+<!-- Script del chatbot -->
+<script>
+  const toggleBtn = document.getElementById('chat-toggle');
+  const chatContainer = document.getElementById('chat-container');
+  const input = document.getElementById('chat-input');
+  const log = document.getElementById('chat-log');
+  const btn = document.getElementById('send-btn');
+
+  // Mostrar/Ocultar el chatbot
+  toggleBtn.addEventListener('click', () => {
+    chatContainer.style.display = chatContainer.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+  // Enviar pregunta
+  btn.addEventListener('click', enviarPregunta);
+  input.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') enviarPregunta();
+  });
+
+  function enviarPregunta() {
+    const pregunta = input.value.trim();
+    if (!pregunta) return;
+
+    agregarMensaje('👤 Tú', pregunta);
+    input.value = '';
+    input.disabled = true;
+    btn.disabled = true;
+
+    fetch('chat.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ mensaje: pregunta })
+    })
+    .then(res => res.json())
+    .then(data => {
+      agregarMensaje('🤖 Bot', data.respuesta);
+      input.disabled = false;
+      btn.disabled = false;
+      input.focus();
+    })
+    .catch(() => {
+      agregarMensaje('⚠️ Bot', 'Error al conectar con el servidor.');
+      input.disabled = false;
+      btn.disabled = false;
+    });
+  }
+
+  function agregarMensaje(quien, texto) {
+  const div = document.createElement('div');
+  const esUsuario = quien.includes('Tú');
+  div.className = 'chat-msg ' + (esUsuario ? 'chat-user' : 'chat-bot');
+  div.innerHTML = texto;
+  log.appendChild(div);
+  log.scrollTop = log.scrollHeight;
+}
+
+
+const chatLabel = document.getElementById('chat-label');
+
+// Mostrar al cargar y ocultar a los 5 segundos
+setTimeout(() => {
+  chatLabel.style.opacity = 0;
+}, 5000);
+
+// Mostrar al pasar mouse y ocultar a los 2 segundos
+let hideTimeout;
+toggleBtn.addEventListener('mouseenter', () => {
+  chatLabel.style.opacity = 1;
+
+  clearTimeout(hideTimeout);
+  hideTimeout = setTimeout(() => {
+    chatLabel.style.opacity = 0;
+  }, 2000);
+});
+
+toggleBtn.addEventListener('mouseleave', () => {
+  clearTimeout(hideTimeout);
+  hideTimeout = setTimeout(() => {
+    chatLabel.style.opacity = 0;
+  }, 2000);
+});
+
+
+
+</script>
 
 
 

@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="fate.css">
     <link rel="stylesheet" href="cursos.css">
+    <link rel="stylesheet" href="chatbot.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -310,6 +311,122 @@
     </div>
   </div>
 </section>
+
+
+
+
+
+
+<!-- Botón flotante con logo -->
+<button id="chat-toggle">
+  <img src="image/LogoBlanco.png" alt="Chat" style="width: 32px; height: 32px;">
+</button>
+<!-- Mensaje flotante del asistente -->
+<div id="chat-label">Hola, soy tu asistente virtual de Atom</div>
+
+
+
+<!-- Contenedor del chat -->
+<div id="chat-container">
+  <!-- Encabezado del chat con logo -->
+<div id="chat-header">
+  <img src="image/LogoBlanco.png" alt="Logo" style="height: 26px; vertical-align: middle; margin-right: 10px;">
+  Asistente de Atom
+</div>
+
+  <div id="chat-log"></div>
+  <div id="chat-input-area">
+    <input type="text" id="chat-input" placeholder="Escribe tu pregunta...">
+    <button id="send-btn">Enviar</button>
+  </div>
+</div>
+
+<!-- Script del chatbot -->
+<script>
+  const toggleBtn = document.getElementById('chat-toggle');
+  const chatContainer = document.getElementById('chat-container');
+  const input = document.getElementById('chat-input');
+  const log = document.getElementById('chat-log');
+  const btn = document.getElementById('send-btn');
+
+  // Mostrar/Ocultar el chatbot
+  toggleBtn.addEventListener('click', () => {
+    chatContainer.style.display = chatContainer.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+  // Enviar pregunta
+  btn.addEventListener('click', enviarPregunta);
+  input.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') enviarPregunta();
+  });
+
+  function enviarPregunta() {
+    const pregunta = input.value.trim();
+    if (!pregunta) return;
+
+    agregarMensaje('👤 Tú', pregunta);
+    input.value = '';
+    input.disabled = true;
+    btn.disabled = true;
+
+    fetch('chat.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ mensaje: pregunta })
+    })
+    .then(res => res.json())
+    .then(data => {
+      agregarMensaje('🤖 Bot', data.respuesta);
+      input.disabled = false;
+      btn.disabled = false;
+      input.focus();
+    })
+    .catch(() => {
+      agregarMensaje('⚠️ Bot', 'Error al conectar con el servidor.');
+      input.disabled = false;
+      btn.disabled = false;
+    });
+  }
+
+  function agregarMensaje(quien, texto) {
+  const div = document.createElement('div');
+  const esUsuario = quien.includes('Tú');
+  div.className = 'chat-msg ' + (esUsuario ? 'chat-user' : 'chat-bot');
+  div.innerHTML = texto;
+  log.appendChild(div);
+  log.scrollTop = log.scrollHeight;
+}
+
+
+const chatLabel = document.getElementById('chat-label');
+
+// Mostrar al cargar y ocultar a los 5 segundos
+setTimeout(() => {
+  chatLabel.style.opacity = 0;
+}, 5000);
+
+// Mostrar al pasar mouse y ocultar a los 2 segundos
+let hideTimeout;
+toggleBtn.addEventListener('mouseenter', () => {
+  chatLabel.style.opacity = 1;
+
+  clearTimeout(hideTimeout);
+  hideTimeout = setTimeout(() => {
+    chatLabel.style.opacity = 0;
+  }, 2000);
+});
+
+toggleBtn.addEventListener('mouseleave', () => {
+  clearTimeout(hideTimeout);
+  hideTimeout = setTimeout(() => {
+    chatLabel.style.opacity = 0;
+  }, 2000);
+});
+
+
+
+</script>
+
 
 
 

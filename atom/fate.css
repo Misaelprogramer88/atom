@@ -63,6 +63,66 @@ body {
 }
 
 
+.bloque-asistente {
+  
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 120px 60px; /* Más espacio */
+  min-height: 500px; /* Altura mínima */
+  background-color: #000000;
+  background-image: url('image/mano1.png');
+  background-repeat: no-repeat;
+  background-size: 90%; /* Tamaño óptimo sin recorte */
+  background-position: right center;
+  color: #ffffff; /* Negro si el fondo es blanco */
+  overflow: hidden;
+}
+
+/* Contenido ajustado */
+.bloque-asistente .contenido-info {
+  max-width: 600px;
+  z-index: 2;
+}
+
+.bloque-asistente h2 {
+  font-size: 30px;
+  color: #0ff;
+  margin-bottom: 20px;
+}
+
+.bloque-asistente p,
+.bloque-asistente li {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Responsive para celular */
+@media (max-width: 768px) {
+  .bloque-asistente {
+    flex-direction: column;
+    background-size: 80%;
+    background-position: center bottom;
+    padding: 80px 30px;
+    text-align: center;
+  }
+
+  .bloque-asistente .contenido-info {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .bloque-asistente {
+    background-image: none;
+  }
+}
+
+
+
+
 /* Dropdown contenedor */
 .dropdown-atom {
   position: relative;
@@ -327,6 +387,11 @@ body {
     }
 }
 
+
+
+
+
+
 .footer {
     width: 100%;
     left: 0;
@@ -477,6 +542,77 @@ body {
 }
 
 
+
+
+/* Fondo común */
+.bloque-asistente,
+.bloque-empresas {
+  background-color: #000000; /* O el color que estés usando */
+  padding: 100px 40px;
+  color: #ffffff;
+}
+
+/* Centrado general */
+.empresas-recomiendan {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.empresas-recomiendan h3 {
+  font-size: 50px;
+   font-weight: 700; 
+  color: #0ff;
+  margin-bottom: 10px;
+}
+
+.descripcion-empresas {
+  font-size: 16px;
+  color: #ededed;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logos-empresas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+.logos-empresas img {
+  width: 200px;
+  height: auto;
+  filter: grayscale(100%) brightness(0.9);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logos-empresas img:hover {
+  transform: scale(1.1);
+  filter: none;
+}
+
+@media (max-width: 768px) {
+  .logos-empresas {
+    gap: 25px;
+  }
+
+  .logos-empresas img {
+    max-width: 100px;
+  }
+
+  .empresas-recomiendan h3 {
+    font-size: 24px;
+  }
+
+  .descripcion-empresas {
+    font-size: 14px;
+  }
+}
 
 
 

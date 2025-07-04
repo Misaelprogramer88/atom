@@ -298,12 +298,23 @@
 
 
 
-<!-- Botón flotante para abrir/cerrar -->
-<button id="chat-toggle">💬</button>
+<!-- Botón flotante con logo -->
+<button id="chat-toggle">
+  <img src="image/LogoBlanco.png" alt="Chat" style="width: 32px; height: 32px;">
+</button>
+<!-- Mensaje flotante del asistente -->
+<div id="chat-label">Hola, soy tu asistente virtual de Atom</div>
+
+
 
 <!-- Contenedor del chat -->
 <div id="chat-container">
-  <div id="chat-header">Asistente SolidWorks</div>
+  <!-- Encabezado del chat con logo -->
+<div id="chat-header">
+  <img src="image/LogoBlanco.png" alt="Logo" style="height: 26px; vertical-align: middle; margin-right: 10px;">
+  Asistente de Atom
+</div>
+
   <div id="chat-log"></div>
   <div id="chat-input-area">
     <input type="text" id="chat-input" placeholder="Escribe tu pregunta...">
@@ -359,13 +370,43 @@
   }
 
   function agregarMensaje(quien, texto) {
-    const div = document.createElement('div');
-    div.innerHTML = `<strong>${quien}:</strong><br>${texto}`;
-    log.appendChild(div);
-    log.scrollTop = log.scrollHeight;
-  }
-</script>
+  const div = document.createElement('div');
+  const esUsuario = quien.includes('Tú');
+  div.className = 'chat-msg ' + (esUsuario ? 'chat-user' : 'chat-bot');
+  div.innerHTML = texto;
+  log.appendChild(div);
+  log.scrollTop = log.scrollHeight;
+}
 
+
+const chatLabel = document.getElementById('chat-label');
+
+// Mostrar al cargar y ocultar a los 5 segundos
+setTimeout(() => {
+  chatLabel.style.opacity = 0;
+}, 5000);
+
+// Mostrar al pasar mouse y ocultar a los 2 segundos
+let hideTimeout;
+toggleBtn.addEventListener('mouseenter', () => {
+  chatLabel.style.opacity = 1;
+
+  clearTimeout(hideTimeout);
+  hideTimeout = setTimeout(() => {
+    chatLabel.style.opacity = 0;
+  }, 2000);
+});
+
+toggleBtn.addEventListener('mouseleave', () => {
+  clearTimeout(hideTimeout);
+  hideTimeout = setTimeout(() => {
+    chatLabel.style.opacity = 0;
+  }, 2000);
+});
+
+
+
+</script>
 
 
 

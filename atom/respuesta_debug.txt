@@ -1,14 +1,14 @@
 {
-  "id": "chatcmpl-BpOPr94HOJSf1bgvdcLoHPnTVgRXb",
+  "id": "chatcmpl-BpOkEFPAhAuVGD1XPg3MgwBFIqyB7",
   "object": "chat.completion",
-  "created": 1751588283,
+  "created": 1751589546,
   "model": "gpt-3.5-turbo-0125",
   "choices": [
     {
       "index": 0,
       "message": {
         "role": "assistant",
-        "content": "En Atom, ofrecemos dos cursos de SolidWorks: Básico - Intermedio y Intermedio - Avanzado. ¿Te gustaría saber más sobre alguno de ellos?",
+        "content": "Lamento la confusión, pero no puedo proporcionar información sobre horarios específicos ya que no se menciona ninguna actividad a las 5 en la información proporcionada sobre el curso de SolidWorks. ¿Hay algo más en lo que pueda ayudarte?",
         "refusal": null,
         "annotations": []
       },
@@ -17,9 +17,9 @@
     }
   ],
   "usage": {
-    "prompt_tokens": 1934,
-    "completion_tokens": 39,
-    "total_tokens": 1973,
+    "prompt_tokens": 1939,
+    "completion_tokens": 53,
+    "total_tokens": 1992,
     "prompt_tokens_details": {
       "cached_tokens": 0,
       "audio_tokens": 0

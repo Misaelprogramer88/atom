@@ -31,18 +31,8 @@ require_once 'db_conexion.php';
     </div>
 
     <nav class="navbar-links" id="navbar-links">
-  <a href="#servicios">Servicios</a>
-  <a href="#nosotros">Nosotros</a>
-  <a href="#eventos">Eventos</a>
+  <a href="confirmar_citas.php">citas</a>
 
-  <!-- Dropdown personalizado -->
-  <div class="dropdown-atom">
-    <span class="dropdown-toggle-atom">Cursos ▾</span>
-    <ul class="dropdown-menu-atom">
-      <li><a href="cursob-i.php">Básico – Intermedio</a></li>
-      <li><a href="cursos.php">Intermedio – Avanzado</a></li>
-    </ul>
-  </div>
 
   <a href="#contacto">Contacto</a>
 </nav>

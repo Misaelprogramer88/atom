@@ -191,6 +191,17 @@ body{
   }
 }
 
+
+
+.video-hero {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* opcional */
+}
+
+
+
 .timeline-section {
   background-color: #fff;
   font-family: 'Poppins', sans-serif;

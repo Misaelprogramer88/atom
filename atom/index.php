@@ -26,7 +26,7 @@ require_once 'db_conexion.php';
 
 <div class="parallax-section">
     <video autoplay muted loop playsinline class="video-fondo" id="parallaxVideo">
-        <source src="image/Frase inspiracional.mp4" type="video/mp4">
+        <source src="image/fondo.mp4" type="video/mp4">
         Tu navegador no soporta el video.
     </video>
     

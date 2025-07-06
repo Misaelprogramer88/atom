@@ -68,8 +68,11 @@
         </div>
 
         <!-- Derecha -->
-        <div class="col-12 col-md-6 hero-right text-center" data-aos="fade-down-left">
-          <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDBoZGpwdGdkNGNuMjRzem5wZzJuN3hld2k3ZDU5eGszNHRocG5tbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DBW3BniaWrFo4/giphy.gif" alt="Animación web" />
+        <div class="col-12 col-md-6 hero-right text-center mt-5" data-aos="fade-down-left">
+          <video autoplay muted loop playsinline class="video-hero">
+            <source src="image/vc.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+          </video>
         </div>
       </div>
     </div>

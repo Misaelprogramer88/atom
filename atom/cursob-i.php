@@ -67,9 +67,13 @@
         </div>
 
         <!-- Derecha -->
-        <div class="col-12 col-md-6 hero-right text-center" data-aos="fade-down-left">
-          <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDBoZGpwdGdkNGNuMjRzem5wZzJuN3hld2k3ZDU5eGszNHRocG5tbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DBW3BniaWrFo4/giphy.gif" alt="Animación web" />
+        <div class="col-12 col-md-6 hero-right text-center mt-5" data-aos="fade-down-left">
+          <video autoplay muted loop playsinline class="video-hero">
+            <source src="image/pinterestdownloader.com-1751762326.530914.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+          </video>
         </div>
+
       </div>
     </div>
   </div>
@@ -211,8 +215,8 @@
       <div class="col-md-5 d-none d-md-block">
         <div class="timeline-gallery">
           <img src="https://www.1min30.com/wp-content/uploads/2018/10/Logo-SolidWorks.jpg" class="img-fluid mb-3 rounded shadow-sm" data-aos="fade-left" alt="SolidWorks Básico">
-          <img src="https://www.solidworks.com/sites/default/files/styles/hero_banner_1440x800/public/2023-01/solidworks-interface.png" data-aos="fade-left" class="img-fluid mb-3 rounded shadow-sm" alt="Croquizado SolidWorks">
-          <img src="https://i.pinimg.com/originals/52/46/36/5246366891c1d9cd8ffb28506a0e098a.png" data-aos="fade-left" data-aos-delay="500" class="img-fluid rounded shadow-sm" alt="Modelado Básico 3D">
+          <img src="image/c1.jpg" data-aos="fade-left" class="img-fluid mb-3 rounded shadow-sm" alt="Croquizado SolidWorks">
+          <img src="image/c3.jpeg" data-aos="fade-left" data-aos-delay="500" class="img-fluid rounded shadow-sm" alt="Modelado Básico 3D">
         </div>
       </div>
 

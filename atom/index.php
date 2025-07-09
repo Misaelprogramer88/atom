@@ -190,11 +190,13 @@ require_once 'db_conexion.php';
                 </div>
                 <div class="col-md-4">
                     <div class="service-card">
+                      <a href="maquinado_cnc.html">
                         <img src="image/descargar.jpg" alt="Maquinado Industrial CNC">
                         <div class="overlay">
                             <h5>Maquinado Industrial CNC</h5>
                             <p>Trabajamos maquinados industriales CNC en Saltillo y Monterrey.</p>
                         </div>
+                      </a>
                     </div>
                 </div>
                 <div class="col-md-4">

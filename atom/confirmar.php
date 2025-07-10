@@ -2,9 +2,10 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
+require 'PHPMailer-master/src/Exception.php';
+require 'PHPMailer-master/src/PHPMailer.php';
+require 'PHPMailer-master/src/SMTP.php';
+
 
 $conn = new mysqli('localhost', 'root', '', 'atom');
 
@@ -30,30 +31,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Si se confirmó, enviar correo
     if ($accion == 'confirmar') {
         $mail = new PHPMailer(true);
+        echo "Enviando correo a: $email<br>";
+
+
         try {
             // Configuración del servidor SMTP
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com'; // Usa el servidor que prefieras
             $mail->SMTPAuth = true;
-            $mail->Username = 'tucorreo@gmail.com';     // Cambia esto
-            $mail->Password = 'tu-contraseña';          // Usa una contraseña de aplicación segura
+            $mail->Username = 'paulinasalas613@gmail.com';     // Cambia esto
+            $mail->Password = 'efbx kwdn mvfg jhqp';          // Usa una contraseña de aplicación segura
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
 
+            // 👉 Agrega esta parte
+    $mail->SMTPOptions = [
+        'ssl' => [
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true
+        ]
+    ];
             // Configurar el correo
-            $mail->setFrom('tucorreo@gmail.com', 'ATOM');
+            $mail->setFrom('paulinasalas613@gmail.com', 'ATOM');
             $mail->addAddress($email, $nombre);
             $mail->Subject = 'Confirmación de tu cita - ATOM';
 
             $mail->Body = "Hola $nombre,\n\nTu cita ha sido confirmada con éxito.\n\n🗓 Fecha: $fecha\n⏰ Hora: $hora\n\nGracias por confiar en ATOM.\n\nSaludos,\nEquipo ATOM";
             $mail->send();
+            echo "Correo enviado correctamente a $email";
+
 
         } catch (Exception $e) {
             error_log("Error al enviar el correo: {$mail->ErrorInfo}");
+            echo "Error al enviar el correo: {$mail->ErrorInfo}";
+
         }
     }
 
-    header("Location: confirmar_citas.php");
+    
     exit();
 }
 ?>

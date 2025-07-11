@@ -185,7 +185,7 @@
 <section id="agendar-cita" class="py-5">
     <div class="form-container">
         <h2>Agenda tu Cita</h2>
-        <form action="guardar_cita.php" method="POST">
+        <form id="formCita">
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" id="nombre" name="nombre" class="form-control" required>
@@ -206,6 +206,55 @@
         </form>
     </div>
 </section>
+
+
+<!-- Incluir SweetAlert2 desde CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+document.getElementById('formCita').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+
+  fetch('guardar_cita.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.text())
+  .then(data => {
+    Swal.fire({
+      title: '¡Cita registrada con éxito!',
+      text: 'Te contactaremos para confirmar tu cita.',
+      icon: 'success',
+      background: '#1e293b',
+      color: '#e0f7ff',
+      iconColor: '#00c8ff',
+      confirmButtonColor: '#00c8ff',
+      confirmButtonText: 'Ir al inicio',
+      customClass: {
+        title: 'swal-title-atom',
+        popup: 'swal-popup-atom',
+      }
+    }).then(() => {
+      window.location.href = 'index.php';
+    });
+  })
+  .catch(error => {
+    Swal.fire({
+      title: 'Error',
+      text: 'No se pudo registrar tu cita. Intenta de nuevo.',
+      icon: 'error',
+      background: '#1e293b',
+      color: '#e0f7ff',
+      iconColor: '#ff4c4c',
+      confirmButtonColor: '#00c8ff',
+    });
+  });
+});
+</script>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

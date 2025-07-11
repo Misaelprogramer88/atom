@@ -35,16 +35,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
         try {
-            // Configuración del servidor SMTP
             $mail->isSMTP();
-            $mail->Host = 'smtp.gmail.com'; // Usa el servidor que prefieras
+            $mail->Host = 'smtp.gmail.com'; 
             $mail->SMTPAuth = true;
-            $mail->Username = 'paulinasalas613@gmail.com';     // Cambia esto
-            $mail->Password = 'efbx kwdn mvfg jhqp';          // Usa una contraseña de aplicación segura
+            $mail->Username = 'paulinasalas613@gmail.com';     
+            $mail->Password = 'efbx kwdn mvfg jhqp';          
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
 
-            // 👉 Agrega esta parte
+            //Hace que funcione :D
     $mail->SMTPOptions = [
         'ssl' => [
             'verify_peer' => false,
@@ -52,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             'allow_self_signed' => true
         ]
     ];
-            // Configurar el correo
+            
             $mail->setFrom('paulinasalas613@gmail.com', 'ATOM');
             $mail->addAddress($email, $nombre);
             $mail->Subject = 'Confirmación de tu cita - ATOM';
@@ -69,7 +68,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    
+    // Mostrar alerta con datos de la cita
+session_start();
+$_SESSION['respuesta'] = [
+    'accion' => $accion,
+    'nombre' => $nombre,
+    'email' => $email,
+    'fecha' => $fecha,
+    'hora' => $hora
+];
+
+header("Location: confirmar_citas.php");
+exit();
+
+
     exit();
 }
 ?>

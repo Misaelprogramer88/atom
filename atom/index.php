@@ -60,7 +60,18 @@ require_once 'db_conexion.php';
     </div>
 
     <nav class="navbar-links" id="navbar-links">
-  <a href="#servicios">Servicios</a>
+  <div class="dropdown-atom">
+    <span class="dropdown-toggle-atom">Servicios ▾</span>
+    <ul class="dropdown-menu-atom">
+      <li><a href="diseños_piezas.html">Diseño de Piezas</a></li>
+      <li><a href="maquinado_cnc.html">Maquinado CNC</a></li>
+      <li><a href="fabricacion_mixtures.html">Fixtures</a></li>
+      <li><a href="automatizacion.html">Automatización</a></li>
+      <li><a href="programacion_plc.html">Programación PLC</a></li>
+      <li><a href="diseño_web.html">Diseño Web</a></li>
+      
+    </ul>
+  </div>
   <a href="#nosotros">Nosotros</a>
   <a href="#eventos">Eventos</a>
   

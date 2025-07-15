@@ -17,8 +17,53 @@ require_once 'db_conexion.php';
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <link rel="icon" href="image/ATOM LOGO.png" type="image/x-icon">
 
+    <style>
+      .services-section {
+  padding: 4rem 0;
+  
+}
+
+.service-card-clean {
+  background-color: #1e293b;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: white;
+}
+
+.service-card-clean:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 187, 255, 0.4);
+}
+
+.service-card-clean img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-card-clean .card-body {
+  padding: 1.2rem;
+}
+
+.service-card-clean h5 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+  color: #1cc5dc;
+}
+
+.service-card-clean p {
+  font-size: 0.95rem;
+  color: #cfd8dc;
+}
+
+    </style>
 </head>
 <body>
 
@@ -184,62 +229,75 @@ require_once 'db_conexion.php';
 </section>
 
 
-<section id="servicios" class="services-section" style="background: linear-gradient(to right, #141414, #343d41, #141414)">
-        <div class="container">
-            <h2 class="styled-title text-center">Nuestros Servicios</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <a href="diseños_piezas.html">
-                            <img src="image/servicio 1.png" alt="Diseño de Piezas">
-                           <div class="overlay">
-                            <h5>Diseño de Piezas</h5>
-                            <p>Realizamos el diseño de piezas mecánicas con precisión y calidad.</p>
-                           </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                      <a href="maquinado_cnc.html">
-                        <img src="image/descargar.jpg" alt="Maquinado Industrial CNC">
-                        <div class="overlay">
-                            <h5>Maquinado Industrial CNC</h5>
-                            <p>Trabajamos maquinados industriales CNC en Saltillo y Monterrey.</p>
-                        </div>
-                      </a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <img src="image/descargar.jpg" alt="Fabricación de Fixtures">
-                        <div class="overlay">
-                            <h5>Fabricación de Fixtures</h5>
-                            <p>Apoyamos a distintas maquiladoras en la fabricación de fixtures personalizados.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <img src="image/descargar.jpg" alt="Servicio de Automatización">
-                        <div class="overlay">
-                            <h5>Servicio de Automatización</h5>
-                            <p>Automatizamos líneas para mejorar la productividad de las empresas.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <img src="image/descargar.jpg" alt="Programación PLC">
-                        <div class="overlay">
-                            <h5>Programación PLC</h5>
-                            <p>Ofrecemos programación de PLC, incluyendo PLC SIEMENS, con alta eficiencia.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section id="servicios" class="services-section">
+  <div class="container">
+    <h2 class="styled-title text-center mb-5">Nuestros Servicios</h2>
+    <div class="row g-4">
+
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="service-card-clean">
+          <img src="image/servicio 1.png" alt="Diseño de Piezas">
+          <div class="card-body">
+            <h5>Diseño de Piezas</h5>
+            <p>Realizamos el diseño de piezas mecánicas con precisión y calidad.</p>
+          </div>
         </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="service-card-clean">
+          <img src="image/servicio 2.png" alt="Maquinado CNC">
+          <div class="card-body">
+            <h5>Maquinado Industrial CNC</h5>
+            <p>Trabajamos maquinados industriales CNC en Saltillo y Monterrey.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="service-card-clean">
+          <img src="image/servicio 3.png" alt="Fixtures">
+          <div class="card-body">
+            <h5>Fabricación de Fixtures</h5>
+            <p>Apoyamos a distintas maquiladoras en la fabricación de fixtures personalizados.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="service-card-clean">
+          <img src="image/servicio 4.png" alt="Automatización">
+          <div class="card-body">
+            <h5>Servicio de Automatización</h5>
+            <p>Automatizamos líneas para mejorar la productividad de las empresas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="service-card-clean">
+          <img src="image/servicio 5.png" alt="PLC">
+          <div class="card-body">
+            <h5>Programación PLC</h5>
+            <p>Ofrecemos programación de PLC, incluyendo PLC SIEMENS, con alta eficiencia.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="service-card-clean">
+          <img src="image/servicio 3.png" alt="Integración de Sistemas">
+          <div class="card-body">
+            <h5>Integración de Sistemas</h5>
+            <p>Desarrollamos soluciones que integran software, maquinaria y sensores industriales.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
+
 
 <section id="cursos" class="py-5 bg-light" style=" background: linear-gradient(to right,rgb(247, 245, 245),rgb(214, 233, 247),rgb(255, 255, 255)); color: rgb(5, 5, 5); position: relative;">
   <div class="container">

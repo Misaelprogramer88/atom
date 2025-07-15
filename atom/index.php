@@ -63,6 +63,27 @@ require_once 'db_conexion.php';
   color: #cfd8dc;
 }
 
+.btn-ver-mas {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1cc5dc;
+  border: 1px solid #1cc5dc;
+  border-radius: 20px;
+  background-color: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-ver-mas:hover {
+  background-color: #1cc5dc;
+  color: white;
+  box-shadow: 0 0 8px rgba(28, 197, 220, 0.5);
+}
+
+
     </style>
 </head>
 <body>
@@ -110,7 +131,7 @@ require_once 'db_conexion.php';
     <ul class="dropdown-menu-atom">
       <li><a href="diseños_piezas.html">Diseño de Piezas</a></li>
       <li><a href="maquinado_cnc.html">Maquinado CNC</a></li>
-      <li><a href="fabricacion_mixtures.html">Fixtures</a></li>
+      <li><a href="fabricacion_fixtures.html">Fixtures</a></li>
       <li><a href="automatizacion.html">Automatización</a></li>
       <li><a href="programacion_plc.html">Programación PLC</a></li>
       <li><a href="diseño_web.html">Diseño Web</a></li>
@@ -236,10 +257,11 @@ require_once 'db_conexion.php';
 
       <div class="col-md-4" data-aos="fade-up">
         <div class="service-card-clean">
-          <img src="image/servicio 1.png" alt="Diseño de Piezas">
+          <img src="image/servicio 1 piezas.png" alt="Diseño de Piezas">
           <div class="card-body">
             <h5>Diseño de Piezas</h5>
             <p>Realizamos el diseño de piezas mecánicas con precisión y calidad.</p>
+            <a href="diseños_piezas.html" class="btn-ver-mas">Ver más</a>
           </div>
         </div>
       </div>
@@ -250,6 +272,7 @@ require_once 'db_conexion.php';
           <div class="card-body">
             <h5>Maquinado Industrial CNC</h5>
             <p>Trabajamos maquinados industriales CNC en Saltillo y Monterrey.</p>
+            <a href="maquinado_cnc.html" class="btn-ver-mas">Ver más</a>
           </div>
         </div>
       </div>
@@ -260,6 +283,7 @@ require_once 'db_conexion.php';
           <div class="card-body">
             <h5>Fabricación de Fixtures</h5>
             <p>Apoyamos a distintas maquiladoras en la fabricación de fixtures personalizados.</p>
+            <a href="fabricacion_fixtures.html" class="btn-ver-mas">Ver más</a>
           </div>
         </div>
       </div>
@@ -270,6 +294,7 @@ require_once 'db_conexion.php';
           <div class="card-body">
             <h5>Servicio de Automatización</h5>
             <p>Automatizamos líneas para mejorar la productividad de las empresas.</p>
+            <a href="automatizacion.html" class="btn-ver-mas">Ver más</a>
           </div>
         </div>
       </div>
@@ -280,16 +305,18 @@ require_once 'db_conexion.php';
           <div class="card-body">
             <h5>Programación PLC</h5>
             <p>Ofrecemos programación de PLC, incluyendo PLC SIEMENS, con alta eficiencia.</p>
+            <a href="programacion_plc.html" class="btn-ver-mas">Ver más</a>
           </div>
         </div>
       </div>
 
       <div class="col-md-4" data-aos="fade-up">
         <div class="service-card-clean">
-          <img src="image/servicio 3.png" alt="Integración de Sistemas">
+          <img src="image/servicio 6.png" alt="TuWeb">
           <div class="card-body">
-            <h5>Integración de Sistemas</h5>
-            <p>Desarrollamos soluciones que integran software, maquinaria y sensores industriales.</p>
+            <h5>TuWeb</h5>
+            <p>Desarrollamos páginas web, logos e imágenes publicitarias para tu negocio.</p>
+            <a href="" class="btn-ver-mas">Ver más</a>
           </div>
         </div>
       </div>
@@ -297,6 +324,7 @@ require_once 'db_conexion.php';
     </div>
   </div>
 </section>
+
 
 
 <section id="cursos" class="py-5 bg-light" style=" background: linear-gradient(to right,rgb(247, 245, 245),rgb(214, 233, 247),rgb(255, 255, 255)); color: rgb(5, 5, 5); position: relative;">

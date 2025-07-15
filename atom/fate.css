@@ -772,3 +772,24 @@ body {
 a.btn:hover {
     background: #0f87a8;
 }
+
+.btn-ver-mas {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1cc5dc;
+  border: 1px solid #1cc5dc;
+  border-radius: 20px;
+  background-color: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-ver-mas:hover {
+  background-color: #1cc5dc;
+  color: white;
+  box-shadow: 0 0 8px rgba(28, 197, 220, 0.5);
+}
+

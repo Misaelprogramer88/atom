@@ -138,7 +138,7 @@ require_once 'db_conexion.php';
       
     </ul>
   </div>
-  <a href="#nosotros">Nosotros</a>
+  <a href="nosotros.php">Nosotros</a>
   <a href="#eventos">Eventos</a>
   
 

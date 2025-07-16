@@ -1,14 +1,14 @@
 {
-  "id": "chatcmpl-Bq897bHdGVNIucl8LDE2U0XqPYWDn",
+  "id": "chatcmpl-BtNWvJmDasCdKbfMxvQNnUmL72JIE",
   "object": "chat.completion",
-  "created": 1751764069,
+  "created": 1752538189,
   "model": "gpt-3.5-turbo-0125",
   "choices": [
     {
       "index": 0,
       "message": {
         "role": "assistant",
-        "content": "El modelo básico en 3D se refiere a la creación de objetos tridimensionales simples utilizando un software de diseño como SolidWorks. En este nivel, se aprenden las bases del modelado en 3D, incluyendo la creación de croquis, extrusiones, revoluciones, cortes, entre otras operaciones fundamentales para la creación de piezas en tres dimensiones.",
+        "content": "No, en realidad solo se menciona un curso de SolidWorks que abarca temas desde intermedio hasta avanzado.",
         "refusal": null,
         "annotations": []
       },
@@ -17,9 +17,9 @@
     }
   ],
   "usage": {
-    "prompt_tokens": 1936,
-    "completion_tokens": 87,
-    "total_tokens": 2023,
+    "prompt_tokens": 1932,
+    "completion_tokens": 26,
+    "total_tokens": 1958,
     "prompt_tokens_details": {
       "cached_tokens": 0,
       "audio_tokens": 0

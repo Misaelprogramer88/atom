@@ -12,6 +12,7 @@ require_once 'db_conexion.php';
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="fate.css">
     <link rel="stylesheet" href="chatbot.css">
+    <link rel="stylesheet" href="">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -96,9 +97,7 @@ require_once 'db_conexion.php';
         Tu navegador no soporta el video.
     </video>
     
-    <div class="parallax-content">
-        <img src="imagenes/logo.pn" class="fade-in-slide img-fluid" style="margin: 0 auto; width: 600px;">
-    </div>
+    
 </div>
 
 <script>
@@ -139,7 +138,7 @@ require_once 'db_conexion.php';
     </ul>
   </div>
   <a href="nosotros.php">Nosotros</a>
-  <a href="#eventos">Eventos</a>
+  
   
 
   <!-- Dropdown personalizado -->
@@ -153,7 +152,7 @@ require_once 'db_conexion.php';
   </div>
 
   <a href="#contacto">Contacto</a>
-  <a href="admin.php">Admin</a>
+
   
 </nav>
   </div>
@@ -602,6 +601,15 @@ toggleBtn.addEventListener('mouseleave', () => {
 </script>
 
 
+<a
+  href="https://wa.me/521XXXXXXXXXX"
+  class="whatsapp-float"
+  target="_blank"
+  rel="noopener"
+  aria-label="Chat en WhatsApp"
+>
+  <i class="fab fa-whatsapp"></i>
+</a>
 
 
 
@@ -611,21 +619,107 @@ toggleBtn.addEventListener('mouseleave', () => {
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </div>
-    <footer class="footer">
-    <p>&copy; 2024 SIR Mantiene. Todos los derechos reservados.</p>
-    <div class="social">
-        <a href="mailto:tuemail@ejemplo.com" title="Enviar correo">
-            <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://wa.me/8442133787" target="_blank" title="Enviar WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-       
+    <footer class="footer-dark" style="background-color: black;">
+  <div class="container py-5">
+    <div class="row text-white">
+
+      <!-- Logo -->
+      <div class="col-md-3 mb-4 mb-md-0 text-center text-md-start">
+        <img src="image/ATOM LOGO.png" alt="ATOM Logo" style="width: 120px;">
+      </div>
+
+      <!-- Nuestras redes -->
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h5 class="footer-title">Nuestras Redes</h5>
+        <hr class="footer-line">
+        <div class="footer-icons">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Contacto -->
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h5 class="footer-title">Contacto</h5>
+        <hr class="footer-line">
+        <p><i class="bi bi-envelope"></i> ariel.perales@disenoymaquinados.mx</p>
+        <p><i class="bi bi-envelope"></i> ventas@disenoymaquinados.mx</p>
+        <p><i class="bi bi-telephone"></i> +52 (844) 622 6979</p>
+        <p><i class="bi bi-whatsapp"></i> WhatsApp</p>
+      </div>
+
+      <!-- Más Información -->
+      <!-- Enlace en el footer -->
+      <div class="col-md-3">
+        <h5 class="footer-title">Más Información</h5>
+        <hr class="footer-line">
+        <ul class="list-unstyled">
+          <li><a href="#" onclick="abrirModalAdmin()">Admin</a></li>
+        </ul>
+      </div>
+
+      <!-- Modal de acceso admin -->
+      <!-- Modal de acceso admin -->
+        <div id="modalAdmin" class="modal-admin">
+          <div class="modal-admin-content">
+            <div class="modal-header">
+              <img src="image/ATOM LOGO.png" alt="Logo" class="modal-logo">
+              <h4>Acceso de Administrador</h4>
+              <span class="close" onclick="cerrarModalAdmin()">&times;</span>
+            </div>
+            <div class="modal-body">
+              
+              <input type="password" id="claveAdmin" placeholder="Introduce la clave" />
+              <button onclick="validarClaveAdmin()">Entrar</button>
+              <p id="errorClave" class="error-text">Clave incorrecta</p>
+            </div>
+          </div>
+        </div>
+
+
+
     </div>
-    <div class="footer-services">
-        <!-- Aquí puedes agregar más enlaces de servicios si lo deseas -->
+
+    <!-- Créditos -->
+    <div class="text-center text-white mt-4 small">
+      © Copyright 2021 ATOM. All Rights Reserved. Made by <span style="color: #FFD700;">Dark Post Marketing Agency</span>
     </div>
-    </footer>
+  </div>
+</footer>
+
+<script>
+  const claveCorrecta = "123"; // Cambia esto por la clave que tú quieras
+
+  function abrirModalAdmin() {
+    document.getElementById("modalAdmin").style.display = "block";
+    document.getElementById("claveAdmin").value = "";
+    document.getElementById("errorClave").style.display = "none";
+  }
+
+  function cerrarModalAdmin() {
+    document.getElementById("modalAdmin").style.display = "none";
+  }
+
+  function validarClaveAdmin() {
+    const claveIngresada = document.getElementById("claveAdmin").value;
+
+    if (claveIngresada === claveCorrecta) {
+      window.location.href = "admin.php";
+    } else {
+      document.getElementById("errorClave").style.display = "block";
+    }
+  }
+
+  // Cerrar modal al hacer clic fuera del contenido
+  window.onclick = function (event) {
+    const modal = document.getElementById("modalAdmin");
+    if (event.target === modal) {
+      cerrarModalAdmin();
+    }
+  };
+</script>
+
 
 <!-- Asegúrate de incluir Font Awesome en tu <head> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -762,6 +856,10 @@ checkSlideVisibility();
     <script>
   AOS.init();
 </script>
+
+
+
+
 </body>
 </html>
 

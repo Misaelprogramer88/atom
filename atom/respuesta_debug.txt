@@ -1,14 +1,14 @@
 {
-  "id": "chatcmpl-BtNWvJmDasCdKbfMxvQNnUmL72JIE",
+  "id": "chatcmpl-BwywsRCIEiSfst7lLgawuAnQB0VG8",
   "object": "chat.completion",
-  "created": 1752538189,
+  "created": 1753397010,
   "model": "gpt-3.5-turbo-0125",
   "choices": [
     {
       "index": 0,
       "message": {
         "role": "assistant",
-        "content": "No, en realidad solo se menciona un curso de SolidWorks que abarca temas desde intermedio hasta avanzado.",
+        "content": "Puedes contactar a Atom a través del número +52 (844) 622 6979. ¡Están disponibles para ayudarte!",
         "refusal": null,
         "annotations": []
       },
@@ -17,9 +17,9 @@
     }
   ],
   "usage": {
-    "prompt_tokens": 1932,
-    "completion_tokens": 26,
-    "total_tokens": 1958,
+    "prompt_tokens": 1934,
+    "completion_tokens": 30,
+    "total_tokens": 1964,
     "prompt_tokens_details": {
       "cached_tokens": 0,
       "audio_tokens": 0

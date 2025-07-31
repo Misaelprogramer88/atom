@@ -192,6 +192,29 @@ require_once 'db_conexion.php';
   });
 </script>
 
+<script>
+  // Abrir y cerrar solo un dropdown a la vez en móviles
+  document.querySelectorAll(".dropdown-toggle-atom").forEach(function (toggle) {
+    toggle.addEventListener("click", function (e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const currentMenu = this.nextElementSibling;
+
+        // Cerrar todos los demás
+        document.querySelectorAll(".dropdown-menu-atom").forEach(function (menu) {
+          if (menu !== currentMenu) {
+            menu.classList.remove("active");
+          }
+        });
+
+        // Alternar el actual
+        currentMenu.classList.toggle("active");
+      }
+    });
+  });
+</script>
+
+
 
 
 
@@ -207,7 +230,7 @@ require_once 'db_conexion.php';
     <div class="container text-center">
         <h2 class="styled-title text-center">Sobre Nosotros</h2>
 
-        <p class="lead" style="font-size: 1.2rem; line-height: 1.8;">
+        <p class="lead" style="font-size: 1.2rem; line-height: 1.8; ">
             ATOM es reconocido como uno de los mejores proveedores de automatización industrial en la región, <br> nuestra empresa se distingue por su enfoque integral en el diseño, desarrollo y puesta en marcha de <br>soluciones personalizadas. Nos especializamos en garantizar la eficiencia operativa, optimizar los <br> costos de producción y elevar la calidad de los productos terminados, ofreciendo un servicio que <br> trasciende las expectativas del cliente y contribuye al éxito sostenible de sus operaciones.
         </p>
         
@@ -393,7 +416,7 @@ require_once 'db_conexion.php';
 
 
 <section class="bloque-asistente">
-  <div class="contenido-info">
+  <div class="contenido-info" style="text-align: justify;">
     <h2 class="styled-title text-center">Hacemos Realidad tus ideas.</h2>
     <p>¿Tienes dudas sobre el curso? Nuestro asistente virtual está disponible 24/7 para ayudarte con preguntas frecuentes, requisitos, duración y más.</p>
     <p>

@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: rgb(255, 255, 255);
 }
+
 .navbar {
   background-color: #1f2c3e;
   padding: 15px 30px;
@@ -61,90 +62,6 @@ body {
 .navbar-links a:hover::after {
   width: 100%;
 }
-
-.whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 25px;
-  left: 25px;
-  background-color: #25D366;
-  color: white;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 32px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
-
-
-.bloque-asistente {
-  
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 120px 60px; /* Más espacio */
-  min-height: 500px; /* Altura mínima */
-  background-color: #000000;
-  background-image: url('image/mano1.png');
-  background-repeat: no-repeat;
-  background-size: 90%; /* Tamaño óptimo sin recorte */
-  background-position: right center;
-  color: #ffffff; /* Negro si el fondo es blanco */
-  overflow: hidden;
-}
-
-/* Contenido ajustado */
-.bloque-asistente .contenido-info {
-  max-width: 600px;
-  z-index: 2;
-}
-
-.bloque-asistente h2 {
-  font-size: 30px;
-  color: #0ff;
-  margin-bottom: 20px;
-}
-
-.bloque-asistente p,
-.bloque-asistente li {
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-/* Responsive para celular */
-@media (max-width: 768px) {
-  .bloque-asistente {
-    flex-direction: column;
-    background-size: 80%;
-    background-position: center bottom;
-    padding: 80px 30px;
-    text-align: center;
-  }
-
-  .bloque-asistente .contenido-info {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .bloque-asistente {
-    background-image: none;
-  }
-}
-
-
-
 
 /* Dropdown contenedor */
 .dropdown-atom {
@@ -222,6 +139,7 @@ body {
     background: none;
     padding: 0;
     margin-top: 5px;
+    
   }
 
   .dropdown-menu-atom li a {
@@ -231,12 +149,32 @@ body {
 
   .dropdown-menu-atom li a:hover {
     background-color: #168ed9;
+    color: white;
+    
   }
 
   .dropdown-atom:hover .dropdown-menu-atom {
     transform: none;
   }
+
+  
+  .dropdown-menu-atom {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    ;
+  }
+
+  .dropdown-menu-atom.active {
+    max-height: 500px; /* Ajusta según cantidad de ítems */
+    opacity: 1;
+    
+  }
 }
+
+
+
 
 
 
@@ -253,17 +191,20 @@ body {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: #1f2c3e;
+    background-color: #040404;
     flex-direction: column;
-    width: 100%;
+    width: 60%;
     display: none;
     text-align: center;
     padding: 10px 0;
+    font-size: 1.1rem;
+    border-radius: 22px;
+    
   }
 
   .navbar-links a {
     padding: 10px 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .navbar-links.active {
@@ -302,6 +243,14 @@ body {
     color: #1ca6dc;
     margin-bottom: 20px;
 }
+
+/* Estilo para móvil SOLO en esta sección */
+@media (max-width: 768px) {
+  .seccion-slide.hero .hero-left h1 {
+    margin-top: 70px !important;
+  }
+}
+
 
 .styled-title::after {
     content: '';
@@ -396,6 +345,7 @@ body {
 .text-section p {
     font-size: 1.5rem; /* Aumenta el tamaño de la letra de los párrafos */
     line-height: 1.8; /* Mejora el espaciado entre las líneas */
+    
 }
 
 .image-section img {
@@ -472,6 +422,7 @@ body {
 .full-width-lg {
     width: 80%;
     margin: 0 auto;
+    text-align: justify;
 }
 
 @media (max-width: 768px) {
@@ -816,6 +767,90 @@ a.btn:hover {
   box-shadow: 0 0 8px rgba(28, 197, 220, 0.5);
 }
 
+
+
+
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  left: 25px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+
+.bloque-asistente {
+  
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 120px 60px; /* Más espacio */
+  min-height: 500px; /* Altura mínima */
+  background-color: #000000;
+  background-image: url('image/mano1.png');
+  background-repeat: no-repeat;
+  background-size: 90%; /* Tamaño óptimo sin recorte */
+  background-position: right center;
+  color: #ffffff; /* Negro si el fondo es blanco */
+  overflow: hidden;
+}
+
+/* Contenido ajustado */
+.bloque-asistente .contenido-info {
+  max-width: 600px;
+  z-index: 2;
+}
+
+.bloque-asistente h2 {
+  font-size: 30px;
+  color: #0ff;
+  margin-bottom: 20px;
+}
+
+.bloque-asistente p,
+.bloque-asistente li {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Responsive para celular */
+@media (max-width: 768px) {
+  .bloque-asistente {
+    flex-direction: column;
+    background-size: 80%;
+    background-position: center bottom;
+    padding: 80px 30px;
+    text-align: center;
+  }
+
+  .bloque-asistente .contenido-info {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .bloque-asistente {
+    background-image: none;
+  }
+}
 
 .footer-dark {
   background-color: #060b10;

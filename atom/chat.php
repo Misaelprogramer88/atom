@@ -25,7 +25,10 @@ if (!$apiKey) {
 // 🧠 Leer el contenido de las dos páginas
 $urls = [
   'http://localhost/atom/atom/cursos.php',
-  'http://localhost/atom/atom/cursob-i.php'
+  'http://localhost/atom/atom/cursob-i.php',
+  'http://localhost/atom/atom/index.php',
+  'http://localhost/atom/atom/nosotros.php',
+  'http://localhost/atom/atom/dise%C3%B1os_piezas.html'
 ];
 
 $contenidoTotal = '';
@@ -44,7 +47,7 @@ foreach ($urls as $url) {
 $contenidoTotal = substr($contenidoTotal, 0, 9000);
 
 // 🎯 Prompt con contexto personalizado
-$prompt = "Eres un asistente experto en un curso de SolidWorks. Usa únicamente la siguiente información extraída del sitio para responder preguntas relacionadas con el curso. Si la pregunta no está relacionada, responde amablemente que no puedes ayudar.\n\n" . $contenidoTotal;
+$prompt = "Eres un asistente experto en La pagina ATOM que ofrece cursos de solid works y servicios, tamibien puedes decir informacion de la empresa, como su fundador que es Ariel Perales. Usa únicamente la siguiente información extraída del sitio de la pagina nosotros, index y la de los cursos para responder preguntas relacionadas con el curso. Si la pregunta no está relacionada, responde amablemente que no puedes ayudar.\n\n" . $contenidoTotal;
 
 $messages = [
   ["role" => "system", "content" => $prompt],
@@ -89,4 +92,3 @@ if (isset($result['choices'][0]['message']['content'])) {
 } else {
   echo json_encode(['respuesta' => 'No obtuve respuesta de OpenAI.']);
 }
-?>

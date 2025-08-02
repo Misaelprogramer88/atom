@@ -516,6 +516,64 @@ body {
 }
 
 
+.nosotros-section {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  padding: 80px 0;
+  color: white;
+}
+
+.container-nosotros {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.text-nosotros {
+  flex: 1;
+  min-width: 300px;
+}
+
+.text-nosotros h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #1cc5dc;
+}
+
+.text-nosotros p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.btn-nosotros {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background-color: #1cc5dc;
+  color: black;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-nosotros:hover {
+  background-color: #0fa7bb;
+}
+
+.imagen-nosotros {
+  flex: 1;
+  min-width: 300px;
+}
+
+.imagen-nosotros img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
 
 
 /* Fondo común */
@@ -704,6 +762,10 @@ body {
 
 .services-section {
   padding: 4rem 0;
+  background: linear-gradient(to right, #121212, #1b2b34, #121212); /* Más oscuro, profesional */
+  color: white;
+  position: relative;
+  z-index: 1;
   
 }
 

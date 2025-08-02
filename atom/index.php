@@ -85,6 +85,75 @@ require_once 'db_conexion.php';
 }
 
 
+.nosotros-section {
+  background: linear-gradient(to right, #121212, #1b2b34, #121212);
+  padding: 80px 0;
+  color: white;
+}
+
+.container-nosotros {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.text-nosotros {
+  flex: 1;
+  min-width: 300px;
+}
+
+.text-nosotros h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #1cc5dc;
+}
+
+.text-nosotros p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.btn-nosotros {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background-color: #1cc5dc;
+  color: black;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-nosotros:hover {
+  background-color: #0fa7bb;
+}
+
+.imagen-nosotros {
+  flex: 1;
+  min-width: 300px;
+}
+
+.imagen-nosotros img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.services-section {
+  padding: 4rem 0;
+  background: linear-gradient(to right, #121212, #1b2b34, #121212); /* Más oscuro, profesional */
+  color: white;
+  position: relative;
+  z-index: 1;
+  
+}
+
+
     </style>
 </head>
 <body>
@@ -226,50 +295,22 @@ require_once 'db_conexion.php';
 
 
     
-<section id="about" class="py-5" style=" background: linear-gradient(to right,rgb(247, 245, 245),rgb(214, 233, 247),rgb(255, 255, 255)); color: rgb(5, 5, 5); position: relative;">
-    <div class="container text-center">
-        <h2 class="styled-title text-center">Sobre Nosotros</h2>
-
-        <p class="lead" style="font-size: 1.2rem; line-height: 1.8; ">
-            ATOM es reconocido como uno de los mejores proveedores de automatización industrial en la región, <br> nuestra empresa se distingue por su enfoque integral en el diseño, desarrollo y puesta en marcha de <br>soluciones personalizadas. Nos especializamos en garantizar la eficiencia operativa, optimizar los <br> costos de producción y elevar la calidad de los productos terminados, ofreciendo un servicio que <br> trasciende las expectativas del cliente y contribuye al éxito sostenible de sus operaciones.
-        </p>
-        
-        <section class="stats-section">
-            <div class="container text-center">
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <div class="stat-item" style="height: 240px;">
-                        <i class="bi bi-calendar-check stat-icon"></i>
-                        <div class="stat-number">6</div>
-                        <div class="stat-label">Años de Servicio</div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="stat-item">
-                        <i class="bi bi-person-check stat-icon"></i>
-                        <div class="stat-number">+20</div>
-                        <div class="stat-label">Especialistas en Diseño y Automatización</div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="stat-item">
-                        <i class="bi bi-bar-chart-line stat-icon"></i>
-                        <div class="stat-number">+30</div>
-                        <div class="stat-label">Proyectos Realizados</div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="stat-item">
-                        <i class="bi bi-award stat-icon"></i>
-                        <div class="stat-number">+480</div>
-                        <div class="stat-label">Profesionales Capacitados en CAD</div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
+<section id="nosotros" class="nosotros-section">
+  <div class="container-nosotros">
+    <div class="text-nosotros">
+      <h2>¿Quiénes Somos?</h2>
+      <p>
+        En <strong>ATOM</strong>, combinamos tecnología, innovación y experiencia para ofrecer soluciones industriales personalizadas.
+        Nuestro equipo está comprometido con el desarrollo de piezas de alta precisión, automatización y excelencia operativa.
+      </p>
+      <a href="nosotros.php" class="btn-nosotros">Conócenos</a>
     </div>
+    <div class="imagen-nosotros">
+      <img src="image/equipo.png" alt="Nosotros - Equipo ATOM">
+    </div>
+  </div>
 </section>
+
 
 
 <section id="servicios" class="services-section">
@@ -349,7 +390,7 @@ require_once 'db_conexion.php';
 
 
 
-<section id="cursos" class="py-5 bg-light" style=" background: linear-gradient(to right,rgb(247, 245, 245),rgb(214, 233, 247),rgb(255, 255, 255)); color: rgb(5, 5, 5); position: relative;">
+<section id="cursos" class="py-5 bg-light" style=" background: linear-gradient(to right, #121212, #1b2b34, #121212); color: rgba(252, 249, 249, 1); position: relative;">
   <div class="container">
     <h2 class="text-center mb-4 styled-title text-center" data-aos="fade-up">Nuestros Cursos de SOLIDWORKS</h2>
     <p class="text-center mb-5 text-muted" data-aos="fade-up" data-aos-delay="100">

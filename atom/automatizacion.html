@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño de Piezas | ATOM</title>
+    <link rel="stylesheet" href="fate.css">
+    <link rel="stylesheet" href="cursos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+          font-family: "Poppins", sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .texto {
+          font-size: 1.2rem;
+  margin-top: 15px;
+  color: #000000;
+        }
+
+        h1 {
+  font-size: 3rem;
+  color: #168ed9;;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2rem;
+  color: #2f2e2e;;
+  font-weight: 700;
+}
+
+        .check-list i {
+            color: #1cc5dc;
+            margin-right: 8px;
+        }
+
+        .img-fluid {
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .content-section {
+            padding: 3rem 0;
+        }
+
+        .content-section h2 {
+            color: #252525;
+            
+            margin-bottom: 1.5rem;
+        }
+
+        .back-button {
+            margin-top: 2rem;
+            display: inline-block;
+            color: #1cc5dc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            text-decoration: underline;
+        }
+
+        i {
+          font-size: 1.2rem;
+        }
+
+        ul {
+          font-size: 1.1rem;
+        }
+
+        .boton-transparente {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #00bfff;
+    background: transparent;
+    border: 2px solid #00bfff;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.boton-transparente:hover {
+    color: white;
+    background-color: #00bfff;
+    box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+}
+
+.titulo-seccion {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00bcd4;
+  margin-bottom: 1rem;
+}
+
+.lista-criterios {
+  list-style: none;
+  padding-left: 0;
+}
+
+.lista-criterios > li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.lista-criterios i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+
+@keyframes neonFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    text-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 0 10px rgba(0, 200, 255, 0.7);
+  }
+}
+
+.preguntas-lista {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.preguntas-lista li {
+  margin-bottom: 1.5rem;
+  padding: 15px 20px;
+  background-color: #0f172a;
+  color: #e0f7ff;
+  border-left: 4px solid #00c8ff;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 200, 255, 0.05);
+}
+
+.preguntas-lista li i {
+  color: #00c8ff;
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+
+.preguntas-lista li:hover {
+  transform: translateX(10px);
+  background-color: #132238;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+  <header id="navbar"  class="navbar sticky-top shadow-sm">
+  <div class="navbar-container">
+    <div class="navbar-logo">
+      <a href="index.php"><img src="image/LetrasAzul.png" alt="Logo" ></a>
+
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <nav class="navbar-links" id="navbar-links">
+  <div class="dropdown-atom">
+    <span class="dropdown-toggle-atom">Servicios ▾</span>
+    <ul class="dropdown-menu-atom">
+      <li><a href="diseños_piezas.html">Diseño de Piezas</a></li>
+      <li><a href="maquinado_cnc.html">Maquinado CNC</a></li>
+      <li><a href="fabricacion_mixtures.html">Fixtures</a></li>
+      <li><a href="automatizacion.html">Automatización</a></li>
+      <li><a href="programacion_plc.html">Programación PLC</a></li>
+      <li><a href="diseño_web.html">Diseño Web</a></li>
+      
+    </ul>
+  </div>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#eventos">Eventos</a>
+
+  <!-- Dropdown personalizado -->
+  <div class="dropdown-atom">
+    <span class="dropdown-toggle-atom">Cursos ▾</span>
+    <ul class="dropdown-menu-atom">
+      <li><a href="cursob-i.php">Básico – Intermedio</a></li>
+      <li><a href="cursos.php">Intermedio – Avanzado</a></li>
+    </ul>
+  </div>
+
+  <a href="#contacto">Contacto</a>
+</nav>
+
+  </div>
+</header>
+
+    <!-- Sección de contenido -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row align-items-center">
+
+               <h1 data-aos="fade-right" data-aos-delay="300" style="margin-top: 40px">
+                      Servicio de Automatización Saltillo-Monterrey
+                    </h1>
+
+                    <p class="texto" data-aos="fade-right" data-aos-delay="700" style="margin-top: 40px">
+                        El servicio automatización Saltillo Monterrey es uno de los más demandados en todos los parques industriales de Derramadero, Ramos Arizpe, Arteaga, Santa Catarina y Apodaca, debido al rápido avance tecnológico que presentan los procesos de producción en estas empresas, lo cual requiere el soporte de expertos profesionales en automatización. <br><br>
+                        Conozca aquí como el servicio automatización Saltillo Monterrey de ATOM puede ayudar a su empresa.
+                    </p>
+                    
+                <!-- Imagen -->
+                <div class="col-md-6 mb-4 mb-md-0" >
+                    <img src="image/maquinado1.png" alt="Diseño CAD de piezas" class="img-fluid"> <br><br>
+                    <img src="image/maquinado1.png" alt="Diseño CAD de piezas" class="img-fluid">
+                </div>
+
+                
+                <div class="col-md-6">
+
+                    <h3 data-aos="fade-right" data-aos-delay="500" style="margin-top: 40px">
+                      ¿Qué es la automatización industrial?
+                    </h3>
+
+                    <p class="texto" data-aos="fade-right" data-aos-delay="700" style="margin-top: 40px">
+                        La automatización industrial es el uso de sistemas computarizados, electromecánicos, electroneumáticos y electrohidráulicos para fines de mejora en los procesos industriales.
+
+                    </p>
+
+                    <h3 data-aos="fade-right" data-aos-delay="500" style="margin-top: 40px">
+                      ¿Qué procesos se pueden automatizar?
+                    </h3>
+
+                    <p class="texto" data-aos="fade-right" data-aos-delay="700" style="margin-top: 40px">
+                        Todos los procesos se pueden automatizar. Usualmente las fábricas de Saltillo y Monterrey buscan automatizar las tareas y procesos repetitivos, fatigosos, o molestos, dejando que sean las máquinas quienes se encarguen. Por ejemplo, la industria alimenticia y farmacéutica, automatizan los procesos de emblistado, el proceso de introducir paquetes en cajas, embalado, entre otros, en la mayoría de los casos, con células de trabajo autónomas.
+                        Otro ejemplo es el de las empresas de inyección de plástico, con robots que ayudan en el proceso de extracción de piezas del moldeo.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mt-5" style="margin: 35px;">
+                <div class="col">
+                    <h2 class="text-center mb-5" style="margin-top: 30px;">¿Cuáles son los 3 principales beneficios de la Automatización Industrial?</h2>
+                    <p class="texto" data-aos="fade-right" data-aos-delay="700" style="margin-top: 40px">
+                      Antes de llevar a cabo cualquier servicio de maquinado industrial CNC de alta precisión, es necesario el diseño de piezas, que servirá de guía para su elaboración.
+                    </p>
+                    <p class="texto" data-aos="fade-right" data-aos-delay="700" style="margin-top: 40px">
+                      Distintas empresas de maquinado, así como plantas industriales de Saltillo y Monterrey, requieren el diseño de piezas que permitan el maquinado industrial, si usted está buscando el servicio de diseño y maquinado industrial CNC ¡ATOM es el proveedor! <br>
+                      Trabajamos desde el diseño de piezas hasta la fabricación total de las mismas a través de nuestro servicio de maquinado industrial CNC disponible en Saltillo y Monterrey.
+                    </p>
+
+                    <p class="texto" data-aos="fade-right" data-aos-delay="700" style="margin-top: 40px">
+                      Si desea conocer más acerca de nuestro servicio de diseño de piezas da <a href="diseños_piezas.html">click aquí.</a> <br>
+                      Encuentre en el servicio de maquinado industrial CNC de ATOM el soporte ideal para la fabricación de diversas piezas, desde fixtures, poka-yoques y piezas mecánicas. Conozca acerca de la fabricación de fixtures <a href="fabricacion_fixtures.html">aquí.</a>
+                    </p>
+                </div>
+            </div>
+
+
+<section class="criterios-proveedor py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img  src="image/maquinado2.png" alt="Diseño CAD" class="img-fluid rounded shadow"> <br>
+      </div>
+
+      <div class="col-md-6">
+        <h3 data-aos="fade-right" data-aos-delay="500">¿Cómo elegir a un proveedor de servicio de maquinado industrial CNC?</h3>
+        <p class="texto" style="font-size: 1.1rem;">
+          Si bien hay existen muchos <strong>proveedores de servicio de maquinado industrial CNC</strong> en Derramadero, Saltillo, Ramos Arizpe, Arteaga, Santa Catarina, Monterrey y Apodaca, son varios los criterios que deberá tener en cuenta para la selección de un proveedor de <strong>servicio de maquinado industrial CNC</strong>, aquí nombramos algunos de los más relevantes:
+        </p>
+      </div>
+
+      <h3 style="color: #00bcd4; margin-top: 50px;">1. Precisión</h3> 
+
+      <p class="texto" style="font-size: 1.1rem;">
+        Sabemos que cualquier pieza o mecanismo, <strong>puede influir en el funcionamiento diario</strong> de una máquina. Por eso lo mejor es dejar en manos de expertos el <strong>servicio de maquinado industrial CNC.</strong>
+        En ATOM cuidamos todos los elementos necesarios, desde el personal capacitado, los materiales, tecnología CAD y la calidad de nuestros productos para atender su requerimiento. Las plantas industriales de <strong>Derramadero, Saltillo, Ramos Arizpe, Arteaga, Santa Catarina, Monterrey y Apodaca</strong>, eligen a ATOM como su proveedor de <strong>servicio de maquinado industrial CNC</strong>, destacando la precisión del <strong>maquinado de piezas.</strong>maquinado de piezas.
+      </p>
+
+      <h3 style="color: #00bcd4; margin-top: 50px;">2. Tecnología</h3> 
+
+      <p class="texto" style="font-size: 1.1rem;">
+        Hay una cantidad bastante amplia de soluciones que impactan tanto en costo como en calidad. En todos los proyectos que desarrollamos, tomamos en cuenta los criterios de: geometría y dimensiones de las piezas, la cantidad de piezas necesarias, las herramientas a utilizar, los números de ejes óptimos para el maquinado, capacidad de rotación, entre otros criterios.
+      </p>
+
+      <h3 style="color: #00bcd4; margin-top: 50px;">3. Versatilidad</h3> 
+
+      <p class="texto" style="font-size: 1.1rem;">
+        Si estás buscando el <strong>servicio de maquinado industrial CNC</strong> elige una empresa que cuente con la <strong>maquinaria capaz de brindarte diversos productos.</strong>
+        En ATOM contamos con diversas <strong>máquinas CNC</strong> que nos permiten atender la producción de diversas piezas de diferentes tamaños y materiales. De esta manera, logramos satisfacer las necesidades de nuestros clientes de Derramadero, Saltillo, Ramos Arizpe, Arteaga, Santa Catarina, Monterrey y Apodaca, sin que tengan que estar buscando nuevos proveedores para sus proyectos.
+      </p>
+
+      <h3 style="color: #00bcd4; margin-top: 50px;">4. Productividad</h3> 
+
+      <p class="texto" style="font-size: 1.1rem;">
+        Para que un <strong>servicio de maquinado industrial CNC</strong> sea eficaz, todo el <strong>proceso de mecanizado</strong> se produce en un único taller, esto reduce los tiempos de fabricación y entrega.
+        En ATOM entendemos que tener todo el equipo necesario en un solo sitio es fundamental para la fabricación y entrega en tiempo de las piezas que nuestros clientes nos solicitan. Justamente este es un punto clave por el cual las plantas industriales de Derramadero, Saltillo, Ramos Arizpe, Arteaga, Santa Catarina, Monterrey y Apodaca, eligen nuestro <strong>servicio de maquinado industrial CNC.</strong>
+      </p>
+
+      <h3 style="color: #00bcd4; margin-top: 50px;">5. Experiencia</h3> 
+
+     <p class="texto" style="font-size: 1.1rem;">
+        Trabajar con las empresas de metal-mecánica, plástico y de autopartes no es cualquier cosa. Este es un factor determinante cuando consideramos que cada aplicación y cada parte es única.
+        Si busca el servicio de maquinado industrial CNC es importante que seleccione un proveedor como ATOM, que cuenta con un equipo de profesionales en Ingeniería Mecatrónica altamente calificados y con una larga trayectoria, asegurando desde el inicio del proyecto, el mejor asesoramiento para su empresa, cubriendo las fases desde la idea hasta el desarrollo y la fabricación de sus piezas. <br><br>
+     </p>
+
+        <ul class="lista-criterios" style="margin-left: 40px;">
+          <li>
+            <i class="bi bi-check-circle-fill text-info"></i>
+            <strong>Maquinados Industriales para Herramientas</strong> como Yunques, navajas, crimpers, anviles, etc.
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill text-info"></i>
+            <strong>Maquinados Industriales para Moldes</strong> para manufactura, de inyección, de fundición.
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill text-info"></i>
+            <strong>Maquinados Industriales para Refacciones</strong> engranes, bujes, flechas, etc.
+          </li>
+        </ul>
+    
+      <div style="margin-top: 50px;">
+        <h3>¿Te interesa cotizar este servicio?</h3>
+        <div class="text-left mt-5" style="margin: 10px;">
+          <a href="#agendar-cita" class="boton-transparente">Agenda tu cita</a>
+        </div>
+      </div>
+    
+
+
+
+
+            <!-- Botón de regreso -->
+            <div class="text-center">
+                <a href="index.php" class="back-button"><i class="bi bi-arrow-left"></i> Volver a Inicio</a>
+            </div>
+        </div>
+</section>
+        </div>
+    </section>
+
+
+    <footer class="footer-dark">
+  <div class="container py-5">
+    <div class="row text-white">
+
+      <!-- Logo -->
+      <div class="col-md-3 mb-4 mb-md-0 text-center text-md-start">
+        <img src="image/ATOM LOGO.png" alt="ATOM Logo" style="width: 120px;">
+      </div>
+
+      <!-- Nuestras redes -->
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h5 class="footer-title">Nuestras Redes</h5>
+        <hr class="footer-line">
+        <div class="footer-icons">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Contacto -->
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h5 class="footer-title">Contacto</h5>
+        <hr class="footer-line">
+        <p><i class="bi bi-envelope"></i> ariel.perales@disenoymaquinados.mx</p>
+        <p><i class="bi bi-envelope"></i> ventas@disenoymaquinados.mx</p>
+        <p><i class="bi bi-telephone"></i> +52 (844) 622 6979</p>
+        <p><i class="bi bi-whatsapp"></i> WhatsApp</p>
+      </div>
+
+      <!-- Más Información -->
+      <div class="col-md-3">
+        <h5 class="footer-title">Más Información</h5>
+        <hr class="footer-line">
+        <ul class="list-unstyled">
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Eventos</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Créditos -->
+    <div class="text-center text-white mt-4 small">
+      © Copyright 2021 ATOM. All Rights Reserved. Made by <span style="color: #FFD700;">Dark Post Marketing Agency</span>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

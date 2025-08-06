@@ -404,7 +404,7 @@ require_once 'db_conexion.php';
       <!-- Curso Básico-Intermedio -->
       <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in">
         <div class="curso-card">
-          <img src="https://cdn.prod.website-files.com/5fcde6f56fdac5414b34eeb3/6422b76aabc618b7492c253c_Solidworks.png" alt="Curso Básico" class="curso-img">
+          <img src="image/bi.png" alt="Curso Básico" class="curso-img">
           <div class="curso-content">
             <h5>SolidWorks Básico - Intermedio</h5>
             <p>Aprende modelado 3D, operaciones básicas, planos técnicos y animaciones simples.</p>
@@ -416,7 +416,7 @@ require_once 'db_conexion.php';
       <!-- Curso Intermedio-Avanzado -->
       <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
         <div class="curso-card">
-          <img src="https://www.solidworks.com/sites/default/filesd10/styles/webp/public/2025-01/Nemo2.jpg.webp?itok=MeFOakVP" alt="Curso Avanzado" class="curso-img">
+          <img src="image/ia.png" alt="Curso Avanzado" class="curso-img">
           <div class="curso-content">
             <h5>SolidWorks Intermedio - Avanzado</h5>
             <p>Domina lectura de planos, GD&T, engranajes, simulaciones y diseño avanzado.</p>

@@ -6,6 +6,7 @@
     <title>Nosotros | ATOM</title>
     <link rel="stylesheet" href="fate.css">
     <link rel="stylesheet" href="nosotros.css">
+    <link rel="stylesheet" href="chatbot.css">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -16,11 +17,10 @@
 </head>
 <body>
 
-  <header id="navbar"  class="navbar sticky-top shadow-sm">
+  <header id="navbar" class="navbar">
   <div class="navbar-container">
     <div class="navbar-logo">
-      <a href="index.php"><img src="image/LetrasAzul.png" alt="Logo" ></a>
-
+      <a href="index.php"><img src="image/LetrasAzul.png" alt="Logo"></a>
     </div>
 
     <div class="menu-toggle" id="menu-toggle">
@@ -28,54 +28,62 @@
     </div>
 
     <nav class="navbar-links" id="navbar-links">
-  <div class="dropdown-atom">
-    <span class="dropdown-toggle-atom">Servicios ▾</span>
-    <ul class="dropdown-menu-atom">
-      <li><a href="diseños_piezas.html">Diseño de Piezas</a></li>
-      <li><a href="maquinado_cnc.html">Maquinado CNC</a></li>
-      <li><a href="fabricacion_mixtures.html">Fixtures</a></li>
-      <li><a href="automatizacion.html">Automatización</a></li>
-      <li><a href="programacion_plc.html">Programación PLC</a></li>
-      <li><a href="diseño_web.html">Diseño Web</a></li>
-      
-    </ul>
-  </div>
-  <a href="#nosotros">Nosotros</a>
-  <a href="#eventos">Eventos</a>
+      <div class="dropdown-atom">
+        <span class="dropdown-toggle-atom">Servicios ▾</span>
+        <ul class="dropdown-menu-atom">
+          <li><a href="diseños_piezas.html">Diseño de Piezas</a></li>
+          <li><a href="maquinado_cnc.html">Maquinado CNC</a></li>
+          <li><a href="fabricacion_fixtures.html">Fixtures</a></li>
+          <li><a href="automatizacion.html">Automatización</a></li>
+          <li><a href="programacion_plc.html">Programación PLC</a></li>
+          <li><a href="diseño_web.html">Diseño Web</a></li>
+        </ul>
+      </div>
 
-  <!-- Dropdown personalizado -->
-  <div class="dropdown-atom">
-    <span class="dropdown-toggle-atom">Cursos ▾</span>
-    <ul class="dropdown-menu-atom">
-      <li><a href="cursob-i.php">Básico – Intermedio</a></li>
-      <li><a href="cursos.php">Intermedio – Avanzado</a></li>
-    </ul>
-  </div>
+      <a href="nosotros.php">Nosotros</a>
 
-  <a href="#contacto">Contacto</a>
-</nav>
+      <div class="dropdown-atom">
+        <span class="dropdown-toggle-atom">Cursos ▾</span>
+        <ul class="dropdown-menu-atom">
+          <li><a href="cursob-i.php">Básico – Intermedio</a></li>
+          <li><a href="cursos.php">Intermedio – Avanzado</a></li>
+        </ul>
+      </div>
+    </nav>
 
+    <!-- Íconos de contacto fuera del menú hamburguesa -->
+    <div class="navbar-contact-icons">
+      <a href="https://wa.me/528446226979" target="_blank" class="icono-contacto" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="mailto:ariel.perales@disenoymaquinados.mx" class="icono-contacto" title="Correo">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
   </div>
 </header>
 
 
+<section class="sobrenosotros-section" data-aos="fade-up">
+  <div class="nosotros-contenido">
+    <!-- Lado izquierdo -->
+    <div class="info-nosotros" data-aos="fade-left">
+      <h1 class="nosotros-titulo">Sobre <br>Nosotros</h1>
+      <span class="subtitulo">Ariel Perales - Fundador de ATOM</span>
+      <p class="descripcion">
+        Ariel es un ingeniero mecatrónico con más de 6 años de experiencia en automatización industrial.
+        Ha liderado proyectos en MAHLE, MAGNA, JOHN DEERE y otras firmas, fusionando diseño, robótica y electrónica
+        para los parques industriales más importantes del norte del país.
+      </p>
+    </div>
 
-<h1 class="page-title">Sobre Nosotros</h1>
-
-
-<!-- Sección de Nosotros - ATOM -->
-<section class="nosotros-hero" data-aos="fade-up">
-  <div class="hero-nosotros">
+    <!-- Lado derecho -->
     <div class="imagen-nosotros" data-aos="fade-right">
       <img src="image/ariel-.jpg" alt="Ariel Perales - Fundador de ATOM">
     </div>
-    <div class="info-nosotros" data-aos="fade-left">
-      <h2 class="styled-title">Ariel Perales</h2>
-      <span class="subtitulo">Fundador de ATOM</span>
-      <p class="descripcion">Ariel es un ingeniero mecatrónico con más de 6 años de experiencia en automatización industrial. Ha liderado proyectos en MAHLE, MAGNA, JOHN DEERE y otras firmas, fusionando diseño, robótica y electrónica para los parques industriales más importantes del norte del país.</p>
-    </div>
   </div>
 </section>
+
 
 <section class="quienes-somos" data-aos="fade-up">
   <div class="contenedor">
@@ -134,113 +142,297 @@
   <p>Contáctanos y recibe el respaldo técnico de una empresa confiable en automatización industrial.</p>
   <a href="#contacto" class="btn-principal">Contáctanos</a>
 </section>
+<!-- Botón flotante con logo -->
+<button id="chat-toggle">
+  <img src="image/LogoBlanco.png" alt="Chat" style="width: 32px; height: 32px;">
+</button>
+<!-- Mensaje flotante del asistente -->
+<div id="chat-label">Hola, soy tu asistente virtual de Atom</div>
+
+
+
+<!-- Contenedor del chat -->
+<div id="chat-container">
+  <!-- Encabezado del chat con logo -->
+<div id="chat-header">
+  <img src="image/LogoBlanco.png" alt="Logo" style="height: 26px; vertical-align: middle; margin-right: 10px;">
+  Asistente de Atom
+</div>
+
+  <div id="chat-log"></div>
+  <div id="chat-input-area">
+    <input type="text" id="chat-input" placeholder="Escribe tu pregunta...">
+    <button id="send-btn">Enviar</button>
+  </div>
+</div>
+
+<!-- Script del chatbot -->
+<script>
+  const toggleBtn = document.getElementById('chat-toggle');
+  const chatContainer = document.getElementById('chat-container');
+  const input = document.getElementById('chat-input');
+  const log = document.getElementById('chat-log');
+  const btn = document.getElementById('send-btn');
+
+  // Mostrar/Ocultar el chatbot
+  toggleBtn.addEventListener('click', () => {
+    chatContainer.style.display = chatContainer.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+  // Enviar pregunta
+  btn.addEventListener('click', enviarPregunta);
+  input.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') enviarPregunta();
+  });
+
+  function enviarPregunta() {
+    const pregunta = input.value.trim();
+    if (!pregunta) return;
+
+    agregarMensaje('👤 Tú', pregunta);
+    input.value = '';
+    input.disabled = true;
+    btn.disabled = true;
+
+    fetch('chat.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ mensaje: pregunta })
+    })
+    .then(res => res.json())
+    .then(data => {
+      agregarMensaje('🤖 Bot', data.respuesta);
+      input.disabled = false;
+      btn.disabled = false;
+      input.focus();
+    })
+    .catch(() => {
+      agregarMensaje('⚠️ Bot', 'Error al conectar con el servidor.');
+      input.disabled = false;
+      btn.disabled = false;
+    });
+  }
+
+  function agregarMensaje(quien, texto) {
+  const div = document.createElement('div');
+  const esUsuario = quien.includes('Tú');
+  div.className = 'chat-msg ' + (esUsuario ? 'chat-user' : 'chat-bot');
+  div.innerHTML = texto;
+  log.appendChild(div);
+  log.scrollTop = log.scrollHeight;
+}
+
+
+const chatLabel = document.getElementById('chat-label');
+
+// Mostrar al cargar y ocultar a los 5 segundos
+setTimeout(() => {
+  chatLabel.style.opacity = 0;
+}, 5000);
+
+// Mostrar al pasar mouse y ocultar a los 2 segundos
+let hideTimeout;
+toggleBtn.addEventListener('mouseenter', () => {
+  chatLabel.style.opacity = 1;
+
+  clearTimeout(hideTimeout);
+  hideTimeout = setTimeout(() => {
+    chatLabel.style.opacity = 0;
+  }, 2000);
+});
+
+toggleBtn.addEventListener('mouseleave', () => {
+  clearTimeout(hideTimeout);
+  hideTimeout = setTimeout(() => {
+    chatLabel.style.opacity = 0;
+  }, 2000);
+});
+
+
+
+</script>
+
+
+<a
+  href="https://wa.me/528446226979"
+  class="whatsapp-float"
+  target="_blank"
+  rel="noopener"
+  aria-label="Chat en WhatsApp"
+>
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+
+
+<footer class="footer-dark" style="background-color: black;">
+  <div class="container py-5">
+    <div class="row text-white">
+
+      <!-- Logo -->
+      <div class="col-md-3 mb-4 mb-md-0 text-center text-md-start">
+        <img src="image/ATOM LOGO.png" alt="ATOM Logo" style="width: 120px;">
+      </div>
+
+      <!-- Nuestras redes -->
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h5 class="footer-title">Nuestras Redes</h5>
+        <hr class="footer-line">
+        <div class="footer-icons">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="https://wa.me/528446226979" target="_blank"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Contacto -->
+        
+        <div class="col-md-3 mb-4 mb-md-0">
+          <h5 class="footer-title">Contacto</h5>
+          <hr class="footer-line">
+          <p style="font-size: 0.9rem;">
+            <a href="mailto:ariel.perales@disenoymaquinados.mx" class="footer-link">
+              <i class="bi bi-envelope"></i> ariel.perales@disenoymaquinados.mx
+            </a>
+          </p>
+          <p style="font-size: 0.9rem;">
+            <a href="mailto:ventas@disenoymaquinados.mx" class="footer-link">
+              <i class="bi bi-envelope"></i> ventas@disenoymaquinados.mx
+            </a>
+          </p>
+          <p style="font-size: 0.9rem;">
+            <i class="bi bi-telephone"></i> +52 (844) 622 6979
+          </p>
+          <p style="font-size: 0.9rem;">
+            <a href="https://wa.me/528446226979" target="_blank" class="footer-link">
+              <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
+          </p>
+        </div>
+
+
+
+
+      <!-- Más Información -->
+      <div class="col-md-3">
+        <h5 class="footer-title">Más Información</h5>
+        <hr class="footer-line">
+        <ul class="list-unstyled">
+          <li><a href="#" onclick="abrirModalAdmin()">Admin</a></li>
+        </ul>
+      </div>
+
+      <!-- Modal de acceso admin -->
+      <div id="modalAdmin" class="modal-admin">
+        <div class="modal-admin-content">
+          <div class="modal-header">
+            <img src="image/ATOM LOGO.png" alt="Logo" class="modal-logo">
+            <h4>Acceso de Administrador</h4>
+            <span class="close" onclick="cerrarModalAdmin()">&times;</span>
+          </div>
+          <div class="modal-body">
+            <input type="password" id="claveAdmin" placeholder="Introduce la clave" />
+            <button onclick="validarClaveAdmin()">Entrar</button>
+            <p id="errorClave" class="error-text">Clave incorrecta</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Créditos -->
+    <div class="text-center text-white mt-4 small">
+      © Copyright 2025 ATOM. All Rights Reserved. Made by <span style="color: #FFD700;">Tuweb - DesarrolloWEB</span>
+    </div>
+  </div>
+</footer>
 
 <style>
-section {
-  background: #ffffff !important;
-  color: #111;
+  
+/* Sección general */
+.sobrenosotros-section {
   padding: 80px 30px;
-}
-.page-title {
-  font-size: 48px;
-  font-weight: 900;
-  color: #0a0a0a;
-  text-align: center;
-  margin: 60px 20px 40px;
-  font-family: 'Poppins', sans-serif;
+  background-color: #ffffffff;
 }
 
-.styled-title {
-  font-size: 36px;
-  font-weight: 800;
-  text-align: center;
-  color:rgb(10, 10, 10);
-  margin-bottom: 40px;
-}
-
-/* Sección sin fondo ni borde, solo padding para separación */
-section.nosotros-hero {
-  background: transparent !important;
-  color: #111;
-  padding: 80px 30px;
-}
-
-/* Contenedor flexible, alineación centrada vertical */
-.hero-nosotros {
+/* Contenedor de dos columnas */
+.nosotros-contenido {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 60px;
-  max-width: 1100px;
+  justify-content: center;
+  max-width: 1200px;
   margin: 0 auto;
-  flex-wrap: nowrap; /* Sin wrap para que imagen e info queden lado a lado */
+  gap: 40px;
 }
 
-/* Info a la izquierda, con max ancho para legibilidad */
+/* Lado izquierdo - Texto */
 .info-nosotros {
   flex: 1;
-  max-width: 600px;
+  min-width: 300px;
+  padding: 20px;
+  text-align: left;
 }
 
-/* Imagen a la derecha */
+.info-nosotros .nosotros-titulo {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000000ff;
+}
+
+.info-nosotros .subtitulo {
+  font-size: 20px;
+  font-weight: 500;
+  color: #1cc5dc;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.info-nosotros .descripcion {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Lado derecho - Imagen */
 .imagen-nosotros {
-  flex-shrink: 0;
-  max-width: 320px;
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  text-align: center;
 }
 
 .imagen-nosotros img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: 16px;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
-  display: block;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Titulos alineados a la izquierda */
-.styled-title {
-  font-size: 36px;
-  font-weight: 800;
-  color:rgb(8, 143, 184);
-  margin-bottom: 12px;
-  text-align: left;
-}
-
-.subtitulo {
-  font-size: 16px;
-  color: #555;
-  font-weight: 600;
-  margin-bottom: 20px;
-  display: block;
-  text-align: left;
-}
-
-.descripcion {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #222;
-  text-align: left;
-}
-
-/* Responsive para móviles: stack vertical y centrado */
+/* Responsive para móvil */
 @media (max-width: 768px) {
-  .hero-nosotros {
-    flex-direction: column;
+  .nosotros-contenido {
+    flex-direction: column-reverse;
     text-align: center;
   }
+
   .info-nosotros {
-    max-width: 100%;
-  }
-  .styled-title, .subtitulo, .descripcion {
     text-align: center;
   }
-  .imagen-nosotros {
-    max-width: 90%;
-    margin-top: 30px;
+
+  .info-nosotros .nosotros-titulo {
+    font-size: 36px;
   }
-  .imagen-nosotros img {
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+
+  .info-nosotros .subtitulo {
+    font-size: 18px;
+  }
+
+  .info-nosotros .descripcion {
+    font-size: 15px;
   }
 }
+
 
 .subtitulo {
   display: block;

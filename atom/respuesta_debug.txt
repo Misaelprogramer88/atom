@@ -1,14 +1,14 @@
 {
-  "id": "chatcmpl-BzW9RjdYPE6R0hwUAg5WAODsPdqOt",
+  "id": "chatcmpl-C1hcwoOSd0UwNnVF9CTeQ08NeDZTc",
   "object": "chat.completion",
-  "created": 1754001297,
+  "created": 1754522066,
   "model": "gpt-3.5-turbo-0125",
   "choices": [
     {
       "index": 0,
       "message": {
         "role": "assistant",
-        "content": "El curso de SolidWorks de ATOM incluye los siguientes temas principales:\n\n1. Introducción a SolidWorks\n2. Modelado de piezas en 3D\n3. Ensamblajes de componentes\n4. Dibujo técnico\n5. Planos de fabricación\n6. Simulaciones y análisis de piezas\n\nAdemás, se ofrecen clases en vivo, material de apoyo y ejercicios prácticos para asegurar una experiencia de aprendizaje completa y efectiva.",
+        "content": "El curso de SOLIDWORKS tiene una duración de 15 a 18 horas, y puedes tomarlo en distintos horarios, ya sea entre semana o en sábados.",
         "refusal": null,
         "annotations": []
       },
@@ -17,9 +17,9 @@
     }
   ],
   "usage": {
-    "prompt_tokens": 114,
-    "completion_tokens": 109,
-    "total_tokens": 223,
+    "prompt_tokens": 1894,
+    "completion_tokens": 39,
+    "total_tokens": 1933,
     "prompt_tokens_details": {
       "cached_tokens": 0,
       "audio_tokens": 0

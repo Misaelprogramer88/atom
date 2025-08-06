@@ -17,11 +17,10 @@
 
 </head>
 <body>
-    <header id="navbar" class="navbar ">
+   <header id="navbar" class="navbar">
   <div class="navbar-container">
     <div class="navbar-logo">
-      <a href="index.php"><img src="image/LetrasAzul.png" alt="Logo" ></a>
-
+      <a href="index.php"><img src="image/LetrasAzul.png" alt="Logo"></a>
     </div>
 
     <div class="menu-toggle" id="menu-toggle">
@@ -29,33 +28,38 @@
     </div>
 
     <nav class="navbar-links" id="navbar-links">
-  <div class="dropdown-atom">
-    <span class="dropdown-toggle-atom">Servicios ▾</span>
-    <ul class="dropdown-menu-atom">
-      <li><a href="diseños_piezas.html">Diseño de Piezas</a></li>
-      <li><a href="maquinado_cnc.html">Maquinado CNC</a></li>
-      <li><a href="fabricacion_mixtures.html">Fixtures</a></li>
-      <li><a href="automatizacion.html">Automatización</a></li>
-      <li><a href="programacion_plc.html">Programación PLC</a></li>
-      <li><a href="diseño_web.html">Diseño Web</a></li>
-      
-    </ul>
-  </div>
-  <a href="#nosotros">Nosotros</a>
-  <a href="#eventos">Eventos</a>
+      <div class="dropdown-atom">
+        <span class="dropdown-toggle-atom">Servicios ▾</span>
+        <ul class="dropdown-menu-atom">
+          <li><a href="diseños_piezas.html">Diseño de Piezas</a></li>
+          <li><a href="maquinado_cnc.html">Maquinado CNC</a></li>
+          <li><a href="fabricacion_fixtures.html">Fixtures</a></li>
+          <li><a href="automatizacion.html">Automatización</a></li>
+          <li><a href="programacion_plc.html">Programación PLC</a></li>
+          <li><a href="diseño_web.html">Diseño Web</a></li>
+        </ul>
+      </div>
 
-  <!-- Dropdown personalizado -->
-  <div class="dropdown-atom">
-    <span class="dropdown-toggle-atom">Cursos ▾</span>
-    <ul class="dropdown-menu-atom">
-      <li><a href="cursob-i.php">Básico – Intermedio</a></li>
-      <li><a href="cursos.php">Intermedio – Avanzado</a></li>
-    </ul>
-  </div>
+      <a href="nosotros.php">Nosotros</a>
 
-  <a href="#contacto">Contacto</a>
-</nav>
+      <div class="dropdown-atom">
+        <span class="dropdown-toggle-atom">Cursos ▾</span>
+        <ul class="dropdown-menu-atom">
+          <li><a href="cursob-i.php">Básico – Intermedio</a></li>
+          <li><a href="cursos.php">Intermedio – Avanzado</a></li>
+        </ul>
+      </div>
+    </nav>
 
+    <!-- Íconos de contacto fuera del menú hamburguesa -->
+    <div class="navbar-contact-icons">
+      <a href="https://wa.me/528446226979" target="_blank" class="icono-contacto" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="mailto:ariel.perales@disenoymaquinados.mx" class="icono-contacto" title="Correo">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
   </div>
 </header>
 
@@ -446,10 +450,19 @@ toggleBtn.addEventListener('mouseleave', () => {
 
 
 
+<a
+  href="https://wa.me/528446226979"
+  class="whatsapp-float"
+  target="_blank"
+  rel="noopener"
+  aria-label="Chat en WhatsApp"
+>
+  <i class="fab fa-whatsapp"></i>
+</a>
 
 
 
-<footer class="footer-dark">
+<footer class="footer-dark" style="background-color: black;">
   <div class="container py-5">
     <div class="row text-white">
 
@@ -464,36 +477,68 @@ toggleBtn.addEventListener('mouseleave', () => {
         <hr class="footer-line">
         <div class="footer-icons">
           <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-linkedin"></i></a>
-          <a href="#"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://wa.me/528446226979" target="_blank"><i class="bi bi-whatsapp"></i></a>
         </div>
       </div>
 
       <!-- Contacto -->
-      <div class="col-md-3 mb-4 mb-md-0">
-        <h5 class="footer-title">Contacto</h5>
-        <hr class="footer-line">
-        <p><i class="bi bi-envelope"></i> ariel.perales@disenoymaquinados.mx</p>
-        <p><i class="bi bi-envelope"></i> ventas@disenoymaquinados.mx</p>
-        <p><i class="bi bi-telephone"></i> +52 (844) 622 6979</p>
-        <p><i class="bi bi-whatsapp"></i> WhatsApp</p>
-      </div>
+        
+        <div class="col-md-3 mb-4 mb-md-0">
+          <h5 class="footer-title">Contacto</h5>
+          <hr class="footer-line">
+          <p style="font-size: 0.9rem;">
+            <a href="mailto:ariel.perales@disenoymaquinados.mx" class="footer-link">
+              <i class="bi bi-envelope"></i> ariel.perales@disenoymaquinados.mx
+            </a>
+          </p>
+          <p style="font-size: 0.9rem;">
+            <a href="mailto:ventas@disenoymaquinados.mx" class="footer-link">
+              <i class="bi bi-envelope"></i> ventas@disenoymaquinados.mx
+            </a>
+          </p>
+          <p style="font-size: 0.9rem;">
+            <i class="bi bi-telephone"></i> +52 (844) 622 6979
+          </p>
+          <p style="font-size: 0.9rem;">
+            <a href="https://wa.me/528446226979" target="_blank" class="footer-link">
+              <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
+          </p>
+        </div>
+
+
+
 
       <!-- Más Información -->
       <div class="col-md-3">
         <h5 class="footer-title">Más Información</h5>
         <hr class="footer-line">
         <ul class="list-unstyled">
-          <li><a href="#">Política de Privacidad</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Eventos</a></li>
+          <li><a href="#" onclick="abrirModalAdmin()">Admin</a></li>
         </ul>
       </div>
+
+      <!-- Modal de acceso admin -->
+      <div id="modalAdmin" class="modal-admin">
+        <div class="modal-admin-content">
+          <div class="modal-header">
+            <img src="image/ATOM LOGO.png" alt="Logo" class="modal-logo">
+            <h4>Acceso de Administrador</h4>
+            <span class="close" onclick="cerrarModalAdmin()">&times;</span>
+          </div>
+          <div class="modal-body">
+            <input type="password" id="claveAdmin" placeholder="Introduce la clave" />
+            <button onclick="validarClaveAdmin()">Entrar</button>
+            <p id="errorClave" class="error-text">Clave incorrecta</p>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <!-- Créditos -->
     <div class="text-center text-white mt-4 small">
-      © Copyright 2021 ATOM. All Rights Reserved. Made by <span style="color: #FFD700;">Dark Post Marketing Agency</span>
+      © Copyright 2025 ATOM. All Rights Reserved. Made by <span style="color: #FFD700;">Tuweb - DesarrolloWEB</span>
     </div>
   </div>
 </footer>

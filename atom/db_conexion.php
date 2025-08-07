@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>App Web</title>
-	<meta charset="utf-8">
+	
 	<!-- Icono del Sitio Web -->
-	<link rel="icon" href="images/favicono.jpg">
+	  <link rel="icon" href="image/logopes.png" type="image/x-icon">
 	
 </head>
 <body>

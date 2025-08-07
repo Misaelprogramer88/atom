@@ -100,3 +100,16 @@
     font-size: 14px;
   }
 }
+
+  .formulario-con-borde {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .formulario-con-borde h3 {
+      font-size: 20px;
+    }
+  }
+

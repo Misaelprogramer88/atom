@@ -1,14 +1,14 @@
 {
-  "id": "chatcmpl-C1hcwoOSd0UwNnVF9CTeQ08NeDZTc",
+  "id": "chatcmpl-C2432DE1Ycwddv6TMn3qFcqzyG0aE",
   "object": "chat.completion",
-  "created": 1754522066,
+  "created": 1754608252,
   "model": "gpt-3.5-turbo-0125",
   "choices": [
     {
       "index": 0,
       "message": {
         "role": "assistant",
-        "content": "El curso de SOLIDWORKS tiene una duración de 15 a 18 horas, y puedes tomarlo en distintos horarios, ya sea entre semana o en sábados.",
+        "content": "El número de contacto de ATOM para información es +52 (844) 622 6979. También puedes contactarlos a través de WhatsApp.",
         "refusal": null,
         "annotations": []
       },
@@ -17,9 +17,9 @@
     }
   ],
   "usage": {
-    "prompt_tokens": 1894,
-    "completion_tokens": 39,
-    "total_tokens": 1933,
+    "prompt_tokens": 1994,
+    "completion_tokens": 31,
+    "total_tokens": 2025,
     "prompt_tokens_details": {
       "cached_tokens": 0,
       "audio_tokens": 0

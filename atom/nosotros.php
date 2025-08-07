@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <link rel="icon" href="image/logopes.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -124,7 +125,7 @@
 </section>
 
 
-<section class="quienes-somos" data-aos="fade-up">
+<section class="quienes-somos" data-aos="fade-up" > 
   <div class="contenedor">
     <h3 class="styled-title text-center">Conoce más de ATOM</h3>
 
@@ -210,7 +211,7 @@
 <section class="cta-contacto" data-aos="fade-up">
   <h3 class="styled-title" style="color: white;">¿Listo para automatizar tus procesos?</h3>
   <p>Contáctanos y recibe el respaldo técnico de una empresa confiable en automatización industrial.</p>
-  <a href="#contacto" class="btn-principal">Contáctanos</a>
+  <a href="https://wa.me/528446226979" target="_blank" class="btn-principal">Contáctanos</a>
 </section>
 <!-- Botón flotante con logo -->
 <button id="chat-toggle">

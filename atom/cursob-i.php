@@ -62,6 +62,37 @@
     </div>
   </div>
 </header>
+ <!-- Navbar para celulares -->
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const links = document.getElementById('navbar-links');
+
+  toggle.addEventListener('click', () => {
+    links.classList.toggle('active');
+  });
+</script>
+
+<script>
+  // Abrir y cerrar solo un dropdown a la vez en móviles
+  document.querySelectorAll(".dropdown-toggle-atom").forEach(function (toggle) {
+    toggle.addEventListener("click", function (e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const currentMenu = this.nextElementSibling;
+
+        // Cerrar todos los demás
+        document.querySelectorAll(".dropdown-menu-atom").forEach(function (menu) {
+          if (menu !== currentMenu) {
+            menu.classList.remove("active");
+          }
+        });
+
+        // Alternar el actual
+        currentMenu.classList.toggle("active");
+      }
+    });
+  });
+</script>
 
 <!-- Sección HERO -->
 <section class="seccion-slide hero">
@@ -79,6 +110,7 @@
           <p data-aos="fade-right" data-aos-delay="700" style="margin-top: 40px">
             Aprende el entorno de SOLIDWORKS, croquizado, modelado de piezas, operaciones básicas en 3D, vaciados, nervios, configuraciones, ensambles y animaciones. Curso presencial, virtual o empresarial.
           </p>
+          <br><a href="https://wa.me/528446226979" target="_blank" ><button class="boton-transparentee" data-aos="fade-right" data-aos-delay="900">Contactanos</button></a>
         </div>
 
         <!-- Derecha -->

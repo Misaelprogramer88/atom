@@ -192,6 +192,27 @@ body {
 }
 
 
+.boton-transparentee {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #00bfff;
+    background: transparent;
+    border: 2px solid #00bfff;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.boton-transparentee:hover {
+    color: white;
+    background-color: #00bfff;
+    box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+}
+
 
 
 .menu-toggle {

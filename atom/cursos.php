@@ -68,6 +68,37 @@
     </div>
   </div>
 </header>
+ <!-- Navbar para celulares -->
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const links = document.getElementById('navbar-links');
+
+  toggle.addEventListener('click', () => {
+    links.classList.toggle('active');
+  });
+</script>
+
+<script>
+  // Abrir y cerrar solo un dropdown a la vez en móviles
+  document.querySelectorAll(".dropdown-toggle-atom").forEach(function (toggle) {
+    toggle.addEventListener("click", function (e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const currentMenu = this.nextElementSibling;
+
+        // Cerrar todos los demás
+        document.querySelectorAll(".dropdown-menu-atom").forEach(function (menu) {
+          if (menu !== currentMenu) {
+            menu.classList.remove("active");
+          }
+        });
+
+        // Alternar el actual
+        currentMenu.classList.toggle("active");
+      }
+    });
+  });
+</script>
 
 <!-- Sección HERO -->
 <section class="seccion-slide hero">
@@ -79,7 +110,7 @@
           <h1 data-aos="fade-right" data-aos-delay="300" style="margin-top: 40px">SOLIDWORKS INTERMEDIO - AVANZADO</h1>
           <h3 data-aos="fade-right" data-aos-delay="500"style="margin-top: 40px">Capacitación profesional para industria y diseño mecánico</h3>
           <p data-aos="fade-right" data-aos-delay="700"style="margin-top: 40px"> Aprende lectura de planos, tolerancias GD&T, metrología, ingeniería inversa, renderizado, engranajes, moldes, animaciones y simulaciones avanzadas. Disponible en modalidad presencial, virtual y para empresas..</p>
-          
+          <br><a href="https://wa.me/528446226979" target="_blank"><button class="boton-transparentee" data-aos="fade-right" data-aos-delay="900">Contactanos</button></a>
         </div>
 
         <!-- Derecha -->

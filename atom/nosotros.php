@@ -17,7 +17,7 @@
 </head>
 <body>
 
-  <header id="navbar" class="navbar">
+  <header id="navbar" class="navbar" style="position: fixed;">
   <div class="navbar-container">
     <div class="navbar-logo">
       <a href="index.php"><img src="image/LetrasAzul.png" alt="Logo"></a>
@@ -62,19 +62,58 @@
     </div>
   </div>
 </header>
+<!-- Navbar para celulares -->
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const links = document.getElementById('navbar-links');
 
+  toggle.addEventListener('click', () => {
+    links.classList.toggle('active');
+  });
+</script>
+
+<script>
+  // Abrir y cerrar solo un dropdown a la vez en móviles
+  document.querySelectorAll(".dropdown-toggle-atom").forEach(function (toggle) {
+    toggle.addEventListener("click", function (e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const currentMenu = this.nextElementSibling;
+
+        // Cerrar todos los demás
+        document.querySelectorAll(".dropdown-menu-atom").forEach(function (menu) {
+          if (menu !== currentMenu) {
+            menu.classList.remove("active");
+          }
+        });
+
+        // Alternar el actual
+        currentMenu.classList.toggle("active");
+      }
+    });
+  });
+</script>
+<style>
+   h1 {
+  font-size: 5rem;
+  color: #168ed9;;
+  font-weight: 700;
+}
+
+</style>
 
 <section class="sobrenosotros-section" data-aos="fade-up">
   <div class="nosotros-contenido">
     <!-- Lado izquierdo -->
     <div class="info-nosotros" data-aos="fade-left">
-      <h1 class="nosotros-titulo">Sobre <br>Nosotros</h1>
+      <h1 >SOBRE <br>NOSOTROS</h1>
       <span class="subtitulo">Ariel Perales - Fundador de ATOM</span>
       <p class="descripcion">
         Ariel es un ingeniero mecatrónico con más de 6 años de experiencia en automatización industrial.
         Ha liderado proyectos en MAHLE, MAGNA, JOHN DEERE y otras firmas, fusionando diseño, robótica y electrónica
         para los parques industriales más importantes del norte del país.
-      </p>
+      </p><br>
+      <a href="https://wa.me/528446226979" target="_blank"><button class="boton-transparentee">Contactanos</button></a>
     </div>
 
     <!-- Lado derecho -->
@@ -88,7 +127,37 @@
 <section class="quienes-somos" data-aos="fade-up">
   <div class="contenedor">
     <h3 class="styled-title text-center">Conoce más de ATOM</h3>
-    <p class="intro text-center">Somos una empresa de Automatización Industrial especializada en soluciones de diseño, programación y capacitación técnica en Saltillo y Monterrey.</p>
+
+    <div class="contenido-quienes">
+      <!-- Columna izquierda: imagen -->
+      <div class="columna-imagen" data-aos="fade-right">
+        <img src="image/nosotros-1.jpg" alt="Equipo de ATOM">
+      </div>
+
+      <!-- Columna derecha: información -->
+      <div class="columna-texto" data-aos="fade-left">
+        <p><strong>ATOM</strong> es una empresa de Automatización Industrial ubicada en Saltillo, que brinda soporte en:</p>
+        <ul>
+          <li>Diseño y maquinado industrial CNC</li>
+          <li>Fabricación de Fixtures, Gages y Moldes</li>
+          <li>Programación de PLCs</li>
+          <li>Capacitación en SolidWorks</li>
+        </ul>
+
+        <p>Contamos con ingenieros mecatrónicos expertos en integrar sistemas automatizados que combinan:</p>
+        <ul>
+          <li>Mecánica de precisión</li>
+          <li>Electrónica</li>
+          <li>Control automático</li>
+          <li>Diseño de procesos industriales</li>
+        </ul>
+
+        <p>Empresas de <strong>Saltillo, Ramos Arizpe, Apodaca, Monterrey</strong> y más, confían en ATOM para optimizar sus procesos con soluciones innovadoras y eficientes.</p>
+        <br><a href="https://wa.me/528446226979" target="_blank"><button class="boton-transparentee">Contactanos</button></a>
+      </div>
+    </div>
+
+    <!-- Tarjetas de servicios -->
     <div class="servicios-grid">
       <div class="servicio" data-aos="zoom-in">
         <i class="fas fa-cogs"></i>
@@ -110,7 +179,8 @@
   </div>
 </section>
 
-<section class="ventajas-atom" data-aos="fade-up">
+
+<section class="ventajas-atom" data-aos="fade-up" style="margin-top: 80px;">
   <h3 class="styled-title text-center">¿Por qué las empresas confían en ATOM?</h3>
   <div class="cards-container">
     <div class="card" data-aos="zoom-in-up">
@@ -138,7 +208,7 @@
 
 
 <section class="cta-contacto" data-aos="fade-up">
-  <h3 class="styled-title">¿Listo para automatizar tus procesos?</h3>
+  <h3 class="styled-title" style="color: white;">¿Listo para automatizar tus procesos?</h3>
   <p>Contáctanos y recibe el respaldo técnico de una empresa confiable en automatización industrial.</p>
   <a href="#contacto" class="btn-principal">Contáctanos</a>
 </section>
@@ -346,192 +416,6 @@ toggleBtn.addEventListener('mouseleave', () => {
   </div>
 </footer>
 
-<style>
-  
-/* Sección general */
-.sobrenosotros-section {
-  padding: 80px 30px;
-  background-color: #ffffffff;
-}
-
-/* Contenedor de dos columnas */
-.nosotros-contenido {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 40px;
-}
-
-/* Lado izquierdo - Texto */
-.info-nosotros {
-  flex: 1;
-  min-width: 300px;
-  padding: 20px;
-  text-align: left;
-}
-
-.info-nosotros .nosotros-titulo {
-  font-size: 4rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #000000ff;
-}
-
-.info-nosotros .subtitulo {
-  font-size: 20px;
-  font-weight: 500;
-  color: #1cc5dc;
-  display: block;
-  margin-bottom: 20px;
-}
-
-.info-nosotros .descripcion {
-  font-size: 16px;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Lado derecho - Imagen */
-.imagen-nosotros {
-  flex: 1;
-  min-width: 300px;
-  padding: 20px;
-  text-align: center;
-}
-
-.imagen-nosotros img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Responsive para móvil */
-@media (max-width: 768px) {
-  .nosotros-contenido {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-
-  .info-nosotros {
-    text-align: center;
-  }
-
-  .info-nosotros .nosotros-titulo {
-    font-size: 36px;
-  }
-
-  .info-nosotros .subtitulo {
-    font-size: 18px;
-  }
-
-  .info-nosotros .descripcion {
-    font-size: 15px;
-  }
-}
-
-
-.subtitulo {
-  display: block;
-  font-size: 16px;
-  color: #555;
-  font-weight: 600;
-  margin: 10px 0 20px;
-}
-
-.servicios-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin-top: 40px;
-}
-
-.servicio {
-  background: #f9f9f9;
-  padding: 20px;
-  text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s;
-}
-
-.servicio:hover {
-  transform: translateY(-6px);
-}
-
-.servicio i {
-  font-size: 28px;
-  color: #007BFF;
-  margin-bottom: 10px;
-}
-
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
-  margin-top: 40px;
-}
-
-.card {
-  background: #f5f5f5;
-  padding: 20px;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-}
-.card i {
-  font-size: 36px;
-  color: #007BFF;
-  margin-bottom: 16px;
-  display: block;
-  text-align: center;
-}
-
-
-.card:hover {
-  transform: translateY(-6px);
-}
-
-.card h4 {
-  color: #007BFF;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.cta-contacto {
-  background: linear-gradient(to right, #0ff, #00f);
-  color: #fff;
-  text-align: center;
-  padding: 60px 20px;
-  border-radius: 20px;
-  margin: 60px 30px;
-}
-
-.cta-contacto .btn-principal {
-  background: #fff;
-  color: #111;
-  padding: 14px 28px;
-  border-radius: 10px;
-  font-weight: bold;
-  text-decoration: none;
-  margin-top: 20px;
-  display: inline-block;
-}
-
-@media (max-width: 768px) {
-  .hero-nosotros {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .imagen-nosotros img {
-    max-width: 90%;
-  }
-}
-</style>
 
 <!-- AOS y Font Awesome -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">

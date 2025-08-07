@@ -443,7 +443,7 @@ require_once 'db_conexion.php';
               <div class="curso-content">
                 <h5>'.htmlspecialchars($row['titulo']).'</h5>
                 <p>'.htmlspecialchars($row['descripcion']).'</p>
-                <a href="#" class="btn-ver-mas">Ver más</a>
+               
               </div>
             </div>
           </div>';

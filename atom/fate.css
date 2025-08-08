@@ -616,7 +616,7 @@ body {
 /* Fondo común */
 .bloque-asistente,
 .bloque-empresas {
-  background-color: #000000; /* O el color que estés usando */
+   background: linear-gradient(to right, #121212, #1b2b34, #121212);/* O el color que estés usando */
   padding: 100px 40px;
   color: #ffffff;
 }
@@ -903,10 +903,11 @@ a.btn:hover {
   justify-content: flex-start;
   padding: 120px 60px; /* Más espacio */
   min-height: 500px; /* Altura mínima */
-  background-color: #000000;
-  background-image: url('image/mano1.png');
-  background-repeat: no-repeat;
-  background-size: 90%; /* Tamaño óptimo sin recorte */
+  
+background-image: url('image/mano1.png'), linear-gradient(to right, #121212, #1b2b34, #121212);
+
+ 
+  background-size: 100%; /* Tamaño óptimo sin recorte */
   background-position: right center;
   color: #ffffff; /* Negro si el fondo es blanco */
   overflow: hidden;

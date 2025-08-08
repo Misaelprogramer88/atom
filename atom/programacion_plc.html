@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación PLC | ATOM</title>
+    <link rel="stylesheet" href="fate.css">
+    <link rel="stylesheet" href="cursos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+          font-family: "Poppins", sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .texto {
+          font-size: 1.2rem;
+  margin-top: 15px;
+  color: #000000;
+        }
+
+        h1 {
+  font-size: 3rem;
+  color: #168ed9;;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2rem;
+  color: #2f2e2e;;
+  font-weight: 700;
+}
+
+        .check-list i {
+            color: #1cc5dc;
+            margin-right: 8px;
+        }
+
+        .img-fluid {
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .content-section {
+            padding: 3rem 0;
+        }
+
+        .content-section h2 {
+            color: #252525;
+            
+            margin-bottom: 1.5rem;
+        }
+
+        .back-button {
+            margin-top: 2rem;
+            display: inline-block;
+            color: #1cc5dc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            text-decoration: underline;
+        }
+
+        i {
+          font-size: 1.2rem;
+        }
+
+        ul {
+          font-size: 1.1rem;
+        }
+
+        .boton-transparente {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #00bfff;
+    background: transparent;
+    border: 2px solid #00bfff;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.boton-transparente:hover {
+    color: white;
+    background-color: #00bfff;
+    box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+}
+
+.titulo-seccion {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00bcd4;
+  margin-bottom: 1rem;
+}
+
+.lista-criterios {
+  list-style: none;
+  padding-left: 0;
+}
+
+.lista-criterios > li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.lista-criterios i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+
+@keyframes neonFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    text-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 0 10px rgba(0, 200, 255, 0.7);
+  }
+}
+
+.preguntas-lista {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.preguntas-lista li {
+  margin-bottom: 1.5rem;
+  padding: 15px 20px;
+  background-color: #0f172a;
+  color: #e0f7ff;
+  border-left: 4px solid #00c8ff;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 200, 255, 0.05);
+}
+
+.preguntas-lista li i {
+  color: #00c8ff;
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+
+.preguntas-lista li:hover {
+  transform: translateX(10px);
+  background-color: #132238;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+  <header id="navbar"  class="navbar sticky-top shadow-sm">
+  <div class="navbar-container">
+    <div class="navbar-logo">
+      <a href="index.php"><img src="image/LetrasAzul.png" alt="Logo" ></a>
+
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <nav class="navbar-links" id="navbar-links">
+  <div class="dropdown-atom">
+    <span class="dropdown-toggle-atom">Servicios ▾</span>
+    <ul class="dropdown-menu-atom">
+      <li><a href="diseños_piezas.html">Diseño de Piezas</a></li>
+      <li><a href="maquinado_cnc.html">Maquinado CNC</a></li>
+      <li><a href="fabricacion_mixtures.html">Fixtures</a></li>
+      <li><a href="automatizacion.html">Automatización</a></li>
+      <li><a href="programacion_plc.html">Programación PLC</a></li>
+      <li><a href="diseño_web.html">Diseño Web</a></li>
+      
+    </ul>
+  </div>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#eventos">Eventos</a>
+
+  <!-- Dropdown personalizado -->
+  <div class="dropdown-atom">
+    <span class="dropdown-toggle-atom">Cursos ▾</span>
+    <ul class="dropdown-menu-atom">
+      <li><a href="cursob-i.php">Básico – Intermedio</a></li>
+      <li><a href="cursos.php">Intermedio – Avanzado</a></li>
+    </ul>
+  </div>
+
+  <a href="#contacto">Contacto</a>
+</nav>
+
+  </div>
+</header>
+
+    <!-- Sección de contenido -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row align-items-center">
+
+               <h1 data-aos="fade-right" data-aos-delay="300" style="margin-top: 40px;">
+                      PROGRAMACIÓN PLC
+                    </h1>
+
+                    
+                <!-- Imagen -->
+                <div class="col-md-6 mb-4 mb-md-0" style="margin-top: 50px;">
+                    <img src="image/programacion-plc.png" alt="Diseño CAD de piezas" class="img-fluid"> <br><br>
+                </div>
+
+                
+                <div class="col-md-6">
+
+                    <p class="texto" data-aos="fade-right" data-aos-delay="700" style="margin-top: 40px;">
+                        El servicio de Programación PLC es fundamental para la optimización y correcto funcionamiento de los sistemas de automatización de las plantas industriales. <br>Si buscas expertos en Programación PLC, ATOM es el proveedor que eligen los departamentos de mantenimiento, producción, proyectos, ingeniería de los parques ubicados en Derramadero, Saltillo, Ramos Arizpe, Arteaga, Santa Catarina, Monterrey y Apodaca. <br><br>
+                        Además, contamos con técnicos altamente capacitados que te pueden ayudar en las labores de:
+                        
+                        <ul class="lista-criterios">
+                            <li style="font-size: 1.1rem;">
+                                <i class="bi bi-check-circle-fill text-info"></i>
+                                Cambios de PLC’s.
+                            </li>
+
+                            <li style="font-size: 1.1rem;">
+                                <i class="bi bi-check-circle-fill text-info"></i>
+                                Mantenimiento de máquinas que utilizan controladores lógicos programables.
+                            </li>
+
+                            <li style="font-size: 1.1rem;">
+                                <i class="bi bi-check-circle-fill text-info"></i>
+                                Diagnóstico de problemas de máquinas que utilizan controladores lógicos programables.
+                            </li>
+
+                            <li style="font-size: 1.1rem;">
+                                <i class="bi bi-check-circle-fill text-info"></i>
+                                Corrección de problemas en máquinas que utilizan controladores lógicos programables.
+                            </li>
+                        </ul>
+                       
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="row mt-5" style="margin: 35px;">
+                <div class="col">
+                    <h3 class="text-center mb-5" style="margin-top: 30px; color: #00bcd4;">¿Cuándo utilizar el servicio de Programación PLC?</h3>
+                    <p class="texto" data-aos="fade-right" data-aos-delay="700" style="margin-top: 40px">
+                     El servicio de Programación PLC, suelen utilizarlo distintas industrias desde manufactura, hasta la industria química, automotriz, de cementos, pulpa y papel, y más. <br><br>
+                     En ATOM atendemos todo el corredor industrial de Derramadero, Saltillo, Ramos Arizpe, Arteaga, Santa Catarina, Monterrey y Apodaca cuando requieren el mantenimiento de las máquinas que utilizan controladores lógicos programables.
+                    </p>
+                </div>
+            </div>
+
+
+<section class="criterios-proveedor py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img  src="image/fabricacion-fixtures-4.jpg" alt="Diseño CAD" class="img-fluid rounded shadow"> <br> <br>  
+        <img  src="image/fixtures-5.png" alt="Diseño CAD" class="img-fluid rounded shadow"> <br> <br>  
+        <img  src="image/fixtures-6.png" alt="Diseño CAD" class="img-fluid rounded shadow"> 
+       
+      </div>
+
+      <div class="col-md-6">
+        <h3 data-aos="fade-right" data-aos-delay="500">Fabricación de Gages (Go nogo) Saltillo Monterrey</h3>
+        <p class="texto" style="font-size: 1.1rem;">
+          Distintas empresas de Saltillo y Monterrey, utilizan el soporte de ATOM para la <strong>fabricación de gages</strong> o también conocidas como <strong>herramientas go – nogo</strong>, usadas en el proceso de verificación de piezas y sus tolerancias permitidas.
+          Si buscas <strong>fabricantes de Gages Saltillo y Monterrey</strong>, nosotros somos <strong>Fabricantes de Gages</strong> de distintos tipos, ya sea para medir: longitudes, diámetros, profundidad de barrerno, espesores, cuerdas, conicidad entre otros.
+          Si está buscando un <strong>proveedor de fixtures en Saltillo o Monterrey</strong> contáctenos ahora.
+        </p>
+
+        <div style="margin-top: 10px;">
+          <div class="text-left mt-5" style="margin: 10px;">
+            <a href="#agendar-cita" class="boton-transparente">Agenda tu cita</a>
+          </div>
+        </div>
+
+        <p class="texto" style="font-size: 1.1rem;">
+          Recuerda que en ATOM desarrollamos la:
+          <ul class="lista-criterios" style="margin-left: 40px;">
+          <li>
+            <i class="bi bi-check-circle-fill text-info"></i>
+            <strong>Fabricación de Fixtures</strong>Saltillo-Monterrey
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill text-info"></i>
+            <strong>Fabricación de Checking Fixture</strong> Saltillo-Monterrey
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill text-info"></i>
+            <strong>Fabricación de dispositivos de sujeción</strong> Saltillo-Monterrey
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill text-info"></i>
+            <strong>Fabricación de go-nogo</strong> Saltillo-Monterrey
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill text-info"></i>
+            <strong>Fabricación de Gages </strong>Saltillo-Monterrey
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill text-info"></i>
+            <strong>Fabricación de Poka Yokes </strong>Saltillo-Monterrey
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill text-info"></i>
+            <strong>Fabricación de Instrumentos pasa / no-pasa</strong> Saltillo-Monterrey
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill text-info"></i>
+            <strong>Fabricación de dispositivos de medición</strong> Saltillo-Monterrey
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill text-info"></i>
+            <strong>Fabricación de moldes </strong>Saltillo-Monterrey
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill text-info"></i>
+            <strong>Diseño y Fabricación de Moldes para plásticos </strong>Saltillo-Monterrey
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill text-info"></i>
+            <strong>Diseño y Fabricación de Moldes para Metales </strong>Saltillo-Monterrey
+          </li>
+        </ul>
+        </p>
+
+      </div>
+
+      <h3 style="color: #2a2b2b; margin-top: 50px;">¿Cómo cotizar la fabricación de fixtures o gages?</h3> 
+
+      <p>Envíanos al mail <strong style="color: #00bcd4;">ariel.perales@disenoymaquinados.mx</strong> tus planos o dibujos, para trabajar tu cotización, respuesta máxima en 24 horas.</p>
+
+            <!-- Botón de regreso -->
+            <div class="text-center">
+                <a href="index.php" class="back-button"><i class="bi bi-arrow-left"></i> Volver a Inicio</a>
+            </div>
+        </div>
+</section>
+        </div>
+    </section>
+
+
+    <footer class="footer-dark">
+  <div class="container py-5">
+    <div class="row text-white">
+
+      <!-- Logo -->
+      <div class="col-md-3 mb-4 mb-md-0 text-center text-md-start">
+        <img src="image/ATOM LOGO.png" alt="ATOM Logo" style="width: 120px;">
+      </div>
+
+      <!-- Nuestras redes -->
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h5 class="footer-title">Nuestras Redes</h5>
+        <hr class="footer-line">
+        <div class="footer-icons">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Contacto -->
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h5 class="footer-title">Contacto</h5>
+        <hr class="footer-line">
+        <p><i class="bi bi-envelope"></i> ariel.perales@disenoymaquinados.mx</p>
+        <p><i class="bi bi-envelope"></i> ventas@disenoymaquinados.mx</p>
+        <p><i class="bi bi-telephone"></i> +52 (844) 622 6979</p>
+        <p><i class="bi bi-whatsapp"></i> WhatsApp</p>
+      </div>
+
+      <!-- Más Información -->
+      <div class="col-md-3">
+        <h5 class="footer-title">Más Información</h5>
+        <hr class="footer-line">
+        <ul class="list-unstyled">
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Eventos</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Créditos -->
+    <div class="text-center text-white mt-4 small">
+      © Copyright 2021 ATOM. All Rights Reserved. Made by <span style="color: #FFD700;">Dark Post Marketing Agency</span>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

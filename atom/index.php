@@ -461,15 +461,15 @@ require_once 'db_conexion.php';
 
 <section class="bloque-asistente">
   <div class="contenido-info" style="text-align: justify;">
-    <h2 class="styled-title text-center">Hacemos Realidad tus ideas.</h2>
-    <p>¿Tienes dudas sobre el curso? Nuestro asistente virtual está disponible 24/7 para ayudarte con preguntas frecuentes, requisitos, duración y más.</p>
-    <p>
+    <h3 class="styled-title text-center">Hacemos Realidad tus ideas.</h3>
+    <p style="font-size: 1.1rem; margin-top: 25px;">¿Tienes dudas sobre el curso? Nuestro asistente virtual está disponible 24/7 para ayudarte con preguntas frecuentes, requisitos, duración y más.</p>
+    <p style="font-size: 1.1rem;">
       ATOM es una empresa en Saltillo especializada en Automatización Industrial. Ofrece servicios de diseño y maquinado CNC, fabricación de moldes y fixtures, programación PLC y capacitación en SolidWorks.
     </p>
-    <p>
+    <p style="font-size: 1.1rem;">
       Cuenta con un equipo experto en Ingeniería Mecatrónica, que desarrolla sistemas automatizados para distintos sectores, mejorando la eficiencia de los procesos productivos.
     </p>
-    <p>
+    <p style="font-size: 1.1rem;">
       Además, usan software 3D para diseñar y modelar piezas antes de su fabricación, asegurando precisión y funcionalidad. Sectores como la ingeniería, el diseño industrial y la animación 3D requieren este tipo de programación para interpretar piezas detalladamente.
     </p>
 </div>
@@ -477,8 +477,8 @@ require_once 'db_conexion.php';
 </section>
 <section class="bloque-empresas">
   <div class="empresas-recomiendan">
-    <h3>EMPRESAS QUE NOS RECOMIENDAN </h3>
-    <p class="descripcion-empresas">
+    <h3 style="color: #00bcd4;">EMPRESAS QUE NOS RECOMIENDAN </h3>
+    <p class="descripcion-empresas" style="font-size: 1.2rem;">
       Estas son algunas de las empresas que confían en nuestro trabajo y capacitación.
     </p>
     <div class="logos-empresas">
@@ -502,27 +502,6 @@ require_once 'db_conexion.php';
 
 <!-- Incluye Bootstrap Icons para los íconos -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-    <section id="contact" class="py-5" style=" background: linear-gradient(to right,rgb(247, 245, 245),rgb(214, 233, 247),rgb(255, 255, 255)); color: rgb(5, 5, 5); position: relative;">
-        <div class="container text-center">
-            <h2>Contacto</h2>
-            <p class="lead">Ponte en contacto con nosotros para más información.</p>
-            <form class="mt-4">
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <input type="text" class="form-control" placeholder="Nombre" required>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <input type="email" class="form-control" placeholder="Correo Electrónico" required>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <textarea class="form-control" rows="4" placeholder="Mensaje" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-        </div>
-    </section>
 
 
     

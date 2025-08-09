@@ -133,20 +133,83 @@
  <div id="trigger" style="height: 0px;"></div>
 
   <!-- ✅ Navbar (se ve normal al inicio) -->
-  <header id="navbar" class="navbar">
+<header id="navbar" class="navbar">
   <div class="navbar-container">
     <div class="navbar-logo">
-      <img src="image/LetrasAzul.png" alt="Logo" style="margin-right: 20px;"/>
+      <a href="index.php"><img src="image/LetrasAzul.png" alt="Logo"></a>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
     </div>
 
     <nav class="navbar-links" id="navbar-links">
-      <a href="#servicios">Servicios</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#eventos">Eventos</a>
-      <a href="#contacto">Contacto</a>
+      <div class="dropdown-atom">
+        <span class="dropdown-toggle-atom">Servicios ▾</span>
+        <ul class="dropdown-menu-atom">
+          <li><a href="diseños_piezas.html">Diseño de Piezas</a></li>
+          <li><a href="maquinado_cnc.html">Maquinado CNC</a></li>
+          <li><a href="fabricacion_fixtures.html">Fixtures</a></li>
+          <li><a href="automatizacion.html">Automatización</a></li>
+          <li><a href="programacion_plc.html">Programación PLC</a></li>
+          <li><a href="diseno_web.html">Diseño Web</a></li>
+        </ul>
+      </div>
+
+      <a href="nosotros.php">Nosotros</a>
+
+      <div class="dropdown-atom">
+        <span class="dropdown-toggle-atom">Cursos ▾</span>
+        <ul class="dropdown-menu-atom">
+          <li><a href="cursob-i.php">Básico – Intermedio</a></li>
+          <li><a href="cursos.php">Intermedio – Avanzado</a></li>
+        </ul>
+      </div>
     </nav>
+
+    <!-- Íconos de contacto fuera del menú hamburguesa -->
+    <div class="navbar-contact-icons">
+      <a href="https://wa.me/528446226979" target="_blank" class="icono-contacto" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="mailto:ariel.perales@disenoymaquinados.mx" class="icono-contacto" title="Correo">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
   </div>
 </header>
+
+<!-- Navbar para celulares -->
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const links = document.getElementById('navbar-links');
+
+  toggle.addEventListener('click', () => {
+    links.classList.toggle('active');
+  });
+</script>
+
+<script>
+  // Abrir y cerrar solo un dropdown a la vez en móviles
+  document.querySelectorAll(".dropdown-toggle-atom").forEach(function (toggle) {
+    toggle.addEventListener("click", function (e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const currentMenu = this.nextElementSibling;
+
+        // Cerrar todos los demás
+        document.querySelectorAll(".dropdown-menu-atom").forEach(function (menu) {
+          if (menu !== currentMenu) {
+            menu.classList.remove("active");
+          }
+        });
+
+        // Alternar el actual
+        currentMenu.classList.toggle("active");
+      }
+    });
+  });
+</script>
 
 
   <!-- Placeholder para evitar salto -->

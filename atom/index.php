@@ -504,19 +504,24 @@ require_once 'db_conexion.php';
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
 
-    
-<section id="agendar" class="py-5" style="background: linear-gradient(to right, #203a43, #2c5364); color: white;">
-    <div class="container text-center">
-        <h3 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1rem;">Agenda tu Cita</h3>
-        <p style="font-size: 1rem; margin-bottom: 2rem;">
-            Haz clic en el botón de abajo para programar una cita con nosotros y recibir atención personalizada.
-        </p>
-        <a href="citas.php" class="btn btn-primary btn-lg">
-            Agendar Cita
-        </a>
-    </div>
-</section>
+<section id="agendar" class="nosotros-section">
+  <div class="container-nosotros">
+    <div class="text-nosotros">
+      <h2>Agenda tu cita</h2>
+      <p>
+        Haz clic en el botón de abajo para programar una cita con nosotros y recibir atención personalizada.
+      </p>
 
+      <a href="citas.php" class="btn-nosotros">
+        Agendar Cita
+      </a>
+    </div>
+
+    <div class="imagen-nosotros text-center" >
+      <img src="image/citas.jpg" alt="Citas-Atom">
+    </div>
+  </div>
+</section>
 
 
 

@@ -12,9 +12,70 @@ $historial = $conn->query("SELECT * FROM citas WHERE estado != 'Pendiente' ORDER
     <title>Confirmar Citas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="fate.css">
 
 </head>
 <body class="bg-light">
+
+<header id="navbar" class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-logo">
+      <a href="index.php"><img src="image/LetrasAzul.png" alt="Logo"></a>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <nav class="navbar-links" id="navbar-links">
+
+      <a href="admin.php">Volver</a>
+
+      
+    </nav>
+
+    <!-- Íconos de contacto fuera del menú hamburguesa -->
+    <div class="navbar-contact-icons">
+      <a href="https://wa.me/528446226979" target="_blank" class="icono-contacto" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="mailto:ariel.perales@disenoymaquinados.mx" class="icono-contacto" title="Correo">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+</header>
+ <!-- Navbar para celulares -->
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const links = document.getElementById('navbar-links');
+
+  toggle.addEventListener('click', () => {
+    links.classList.toggle('active');
+  });
+</script>
+
+<script>
+  // Abrir y cerrar solo un dropdown a la vez en móviles
+  document.querySelectorAll(".dropdown-toggle-atom").forEach(function (toggle) {
+    toggle.addEventListener("click", function (e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const currentMenu = this.nextElementSibling;
+
+        // Cerrar todos los demás
+        document.querySelectorAll(".dropdown-menu-atom").forEach(function (menu) {
+          if (menu !== currentMenu) {
+            menu.classList.remove("active");
+          }
+        });
+
+        // Alternar el actual
+        currentMenu.classList.toggle("active");
+      }
+    });
+  });
+</script>
 
 <div class="container my-5">
     <h2 class="text-center mb-4">Citas Pendientes</h2>

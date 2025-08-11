@@ -302,7 +302,7 @@ require_once 'db_conexion.php';
     <div class="text-nosotros">
       <h2>DISEÑO Y <br> MAQUINADOS</h2>
       <p>
-        En <strong>ATOM</strong>,nos dedicamos a la Automatización Industrial, y todo lo que conlleva su proceso. Trabajamos desde el diseño y maquinado industrial CNC, somos Fabricantes de Fixtures, brindamos el Servicio de Programación PLC y además capacitamos a estudiantes, técnicos e ingenieros en Cursos de Solidworks. Atendemos el sector automotriz, metalmecánico, eléctrico, y de plástico en Saltillo y Monterrey.
+        En <strong>ATOM</strong>, nos dedicamos a la Automatización Industrial, y todo lo que conlleva su proceso. Trabajamos desde el diseño y maquinado industrial CNC, somos Fabricantes de Fixtures, brindamos el Servicio de Programación PLC y además capacitamos a estudiantes, técnicos e ingenieros en Cursos de Solidworks. Atendemos el sector automotriz, metalmecánico, eléctrico, y de plástico en Saltillo y Monterrey.
 
 
       </p>

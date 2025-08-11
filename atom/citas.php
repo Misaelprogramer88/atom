@@ -259,32 +259,23 @@
         <input type="email" id="email" name="email" class="form-control" required>
       </div>
       <div class="mb-3">
-        <label for="fecha" class="form-label">Fecha</label>
-        <input type="date" id="fecha" name="fecha" class="form-control" required>
+        <label for="fecha" class="form-label">Fecha (lunes - Viernes)</label>
+        <input type="date" id="fecha" name="fecha" class="form-control" required min="<?php echo date('Y-m-d'); ?>">
+        <script>
+  document.getElementById('fecha').min = new Date().toISOString().split("T")[0];
+</script>
+
       </div>
       <div class="mb-3">
-        <label for="hora" class="form-label">Hora</label>
-        <input type="time" id="hora" name="hora" class="form-control" min="10:00" max="17:00" required>
+        <label for="hora" class="form-label">Hora (10 am - 5 pm)</label>
+        <input type="time" id="hora" name="hora" class="form-control" required>
       </div>
       <button type="submit" class="btn btn-primary w-100">Registrar Cita</button>
     </form>
   </div>
 </section>
 
-<script>
-  document.getElementById('formCita').addEventListener('submit', function(e) {
-    const fechaInput = document.getElementById('fecha').value;
-    if (!fechaInput) return; // Por si no hay fecha
 
-    const fecha = new Date(fechaInput);
-    const diaSemana = fecha.getDay(); // 0 = domingo, 6 = sábado
-
-    if (diaSemana === 0 || diaSemana === 6) {
-      alert('Por favor selecciona un día entre lunes y viernes.');
-      e.preventDefault();
-    }
-  });
-</script>
 
 
 
@@ -295,6 +286,54 @@
 document.getElementById('formCita').addEventListener('submit', function(e) {
   e.preventDefault();
 
+  const fechaInput = document.getElementById('fecha').value;
+  const horaInput = document.getElementById('hora').value;
+
+  // Validación de fecha
+  if (!fechaInput) {
+    Swal.fire({
+      icon: 'warning',
+      title: 'Fecha requerida',
+      text: 'Por favor selecciona una fecha para la cita.',
+      background: '#1e293b',
+      color: '#e0f7ff',
+      iconColor: '#ffc107',
+      confirmButtonColor: '#00c8ff',
+    });
+    return;
+  }
+
+  const fecha = new Date(fechaInput);
+  const diaSemana = fecha.getDay(); // 0 = domingo, 6 = sábado
+
+  if (diaSemana === 0 || diaSemana === 6) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Día no válido',
+      text: 'Por favor selecciona un día entre lunes y viernes.',
+      background: '#1e293b',
+      color: '#e0f7ff',
+      iconColor: '#ff4c4c',
+      confirmButtonColor: '#00c8ff',
+    });
+    return;
+  }
+
+  // Validación de hora
+  if (horaInput < "10:00" || horaInput > "17:00") {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hora fuera de horario',
+      text: 'Selecciona un horario entre 10:00 am y 5:00 pm.',
+      background: '#1e293b',
+      color: '#e0f7ff',
+      iconColor: '#ff4c4c',
+      confirmButtonColor: '#00c8ff',
+    });
+    return;
+  }
+
+  // Si pasa todas las validaciones → enviar
   const formData = new FormData(this);
 
   fetch('guardar_cita.php', {
@@ -311,11 +350,7 @@ document.getElementById('formCita').addEventListener('submit', function(e) {
       color: '#e0f7ff',
       iconColor: '#00c8ff',
       confirmButtonColor: '#00c8ff',
-      confirmButtonText: 'Ir al inicio',
-      customClass: {
-        title: 'swal-title-atom',
-        popup: 'swal-popup-atom',
-      }
+      confirmButtonText: 'Ir al inicio'
     }).then(() => {
       window.location.href = 'index.php';
     });
@@ -333,6 +368,7 @@ document.getElementById('formCita').addEventListener('submit', function(e) {
   });
 });
 </script>
+
 
 
 

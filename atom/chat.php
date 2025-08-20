@@ -28,7 +28,13 @@ $urls = [
   'http://localhost/atom/atom/cursob-i.php',
   'http://localhost/atom/atom/index.php',
   'http://localhost/atom/atom/nosotros.php',
-  'http://localhost/atom/atom/dise%C3%B1os_piezas.html'
+  'http://localhost/atom/atom/dise%C3%B1os_piezas.html',
+  'http://localhost/atom/atom/cursomastercam.php',
+  'http://localhost/atom/atom/maquinado_cnc.html',
+  'http://localhost/atom/atom/fabricacion_fixtures.html',
+  'http://localhost/atom/atom/automatizacion.html',
+  'http://localhost/atom/atom/programacion_plc.html',
+  'http://localhost/atom/atom/diseno_web.html',
 ];
 
 $contenidoTotal = '';
@@ -47,7 +53,7 @@ foreach ($urls as $url) {
 $contenidoTotal = substr($contenidoTotal, 0, 9000);
 
 // 🎯 Prompt con contexto personalizado
-$prompt = "Eres un asistente experto en La pagina ATOM que ofrece cursos de solid works y servicios, tamibien puedes decir informacion de la empresa, como su fundador que es Ariel Perales. Usa únicamente la siguiente información extraída del sitio de la pagina nosotros, index y la de los cursos para responder preguntas relacionadas con el curso. Si la pregunta no está relacionada, responde amablemente que no puedes ayudar.\n\n" . $contenidoTotal;
+$prompt = "Eres un asistente experto en La pagina ATOM que ofrece cursos de diferentes cosas, como solidworks mastercam y demas , servicios como diseño de piezAS, FIXTURES Y DEMAS , tamibien puedes decir informacion de la empresa, como su fundador que es Ariel Perales, tambien sobre los horarios de los cursos que se encuentran en cualquier pagina de algun curso . Usa únicamente la siguiente información extraída del sitio de la pagina nosotros, index y la de los cursos para responder preguntas relacionadas con el curso. Si la pregunta no está relacionada, responde amablemente que no puedes ayudar.\n\n" . $contenidoTotal;
 
 $messages = [
   ["role" => "system", "content" => $prompt],

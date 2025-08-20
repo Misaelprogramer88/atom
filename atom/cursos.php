@@ -51,8 +51,9 @@
       <div class="dropdown-atom">
         <span class="dropdown-toggle-atom">Cursos ▾</span>
         <ul class="dropdown-menu-atom">
-          <li><a href="cursob-i.php">Básico – Intermedio</a></li>
-          <li><a href="cursos.php">Intermedio – Avanzado</a></li>
+          <li><a href="cursob-i.php">Solidworks Básico – Intermedio</a></li>
+          <li><a href="cursos.php">Solidworks Intermedio – Avanzado</a></li>
+          <li><a href="cursomastercam.php">Mastercam Basico – Intermedio</a></li>
         </ul>
       </div>
     </nav>

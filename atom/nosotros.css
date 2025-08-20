@@ -53,13 +53,13 @@
 /* Lado derecho - Imagen */
 .imagen-nosotros {
   flex: 1;
-  min-width: 300px;
+  width: 300px;
   padding: 20px;
   text-align: center;
 }
 
 .imagen-nosotros img {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);

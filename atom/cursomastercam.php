@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Curso Basico-Intermedio |ATOM</title>
+    <title>Curso Intermedio-Avanzado |ATOM</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="fate.css">
     <link rel="stylesheet" href="cursos.css">
@@ -16,6 +16,12 @@
     <link rel="icon" href="image/logopes.png" type="image/x-icon">
 
 </head>
+
+
+
+
+
+
 <body>
    <header id="navbar" class="navbar">
   <div class="navbar-container">
@@ -102,26 +108,21 @@
       <div class="row align-items-center">
         <!-- Izquierda -->
         <div class="col-12 col-md-6 hero-left">
-          <h1 data-aos="fade-right" data-aos-delay="300" style="margin-top: 40px">
-            SOLIDWORKS BÁSICO - INTERMEDIO
-          </h1>
-          <h3 data-aos="fade-right" data-aos-delay="500" style="margin-top: 40px">
-            Domina las bases del diseño mecánico 3D desde cero
-          </h3>
+          <h1 data-aos="fade-right" data-aos-delay="300" style="margin-top: 40px">MASTERCAM - CNC</h1>
+          <h3 data-aos="fade-right" data-aos-delay="500" style="margin-top: 40px">Capacitación profesional en programación CNC y manufactura</h3>
           <p data-aos="fade-right" data-aos-delay="700" style="margin-top: 40px">
-            Aprende el entorno de SOLIDWORKS, croquizado, modelado de piezas, operaciones básicas en 3D, vaciados, nervios, configuraciones, ensambles y animaciones. Curso presencial, virtual o empresarial.
+            Aprende códigos G y M, simulación CNC, selección de herramentales, manufactura en torno y fresadora, además de programación en Mastercam con integración CAD. Disponible en modalidad presencial, virtual y para empresas.
           </p>
-          <br><a href="https://wa.me/528446226979" target="_blank" ><button class="boton-transparentee" data-aos="fade-right" data-aos-delay="900">Contactanos</button></a>
+          <br><a href="https://wa.me/528446226979" target="_blank"><button class="boton-transparentee" data-aos="fade-right" data-aos-delay="900">Contáctanos</button></a>
         </div>
 
         <!-- Derecha -->
         <div class="col-12 col-md-6 hero-right text-center mt-5" data-aos="fade-down-left">
           <video autoplay muted loop playsinline class="video-hero">
-            <source src="image/pinterestdownloader.com-1751762326.530914.mp4" type="video/mp4">
+            <source src="image/mastercam.mp4" type="video/mp4">
             Tu navegador no soporta videos HTML5.
           </video>
         </div>
-
       </div>
     </div>
   </div>
@@ -129,7 +130,7 @@
 
 <section id="tematica" class="timeline-section py-5">
   <div class="container">
-    <h2 class="text-center mb-5">¿Cuál es la temática del curso de SOLIDWORKS?</h2>
+    <h2 class="text-center mb-5">¿Cuál es la temática del curso de Mastercam?</h2>
     <div class="row">
 
       <!-- Línea del tiempo (izquierda) -->
@@ -139,120 +140,40 @@
           <div class="timeline-item" data-aos="fade-up">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h5>1. Entorno de SolidWorks</h5>
-              <p>Interfaz, unidades, planos cartesianos, árbol de operaciones, croquis y operaciones básicas.</p>
+              <h5>1. Introducción al entorno de CNC</h5>
+              <p>Sistemas de unidades, planos cartesianos, coordenadas y comandos básicos G y M para programación CNC.</p>
             </div>
           </div>
 
           <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h5>2. Modelado básico en 3D</h5>
-              <p>Extrusiones, cortes, redondeos, chaflanes, simetrías y control espacial.</p>
+              <h5>2. Elaboración de códigos G y M</h5>
+              <p>Interpretación y ejecución de trayectorias en torno y fresadora CNC con coordenadas y ecuaciones de desplazamiento.</p>
             </div>
           </div>
 
           <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h5>3. Operaciones de revolución</h5>
-              <p>Uso de croquis para modelar piezas mediante revolución.</p>
+              <h5>3. Introducción al software CNC Simulator</h5>
+              <p>Simulación de piezas en torno y fresadora, exportación de códigos G y M, y diagnóstico de errores.</p>
             </div>
           </div>
 
           <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h5>4. Asistente de taladros</h5>
-              <p>Tipos de taladro, aplicación según diseño y normas de unidades.</p>
+              <h5>4. Introducción a herramentales</h5>
+              <p>Selección de herramientas, geometrías comunes y estudio de materiales para parámetros de corte.</p>
             </div>
           </div>
 
           <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h5>5. Matrices</h5>
-              <p>Matriz circular y lineal en croquis y sólidos.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h5>6. Planos y vistas</h5>
-              <p>Creación de vistas de sección y uso de herramientas de medición 3D.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h5>7. Modelado con vaciado</h5>
-              <p>Técnicas para aplicar vaciados en piezas con diversas geometrías.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="700">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h5>8. Modelado con nervios</h5>
-              <p>Aplicación de refuerzos en piezas cilíndricas o esféricas.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="800">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h5>9. Edición de piezas</h5>
-              <p>Modificación del árbol de operaciones, solución de errores y rediseño.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="900">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h5>10. Configuraciones</h5>
-              <p>Creación de variantes dentro de una misma pieza (IGES, STEP, Parasólidos).</p>
-            </div>
-          </div>
-
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="1000">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h5>11. Ensambles</h5>
-              <p>Importación, relaciones de coincidencia y control de estructura de ensamble.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="1100">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h5>12. Tornillería y librerías CAD</h5>
-              <p>Uso de piezas prediseñadas descargadas desde plataformas externas.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="1200">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h5>13. Introducción a GD&T</h5>
-              <p>Vistas de sección, cotas, símbolos y creación del formato de hoja.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="1300">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h5>14. Obtención de planos</h5>
-              <p>Generación de planos listos para manufactura.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="1400">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h5>15. Animaciones básicas</h5>
-              <p>Animaciones explosionadas y estudios de movimiento simples.</p>
+              <h5>5. Introducción al entorno de Mastercam</h5>
+              <p>Interfaz, integración con CAD, puesta a punto cero, elección de herramientas, simulación, obtención y exportación de códigos G.</p>
             </div>
           </div>
 
@@ -261,10 +182,10 @@
 
       <!-- Galería de imágenes (derecha) -->
       <div class="col-md-5 d-none d-md-block">
-        <div class="timeline-gallery">
-          <img src="https://www.1min30.com/wp-content/uploads/2018/10/Logo-SolidWorks.jpg" class="img-fluid mb-3 rounded shadow-sm" data-aos="fade-left" alt="SolidWorks Básico">
-          <img src="image/c1.jpg" data-aos="fade-left" class="img-fluid mb-3 rounded shadow-sm" alt="Croquizado SolidWorks">
-          <img src="image/c3.jpeg" data-aos="fade-left" data-aos-delay="500" class="img-fluid rounded shadow-sm" alt="Modelado Básico 3D">
+        <div class="timeline-gallery" >
+          
+          <img src="image/mastercam.avif"  data-aos="fade-left" class="img-fluid mb-3 rounded shadow-sm" alt="Torno CNC en Mastercam">
+          <img src="image/mastercam2.webp" data-aos="fade-left" data-aos-delay="500"  class="img-fluid rounded shadow-sm" alt="Fresadora CNC en Mastercam">
         </div>
       </div>
 
@@ -363,9 +284,6 @@
     </div>
   </div>
 </section>
-
-
-
 
 
 
@@ -480,9 +398,6 @@ toggleBtn.addEventListener('mouseleave', () => {
 </script>
 
 
-
-
-
 <a
   href="https://wa.me/528446226979"
   class="whatsapp-float"
@@ -575,7 +490,6 @@ toggleBtn.addEventListener('mouseleave', () => {
     </div>
   </div>
 </footer>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

@@ -210,8 +210,9 @@ require_once 'db_conexion.php';
       <div class="dropdown-atom">
         <span class="dropdown-toggle-atom">Cursos ▾</span>
         <ul class="dropdown-menu-atom">
-          <li><a href="cursob-i.php">Básico – Intermedio</a></li>
-          <li><a href="cursos.php">Intermedio – Avanzado</a></li>
+          <li><a href="cursob-i.php">SolidWorks Básico – Intermedio</a></li>
+          <li><a href="cursos.php">SolidWorks Intermedio – Avanzado</a></li>
+          <li><a href="cursomastercam.php">Mastercam Basico – Intermedio</a></li>
         </ul>
       </div>
     </nav>
@@ -395,7 +396,7 @@ require_once 'db_conexion.php';
 
 <section id="cursos" class="py-5 bg-light" style=" background: linear-gradient(to right, #121212, #1b2b34, #121212); color: rgba(252, 249, 249, 1); position: relative;">
   <div class="container">
-    <h2 class="text-center mb-4 styled-title text-center" data-aos="fade-up">Nuestros Cursos de SOLIDWORKS</h2>
+    <h2 class="text-center mb-4 styled-title text-center" data-aos="fade-up">Nuestros Cursos </h2>
     <p class="text-center mb-5 text-muted" data-aos="fade-up" data-aos-delay="100">
       Elige el curso que se adapte a tu nivel y modalidad. Capacitación profesional para la industria.
     </p>
@@ -422,6 +423,17 @@ require_once 'db_conexion.php';
             <h5>SolidWorks Intermedio - Avanzado</h5>
             <p>Domina lectura de planos, GD&T, engranajes, simulaciones y diseño avanzado.</p>
             <a href="cursos.php" class="btn-ver-mas">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <!-- Curso Intermedio-Avanzado -->
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="curso-card">
+          <img src="image/cma.png" alt="Curso Avanzado" class="curso-img">
+          <div class="curso-content">
+            <h5>Mastercam Basico - Intermedio</h5>
+            <p>Domina lectura de planos, GD&T, engranajes, simulaciones y diseño avanzado.</p>
+            <a href="cursomastercam.php" class="btn-ver-mas">Ver más</a>
           </div>
         </div>
       </div>

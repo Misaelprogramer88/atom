@@ -1,14 +1,14 @@
 {
-  "id": "chatcmpl-C2432DE1Ycwddv6TMn3qFcqzyG0aE",
+  "id": "chatcmpl-C6mQnZrKfZrLSxfgiYRJAa4Gyxw83",
   "object": "chat.completion",
-  "created": 1754608252,
+  "created": 1755732173,
   "model": "gpt-3.5-turbo-0125",
   "choices": [
     {
       "index": 0,
       "message": {
         "role": "assistant",
-        "content": "El número de contacto de ATOM para información es +52 (844) 622 6979. También puedes contactarlos a través de WhatsApp.",
+        "content": "Lo siento, pero no tengo acceso a esa información específica. Te recomendaría visitar la página web de ATOM donde ofrecen los cursos para obtener los horarios actualizados. Si necesitas ayuda con otra pregunta, estaré encantado de ayudarte.",
         "refusal": null,
         "annotations": []
       },
@@ -17,9 +17,9 @@
     }
   ],
   "usage": {
-    "prompt_tokens": 1994,
-    "completion_tokens": 31,
-    "total_tokens": 2025,
+    "prompt_tokens": 2020,
+    "completion_tokens": 56,
+    "total_tokens": 2076,
     "prompt_tokens_details": {
       "cached_tokens": 0,
       "audio_tokens": 0

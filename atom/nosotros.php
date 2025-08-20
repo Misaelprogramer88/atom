@@ -46,8 +46,9 @@
       <div class="dropdown-atom">
         <span class="dropdown-toggle-atom">Cursos ▾</span>
         <ul class="dropdown-menu-atom">
-          <li><a href="cursob-i.php">Básico – Intermedio</a></li>
-          <li><a href="cursos.php">Intermedio – Avanzado</a></li>
+          <li><a href="cursob-i.php">Solidworks Básico – Intermedio</a></li>
+          <li><a href="cursos.php">Solidworks Intermedio – Avanzado</a></li>
+          <li><a href="cursomastercam.php">Mastercam Basico – Intermedio</a></li>
         </ul>
       </div>
     </nav>
@@ -107,19 +108,19 @@
   <div class="nosotros-contenido">
     <!-- Lado izquierdo -->
     <div class="info-nosotros" data-aos="fade-left">
-      <h1 >SOBRE <br>NOSOTROS</h1>
+      <h1 >NOSOTROS</h1>
       <span class="subtitulo">Ariel Perales - Fundador de ATOM</span>
       <p class="descripcion">
-        Ariel es un ingeniero mecatrónico con más de 6 años de experiencia en automatización industrial.
-        Ha liderado proyectos en MAHLE, MAGNA, JOHN DEERE y otras firmas, fusionando diseño, robótica y electrónica
-        para los parques industriales más importantes del norte del país.
+        Ariel Perales es un reconocido ingeniero mecatrónico de la ciudad de Saltillo, fundador de la empresa de automatización ATOM, quien con más de 10 años de experiencia en la industria se ha destacado por el desarrollo de proyectos de plantas industriales como MAHLE, MAGNA, JOHN DEERE, MARTINREA, entre otras fábricas integrando las áreas de diseño industrial, mecánica, electrónica y robótica para los parques de Derramadero, Ramos Arizpe, Arteaga, Apodaca, Santa Catarina y Monterrey.
+
+Ariel Perales es además un experto en el funcionamiento de los componentes mecánicos, eléctricos, electrónicos y computacionales de los procesos, es por esto que múltiples plantas industriales de Saltillo y Monterrey confían en su capacidad de seleccionar los mejores métodos y tecnologías para el diseño y desarrollo integral de la automatización de sus procesos, diseñados a través de su empresa ATOM, que desarrolla procesos funcionales, de calidad y con alto desempeño.
       </p><br>
       <a href="https://wa.me/528446226979" target="_blank"><button class="boton-transparentee">Contactanos</button></a>
     </div>
 
     <!-- Lado derecho -->
     <div class="imagen-nosotros" data-aos="fade-right">
-      <img src="image/ariel-.jpg" alt="Ariel Perales - Fundador de ATOM">
+      <img src="image/ariel.jpg" alt="Ariel Perales - Fundador de ATOM">
     </div>
   </div>
 </section>

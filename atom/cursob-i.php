@@ -509,7 +509,7 @@ toggleBtn.addEventListener('mouseleave', () => {
         <h5 class="footer-title">Nuestras Redes</h5>
         <hr class="footer-line">
         <div class="footer-icons">
-          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.facebook.com/share/1B3hc5nK13/" target="_blank"><i class="bi bi-facebook"></i></a>
           <a href="https://wa.me/528446226979" target="_blank"><i class="bi bi-whatsapp"></i></a>
         </div>
       </div>

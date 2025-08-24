@@ -196,7 +196,7 @@
 
 <section id="duracion" class="duracion-section py-5">
   <div class="container">
-    <h2 class="text-center mb-4">¿Cuánto dura el curso de SOLIDWORKS?</h2>
+    <h2 class="text-center mb-4">¿Cuánto dura el curso de MASTERCAM?</h2>
     <p class="text-center mb-5 lead">El curso tiene una duración de <strong>15 a 18 horas</strong> y puedes tomarlo en distintos horarios, entre semana o en sábados.</p>
 
     <div class="row g-4 justify-content-center">
@@ -424,7 +424,7 @@ toggleBtn.addEventListener('mouseleave', () => {
         <h5 class="footer-title">Nuestras Redes</h5>
         <hr class="footer-line">
         <div class="footer-icons">
-          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.facebook.com/share/1B3hc5nK13/" target="_blank"><i class="bi bi-facebook"></i></a>
           <a href="https://wa.me/528446226979" target="_blank"><i class="bi bi-whatsapp"></i></a>
         </div>
       </div>
